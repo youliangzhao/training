@@ -1,0 +1,925 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-size: 12px;
+}
+img{
+	border:0;
+	display:block;
+}
+
+ul li {
+	list-style: none;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	background-color: #3B6EA5;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.webox {
+    z-index: 0;
+    width: 596px;
+    height: 448px;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    margin: -224px 0 0 -298px;
+}
+
+.webox #inside{
+	background-color: #fff;
+	height: 240px;
+}
+.open_back1 {
+	background: url("/assets/open_back2.jpg") repeat-x;
+	width: 100%;
+	height: 40px;
+	position: relative;
+	cursor: pointer;
+}
+
+.open_back1 a {
+	position: absolute;
+	display: block;
+	right: 6px;
+	margin-top: 6px;
+	top: 0px;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.open_title1 {
+	color: #fff;
+	font-weight: bold;
+	position: absolute;
+	left: 40px;
+	top: 13px;
+}
+
+.open_close1 {
+	background: url("/assets/system_manager.jpg") -1px -75px;
+	width: 28px;
+	height: 11px;
+	position: absolute;
+	right: 9px;
+	top: 13px;
+}
+
+.open_logo1 {
+	background: url("/assets/logo1.png") no-repeat;
+	width: 41px;
+	height: 40px;
+	display: block;
+}
+
+.open_content1 {
+	background: #335774;
+	width: 586px;
+	height: 404px;
+	padding: 0px 4px 4px 4px;
+}
+
+.open_main1 {
+	overflow: hidden;
+	width: 100%;
+}
+
+.open_back {
+	background: url("/assets/open_back1.jpg") repeat-x;
+	width: 100%;
+	height: 28px;
+	position: relative;
+	cursor: pointer;
+}
+
+.open_back a {
+	position: absolute;
+	display: block;
+	right: 6px;
+	margin-top: 6px;
+	top: 0px;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.open_title {
+	color: #fff;
+	position: absolute;
+	left: 31px;
+	top: 7px;
+}
+
+.open_close {
+	background: url("/assets/system_manager.jpg") -1px -129px;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 9px;
+	top: 7px;
+}
+
+.open_logo {
+	background: url("/assets/logo.png") no-repeat;
+	width: 29px;
+	height: 28px;
+	display: block;
+}
+
+.open_content {
+	background: #9ab4d5;
+	padding: 0px 2px 2px 2px;
+}
+
+.open_main {
+	overflow: hidden;
+	width: 100%; 
+	width: 100%;
+}
+.system_login {
+	background: url("/assets/login.jpg") no-repeat;
+	width: 588px;
+	height: 405px;
+}
+
+.system_login_left {
+	float: left;
+	width: 478px;
+	height: 417px;
+	margin: 14px 18px 0px 14px;
+	border-top: solid 1px #335774;
+	border-left: solid 1px #335774;
+	border-right: solid 1px #335774;
+	border-bottom: solid 1px #335774;
+}
+
+.system_input {
+	width: 180px;
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	border: 1px solid #646464;
+}
+
+.system_login_border {
+	border-top: solid 1px #335774;
+	border-left: solid 1px #335774;
+	border-right: solid 1px #335774;
+	border-bottom: solid 1px #335774;
+	height: 220px;
+	position: relative;
+}
+
+.system_login_border_dl {
+	margin: 0px;
+	position: absolute;
+	left: 20px;
+	top: 30px;
+}
+
+.system_login_border_dl dt {
+	margin-bottom: 32px;
+}
+
+.system_login_border_input {
+	margin: 0px;
+	position: absolute;
+	top: 145px;
+	left: 202px;
+}
+
+.system_login_border_input dt {
+	margin-bottom: 13px;
+}
+
+.system_input_select {
+	height: 30px;
+	font-size: 14px;
+	border: 1px solid #646464;
+	width: 185px;
+}
+
+.system_login_right {
+	float: left;
+	margin-top: 120px;
+}
+
+.system_login_right dl {
+	margin: 0px;
+}
+
+.margin35 {
+	margin-bottom: 35px;
+}
+
+.margin10 {
+	margin-bottom: 10px;
+}
+
+ul.pico li{
+	width: 60px;
+	height: 60px;
+	margin: 20px 0 10px 20px;
+	overflow:hidden;
+}
+.icon_copytax{
+	display: none;
+}
+
+.install_0{
+	width:766px;
+	height:553px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-276px 0 0 -383px;
+	background:url("/assets/install_0.png") no-repeat;
+	overflow:hidden;
+	z-index: 0;
+	display:none;
+}
+.install_0 .click1{
+    width: 490px;
+    height: 20px;
+    position: absolute;
+    top: 193px;
+    left: 244px;
+}
+.install_0 .close_0{
+    width: 28px;
+    height: 14px;
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    cursor:pointer;
+}
+
+.install_1{
+	width:450px;
+	height:322px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-161px 0 0 -225px;
+	background:url("/assets/install_01.png") no-repeat;
+	display:none;
+	z-index:10;
+	overflow:hidden;
+}
+.close_1{
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    cursor:pointer;
+}
+ .next_1{
+    width: 62px;
+    height: 15px;
+    position: absolute;
+    bottom: 12px;
+    right: 93px;
+    cursor: pointer;
+}
+ .next_2{
+    width: 59px;
+    height: 12px;
+    position: absolute;
+    bottom: 14px;
+    right: 93px;
+    cursor: pointer;
+}
+ .next_3{
+    width: 58px;
+    height: 12px;
+    position: absolute;
+    bottom: 15px;
+    right: 95px;
+    cursor: pointer;
+}
+ .next_4{
+    width: 58px;
+    height: 11px;
+    position: absolute;
+    bottom: 15px;
+    right: 94px;
+    cursor: pointer;
+}
+ .next_5{
+    width: 56px;
+    height: 12px;
+    position: absolute;
+    bottom: 12px;
+    right: 96px;
+    cursor: pointer;
+}
+ .next_ok{
+    width: 63px;
+    height: 15px;
+    position: absolute;
+    bottom: 14px;
+    right: 92px;
+    cursor: pointer;
+}
+
+.cancel_1{
+    width: 65px;
+    height: 18px;
+    position: absolute;
+    bottom: 10px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.install_2{
+	width:450px;
+	height:323px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-161px 0 0 -225px;
+	background:url("/assets/install_02.png") no-repeat;
+	overflow:hidden;
+	display:none; 
+}
+
+.install_3{
+	width:450px;
+	height:324px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-162px 0 0 -225px;
+	background:url("/assets/install_03.png") no-repeat;
+	overflow:hidden;
+	display:none; 
+}
+.install_3 .TaxNum{
+    width: 285px;
+    height: 55px;
+    position: absolute;
+    top: 147px;
+    right: 43px;
+    overflow: hidden;
+}
+.install_3 .TaxNum input{
+    display: block;
+    width: 100%;
+    height: 18px;
+    outline: none;
+    margin-bottom: 11px;
+    padding-left: 3px;
+    border: 1px solid #dfdfdf;
+}
+
+.install_4{
+	width:450px;
+	height:323px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-162px 0 0 -225px;
+	background:url("/assets/install_041.png") no-repeat;
+	overflow:hidden;
+	display:none;
+}
+.install_4 .Ref{
+    width: 288px;
+    height: 22px;
+    position: absolute;
+    top: 147px;
+    left: 120px;
+    overflow: hidden;
+}
+.install_4 .Ref input{
+	display:block;
+	width:100%;
+	height:18px;
+	border:1px solid #dfdfdf;
+	outline:none;
+	padding-left:3px;
+}
+
+.install_5{
+	width:450px;
+	height:323px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-162px 0 0 -225px;
+	background:url("/assets/install_051.png") no-repeat;
+	overflow:hidden;
+	display:none;	
+}
+
+.install_6{
+	width:450px;
+	height:323px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-162px 0 0 -225px;
+	background:url("/assets/install_06.png") no-repeat;
+	overflow:hidden;
+	display:none;		
+}
+
+.modify{
+    width: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -130px 0 0 -210px;
+    background-color: #fff;
+    border:4px solid #2E5473;
+    overflow: hidden;
+    display:none;
+}
+.modify .mod_tit{
+	width: 100%;
+	height: 24px;
+	background-color:#2E5473;
+	color:#fff;
+	overflow: hidden;
+}
+.modify .mod_tit i{
+    float: left;
+    display: block;
+    width: 25px;
+    height: 20px;
+    margin: 0 3px 0 0;
+    background: url("/assets/logo1.png") no-repeat -8px -10px;
+    overflow: hidden;
+}
+.modify .mod_tit span{
+	display: block;
+    float: left;
+    line-height:18px;
+}
+.modify .mod_tit .mod_close{
+    float: right;
+    width: 28px;
+    height: 12px;
+    margin: 3px 5px 0 0;
+    background: url("/assets/system_manager.jpg") -1px -75px;
+    cursor:pointer;
+    overflow: hidden;
+}
+
+.modify .mod_con{
+	width: 80%;
+	margin: 17px auto;
+	overflow: hidden;
+	font-size: 14px;
+}
+.modify .mod_con h4{
+    color: #f00;
+    font-weight: 400;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.modify .mod_con dl dt{
+	float: left;
+	width: 25%;
+	height: 25px;
+	line-height:25px;
+	text-align:right;
+	margin-bottom: 14px;
+	overflow:hidden;
+}
+.modify .mod_con dl dd{
+	float: left;
+	width: 75%;
+	height: 25px;
+	margin-bottom: 14px;
+	overflow:hidden;
+}
+.modify .mod_con dl dd input{
+    display: block;
+    width: 95%;
+    height: 18px;
+    margin: 2px 0 0 3px;
+    padding-left: 4px;
+}
+.modify .mod_fo{
+	width:100%;
+	height:40px;
+	background-color:#E4E6E7;
+	overflow: hidden;
+}
+.modify .mod_fo .mod_fo_con{
+	width:35%;
+	margin:8px auto;
+	overflow:hidden;
+}
+.modify .mod_fo .mod_fo_con button{
+    display: block;
+    width: 60px;
+    height: 25px;
+    color: #fff;
+    background-color: #0F71D5;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    cursor:pointer;
+}
+.modify .mod_fo .mod_fo_con .mod_confirm{
+	float:left;
+}
+.modify .mod_fo .mod_fo_con .mod_cancel{
+	float:right;
+}
+
+#norightbro{
+    position: absolute;
+    z-index: 9999999;
+    background-color:#fff;
+    width: 650px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-left: -325px;
+    margin-top: -75px;
+	border:2px solid #2E5473;
+}
+#norightbro .mod_tit{
+	width: 651px;
+	height: 24px;
+	background-color:#2E5473;
+	color:#fff;
+	overflow: hidden;
+	margin-left: -1px;
+}
+
+#norightbro .mod_tit span{
+    display:block;
+	margin:3px 0 0 7px;
+}
+
+#norightbro .mod_con{
+	width: 80%;
+	margin: 17px auto;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+#norightbro .mod_con p{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.command{
+    width: 360px;
+    height: 164px;
+    background-color: #fff;
+    border: 4px solid #2E5473;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -82px 0 0 -175px;
+    overflow: hidden;
+    display:none;
+}
+.command .comma_tit{
+	width: 100%;
+	height: 24px;
+	background-color: #2E5473;
+	color: #fff;
+	overflow: hidden;
+}
+.command .comma_tit i{
+	float: left;
+    display: block;
+    width: 25px;
+    height: 20px;
+    margin: 0 3px 0 0;
+    background: url("/assets/logo1.png") no-repeat -8px -10px;
+    overflow: hidden;
+}
+.command .comma_tit span{
+	display: block;
+    float: left;
+    line-height: 18px;
+}
+.command .comma_tit .comma_close{
+	float: right;
+    width: 28px;
+    height: 12px;
+    margin: 3px 5px 0 0;
+    background: url("/assets/system_manager.jpg") -1px -75px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.command .comma_cont{
+	width: 85%;
+	height: 80px;
+	margin: 10px auto;
+}
+.command .comma_cont i{
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url("/assets/command.png") no-repeat 1px 1px;
+    overflow: hidden;
+    margin: 25px 5px 0 0;
+}
+.command .comma_cont span{
+	display: block;
+	float: left;
+	/* margin-top: 33px; */
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	width: 74%;
+}
+.command .comma_yes{
+	width: 100%;
+	height: 40px;
+	background-color: #E4E6E7;
+	overflow: hidden;
+}
+.command .comma_yes .comma_confir{
+    display: block;
+    width: 60px;
+    height: 25px;
+    color: #fff;
+    background-color: #0F71D5;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    cursor: pointer;
+    margin: 8px auto;
+}
+
+.init{
+	width:640px;
+	height:425px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-212px 0 0-320px;
+	overflow:hidden;
+	display:none; 
+}
+.init .WHR{
+	width:640px;
+	height:425px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.WHR_close{
+    width: 45px;
+    height: 15px;
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    cursor:pointer;
+    z-index: 1;
+}
+.WHR_prev{
+    width: 80px;
+    height: 28px;
+    position: absolute;
+    bottom: 22px;
+    right: 165px;
+    cursor: pointer;
+}
+.WHR_next{
+    width: 86px;
+    height: 28px;
+    z-index: 1;
+}
+.one_next,.two_next{
+	position: absolute;
+    bottom: 27px;
+    right: 60px;
+    cursor:pointer;
+}
+
+.three_next,.four_next,.five_next{
+	position: absolute;
+    right: 60px;
+    cursor:pointer;
+	bottom: 17px;
+}
+
+.init .init_One{
+	background: url("/assets/init_01.png") no-repeat 0 0;
+	display: none; 
+}
+.init .init_Two{
+	background: url("/assets/init_02.png") no-repeat 0 0;
+	display:none;
+}
+.init .two_admin{
+    width: 310px;
+    height: 70px;
+    position: absolute;
+    top: 154px;
+    right: 55px;
+    overflow: hidden;
+}
+.init .two_admin input{
+    display: block;
+    height: 22px;
+}
+.init .two_admin .two_user{
+	width: 90px;
+	float:left;
+}
+.init .two_admin .two_pass1{
+	width: 105px;
+	float:right;
+}
+.init .two_admin .two_pass2{
+    width: 105px;
+    float: right;
+    margin-top: 35px;
+    margin-right: -107px;
+}
+
+.init .init_Three{
+	background: url("/assets/init_03.png") no-repeat 0 0;
+	display:none;
+}
+.init .init_Three .three_info{
+    width: 292px;
+    height: 253px;
+    position: absolute;
+    top: 88px;
+    right: 60px;
+    overflow: hidden;
+}
+.init .init_Three .three_info p{
+	display:block;
+	width: 99%;
+    height: 22px;
+    margin-bottom: 4px;
+    border:0;   
+    overflow:hidden;
+    font-size: 14px;
+}
+.init .init_Three .three_info input{
+	display:block;
+	width: 99%;
+    height: 22px;
+    margin-bottom: 9px;
+    border:0;   
+    overflow:hidden;
+}
+.init .init_Three .three_info textarea{
+	display:block;
+	width: 99%;
+    height: 53px;
+    margin-top: 16px;
+    border:0;
+    overflow: hidden;   
+}
+
+.init .init_Four{
+	background: url("/assets/init_04.png") no-repeat 0 0;
+	display: none;
+}
+.init .init_Four input{
+    display: block;
+    width: 208px;
+    height: 20px;
+    position: absolute;
+    top: 132px;
+    right: 93px;
+}
+.init .init_Four .tests{
+    width: 50px;
+    height: 22px;
+    position: absolute;
+    top: 131px;
+    right: 35px;
+    cursor: pointer;
+}
+.init .init_Four .four_alert{
+	width: 360px;
+    height: 164px;
+    background-color: #fff;
+    border: 4px solid #2E5473;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -82px 0 0 -175px;
+    overflow: hidden;
+    display:none;
+}
+.init .init_Four .four_alert .four_alert_tit{
+    width: 100%;
+    height: 24px;
+    background-color: #2E5473;
+    color: #fff;
+    overflow: hidden;
+}
+.init .init_Four .four_alert .four_alert_tit i{
+	float: left;
+    display: block;
+    width: 25px;
+    height: 20px;
+    margin: 0 3px 0 0;
+    background: url("/assets/logo1.png") no-repeat -8px -10px;
+    overflow: hidden;
+}
+.init .init_Four .four_alert .four_alert_tit span{
+	display: block;
+    float: left;
+    line-height: 18px;
+}
+.init .init_Four .four_alert .four_alert_tit .four_alert_close{
+	float: right;
+    width: 28px;
+    height: 12px;
+    margin: 3px 5px 0 0;
+    background: url("/assets/system_manager.jpg") -1px -75px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.init .init_Four .four_alert .four_alert_cont{
+	width: 85%;
+    height: 80px;
+    margin: 10px auto;
+    overflow:hidden;
+}
+.init .init_Four .four_alert .four_alert_cont i{
+	display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url("/assets/command.png") no-repeat 1px 1px;
+    overflow: hidden;
+    margin: 25px 5px 0 0;
+}
+.init .init_Four .four_alert .four_alert_cont span{
+	display: block;
+    float: left;
+    margin-top: 33px;
+}
+.init .init_Four .four_alert .four_alert_ok{
+	width: 100%;
+    height: 40px;
+    background-color: #E4E6E7;
+    overflow: hidden;
+}
+.init .init_Four .four_alert .four_alert_confir{
+	display: block;
+    width: 60px;
+    height: 25px;
+    color: #fff;
+    background-color: #0F71D5;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    cursor: pointer;
+    margin: 8px auto;
+}
+
+
+
+
+
+
+
+
+
+.init .init_Five{
+	background: url("/assets/init_05.png") no-repeat 0 0;
+	display: none;
+}
+
+

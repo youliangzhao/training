@@ -1,0 +1,3181 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+img{
+	border: 0;
+	display: block;
+}
+body{
+    font-family: "微软雅黑";
+}
+.tit_colorx{
+	color: #858a90;
+}
+a{
+	display: block;
+    text-decoration: none;
+}
+
+.inv_a1{
+    width: 62px;
+    height: 72px;
+	position: absolute;
+	top: 248px;
+	left: 140px;
+    cursor: pointer;
+}
+
+.inv_a2{
+    width: 62px;
+    height: 72px;
+    position: absolute;
+    bottom: 77px;
+    left: 307px;
+    cursor: pointer;
+}
+.inv_a3{
+    width: 62px;
+    height: 72px;
+    position: absolute;
+    top: 248px;
+    left: 486px;
+    cursor: pointer;
+}
+.inv_a4{
+    width: 62px;
+    height: 72px;
+    position: absolute;
+    top: 150px;
+    left: 634px;
+    cursor: pointer;
+}
+.inv_a5{
+    width: 62px;
+    height: 72px;
+    position: absolute;
+    top: 346px;
+    right: 284px;
+    cursor: pointer;
+}
+.inv_a6{
+    width: 62px;
+    height: 72px;
+    position: absolute;
+    top: 346px;
+    right: 150px;
+    cursor: pointer;
+}
+.inv_a7{
+    width: 62px;
+    height: 72px;
+    position: absolute;
+    top: 248px;
+    left: 309px;
+    cursor: pointer;
+}
+.wrong {
+    width: 376px;
+    height: 169px;
+    position: absolute;
+    top: 166px;
+    left: 335px;
+    background-color: #fff;
+    z-index: 40;
+    display: none;
+    overflow: hidden;
+}
+.wrong p {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.wrong p:hover{
+	color: #fff;
+}
+
+.wrong span {
+    display: block;
+    width: 50px;
+    height: 24px;
+    background-color: #299dda;
+    position: absolute;
+    bottom: 13px;
+    right: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.read{
+	width: 370px;
+	height: 165px;
+	background-color: #fff;
+	position: absolute;
+	top:165px;
+	left:335px;
+	z-index: 10;
+	overflow: hidden;
+	display: none;
+}
+
+
+.read p{
+	float: right;
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.read p:hover{
+	color: #fff;
+}
+.read input{
+    display: block;
+    width: 45px;
+    height: 24px;
+    background-color: #289ad8;
+    position: absolute;
+    bottom: 11px;
+    right: 12px;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 0;
+}
+
+.returnx{
+    width: 715px;
+    height: 357px;
+    background-color: #fff;
+    position: absolute;
+    top: 138px;
+    left: 138px;
+    overflow: hidden;
+    display: none; 
+    z-index: 10;
+}
+.returnx .ret_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.returnx .ret_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.returnx .ret_tit{
+    height: 17px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}
+.returnx .ret_tit ul li{
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.returnx .ret_tit ul li a{
+    display: block;
+    width: 42px;
+    height: 17px;
+}
+.returnx .ret_tit ul li a:hover{
+    border-left: 1px solid #A1A1A1;
+    border-top: 1px solid #A1A1A1;
+}
+.returnx .ret_tit ul li img.ret_tit_disab{
+    margin: 0px 6px 0px -2px;
+    cursor:default ;
+}
+
+.formx{
+    width: 708px;
+    height: 250px;
+    background-color: #fff;
+    position: absolute;
+    top: 95px;
+    left: 0;
+}
+.formx .for_scroll .for_cont table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.formx .for_scroll .for_cont table thead{
+    background-color: #1487c6;
+    color: #fff;
+}
+.formx .for_scroll .for_cont table thead th{
+    width: 12.3%;
+    height: 26px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+.formx .for_scroll .for_cont table .ta_left {
+    width: 1%;
+    background-color: #1487c6;
+}
+
+.formx .for_scroll .for_cont table tbody tr td{
+    width: 12.3%;
+    height: 20px;
+    text-align: left;
+    /*padding-left: 5px;*/
+}
+
+.formx .for_scroll .for_cont table tbody tr td input{
+    line-height: 20px;
+    border: 0;
+    display: block;
+    cursor: pointer;
+}
+
+.printx{
+	width: 447px;
+	height: 288px;
+	background-color: #fff;
+	position: absolute;
+	top: 115px;
+	left: 252px;
+	z-index: 30;
+	display: none;
+}
+.printx .prin_close{
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.printx .prin_close img{
+	margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.printx .prin_btn{
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 50%;
+    margin-right: -155px;
+    overflow: hidden;
+}
+.printx .prin_btn span{
+	width: 90px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.printx .prin_btn .prin_yl{
+	float: left;
+}
+.printx .prin_btn .prin_yes{
+	float: left;
+}
+.printx .prin_btn .prin_no{
+	float: left;
+	margin-right: 0;
+}
+
+.back{
+	width: 370px;
+	height: 200px;
+	position: absolute;
+	top: 70px;
+	right: 155px;
+	overflow: hidden;
+	z-index: 10;
+    display: none;
+}
+.back p{
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.back p:hover{
+	color: #fff;
+	cursor: pointer;
+}
+.back .back_btn{
+	height: 24px;
+	position: absolute;
+	bottom: 13px;
+	right: 15px;
+}
+.back .back_btn span{
+	display: block;
+    width: 50px;
+    height: 24px;
+    background-color: #299dda;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.back .back_btn .back_btn_yes{
+	float: left;
+	margin-left: 0;
+}
+.back .back_btn .back_btn_no{
+	float: right;
+    background-color: #F6F6F6;
+    color: #333;
+    border: 1px solid #C2C1C1;
+}
+
+.infox{
+    width: 800px;
+    height: 230px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 145px;
+    left: 90px;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.infox .inf_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.infox .inf_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.infox .inf_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.infox .inf_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.infox .inf_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.infox h3{
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.infox .inf_scroll table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.infox .inf_scroll table thead{
+    /*background-color: #1487c6;*/
+}
+.infox .inf_scroll table thead th{
+    width: 14.1%;
+    height: 25px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+}
+.infox .inf_scroll table .ta_left{
+    width: 1%;
+    background-color: #1487c6;
+}
+.infox .inf_scroll table tbody tr td{
+    width: 14.1%;
+    height: 22px;
+    text-align: left;
+}
+.infox .inf_scroll table tbody tr td input{
+    display: block;
+    width: 110px;
+    border: 0;
+    height: 22px;
+    /*cursor: pointer;*/
+}
+
+.infox .inf_btn{
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    margin-right: -106px;
+    overflow: hidden;
+}
+.infox .inf_btn span{
+    width: 70px;
+    height: 30px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 45px;
+}
+.infox .inf_btn .inf_yes{
+    float: left;
+}
+.infox .inf_btn .inf_no{
+    float: right;
+}
+.rubric {
+    width: 415px;
+    height: 282px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -205px;
+    display: none;
+    z-index: 20;
+}
+.rubric .rub_btn {
+    width: 240px;
+    height: 35px;
+    position: absolute;
+    bottom: 24px;
+    right: 50%;
+    margin-right: -124px;
+    overflow: hidden;
+}
+.rubric .rub_btn span {
+    width: 100px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.rubric .rub_btn span.rub_btn_ok {
+    float: left;
+}
+.rubric .rub_btn span.rub_btn_no {
+    float: right;
+}
+.rubric .rub_close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.rubric .rub_close img {
+    margin: 0 0 0 -16px;
+}
+
+.details {
+    width: 527px;
+    height: 524px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -262px;
+    margin-left: -260px;
+    background-color: #fff;
+    z-index: 21;
+    display: none;
+}
+.details .det_close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.details .det_close img {
+    margin: 0 0 0 -16px;
+}
+.details span {
+    width: 100px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+
+.Category{
+    position: absolute;
+    top: 362px;
+    right: 120px;
+    background-color: #fff;
+    z-index: 10;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #5e8fc7;
+    display: none;
+}
+.Category p{
+    line-height: 20px;
+    cursor: pointer;
+}
+.Category p:hover{
+    background-color: #5e8fc7;
+}
+
+.information{
+    width: 445px;
+    height: 470px;
+    border: 2px solid #5e8fc7;
+    position: absolute;
+    top: 50px;
+    left: 260px;
+    background-color: #fff;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.information .infor_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.information .infor_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.information .infor_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.information .infor_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.information .infor_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.information .infor_h3_1{
+    margin: 5px 0 0 20px;
+}
+
+
+.invoice_red {
+    position: relative;
+}
+
+.invoice_product_main input {
+    border: 0px;
+    width: 100%;
+}
+
+.invoice_red_radio {
+    
+}
+
+.invoice_red_radio input {
+    position: absolute;
+}
+
+.invoice_red_deductible {
+    margin-left: 44px;
+    margin-top: 6px\0;
+}
+
+.invoice_red_notdeductible {
+    margin-left: 72px;
+    margin-bottom: 5px\0;
+}
+
+.invoice_red_sellerapp {
+    margin-left: 28px;
+    margin-bottom: 5px\0;
+}
+
+.invoice_red_input {
+    position: absolute;
+    top: 287px;
+    left: 120px;
+}
+
+.invoice_red_input input {
+    border-top: 2px solid #86858A;
+    border-left: 2px solid #86858A;
+    border-right: 1px solid #E6E6E8;
+    border-bottom: 1px solid #E6E6E8;
+    width: 80px;
+}
+
+.invoice_red_submit {
+    display: block;
+    width: 85px;
+    height: 26px;
+    position: absolute;
+}
+
+.invoice_red_submit img {
+    width: 100%;
+    height: 100%;
+}
+
+.invoice_red_back {
+    position: absolute;
+    top: 1px;
+    left: 8px;
+}
+
+.invoice_red_back a {
+    display: block;
+    width: 33px;
+    height: 33px;
+    float: left;
+    position: absolute;
+}
+
+.invoice_red_back a:hover {
+    border-top: 2px solid #aaa7ae;
+    border-left: 2px solid #aaa7ae;
+    border-bottom: 1px solid #fafcf9;
+    border-right: 1px solid #fafcf9;
+}
+
+.invoice_red_back img {
+    width: 100%;
+    height: 100%;
+}
+
+.phoneandcontent {
+    position: absolute;
+    left: 535px;
+    top: 404px;
+}
+
+.invoice_red_radio_two {
+    position: absolute;
+    top: 5px;
+    left: 31px;
+}
+
+.invoice_red_radio_two dt {
+    line-height: 22px;
+}
+
+.invoice_red_radio_two input {
+    width: auto;
+}
+
+.invoice_red_radio_two .invoice_red_deductible {
+    margin-left: 44px;
+    margin-top: 6px\0;
+}
+
+.invoice_red_radio_two .invoice_red_notdeductible {
+    margin-left: 72px;
+    margin-bottom: 5px\0;
+}
+
+.invoice_red_radio_two .invoice_red_sellerapp {
+    margin-left: 28px;
+    margin-bottom: 5px\0;
+}
+
+.information .infor_sele{
+    margin: 5px 0 0 20px;
+}
+.information .infor_sele table tr td{
+    padding: 5px 0 5px 0;
+}
+
+.information .infor_btn{
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 50%;
+    margin-right: -140px;
+    overflow: hidden;
+}
+.information .infor_btn span{
+    width: 65px;
+    height: 30px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 15px;
+    float: left;
+}
+.information .infor_btn .infor_next{
+
+}
+.information .infor_btn .infor_ok{
+     background-color: #939191;
+     cursor: default;
+}
+.messagex{
+    width: 370px;
+    height: 165px;
+    position: absolute;
+    top: 110px;
+    left: 37px;
+    background-color: #fff;
+    z-index: 10;
+    display: none;
+}
+.messagex p{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+}
+.messagex p:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.messagex span{
+    display: block;
+    width: 56px;
+    height: 26px;
+    background-color: #299dda;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.invalid{
+    width: 660px;
+    height: 440px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 60px;
+    left: 175px;
+    z-index: 10;
+    display: none;
+}
+.invalid .inv_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.invalid .inv_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.invalid .inv_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.invalid .inv_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.invalid .inv_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.invalid .inv_pic{
+    height: 25px;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+}
+.invalid .inv_pic ul li{
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.invalid .inv_pic ul li a{
+    display: block;
+    height: 17px;
+}
+.invalid .inv_pic ul li a:hover{
+    border-left: 1px solid #A1A1A1;
+    border-top: 1px solid #A1A1A1;    
+}
+.invalid .inv_pic ul li .inv_li_border:hover{
+    border: none;
+    cursor: default;
+}
+
+.reports{
+    height: 355px;
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    right: 0;
+}
+.reports .scr_cont table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.reports .scr_cont table thead{
+    background-color: #1487c6;
+    color: #fff;
+}
+.reports .scr_cont table .ta_left{
+    width: 1%;
+    background-color: #1487c6;
+}
+.reports .scr_cont table thead th{
+    width: 9.9%;
+    height: 25px;
+    text-align: left;
+    font-weight: 400;
+}
+.reports .scr_cont table tbody tr td{
+    width: 9.9%;
+    height: 20px;
+    text-align: left;
+}
+.reports .scr_cont table tbody tr:hover{
+    background-color: #7d95b9;
+    color: #fff;
+}
+.reports .scr_cont table tbody tr.selected{
+    background-color: #7d95b9;
+    color: #fff;
+}
+
+.detailedx{
+    width: 620px;
+    height: 442px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 10;
+    display: none;
+}
+.detailedx .detai_close{    
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.detailedx .detai_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.detailedx a.detai_no{
+    display: block;
+    width: 85px;
+    height: 23px;
+    position: absolute;
+    bottom: 28px;
+    right: 26px;
+    cursor: pointer;
+}
+
+.count{
+    width: 242px;
+    height: 165px;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    z-index: 10;
+    display: none;
+}
+.count p{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.count p:hover{
+    color: #fff;
+}
+.count .count_btn{
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    bottom: 1px;
+    right: 50px;
+}
+.count .count_btn input{
+    display: block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #4BA9E8;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+.count .count_btn .count_btn_ok{
+    float: left;
+}
+.count .count_btn .count_btn_no{
+    float: right;
+    background-color: #F9F9F9;
+    color: #333;
+    border: 1px solid #C0C0C0;
+}
+.sure{
+    width: 370px;
+    height: 165px;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 132px;
+    z-index: 20;
+    display: none;
+}
+.sure p{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.sure p:hover{
+    color: #fff;
+}
+.sure button{
+    display: block;
+    width: 56px;
+    height: 26px;
+    background-color: #299dda;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;  
+    border: 0;
+}
+.ticket{
+    width: 770px;
+    height: 590px;
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    left: 100px;
+    z-index: 20;
+    border: 3px solid #a6bddc;
+    display: none;
+}
+
+.ticket .tick_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.ticket .tick_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.numberx{
+    width: 470px;
+    height: 20px;
+    position: absolute;
+    top: 80px;
+    left: 170px;
+}
+.numberx .num_p1{
+    float: left;
+}
+.numberx .num_p2{
+    float: right;
+}
+.datex{
+    position: absolute;
+    top: 116px;
+    right: 28px;
+}
+.remarks{
+    width: 240px;
+    height: 70px;
+    position: absolute;
+    bottom: 53px;
+    right: 72px;
+}
+.ticket .tick_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.ticket .tick_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.ticket .tick_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.receipt{
+    width: 770px;
+    height:560px;
+    overflow: hidden;
+    position: relative;
+}
+.receipt .rece_city{
+    position: absolute;
+    top: 66px;
+    left: 293px;
+    font-size: 20px;
+    font-family: 楷体;
+}
+
+.receipt .passwordx{
+    width: 240px;
+    height: 70px;
+    position: absolute;
+    top: 145px;
+    right: 72px;
+}
+.tablex{
+    width: 630px;
+    height: 166px;
+    /* background-color: #fff; */
+    position: absolute;
+    top: 215px;
+    left: 70px;
+    z-index: 10;
+}
+.tablex table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.tablex table thead{
+    background-color: #1487c6;
+    color: #fff;
+}
+.tablex table .tab_left{
+    width: 1%;
+    background-color: #1487c6;
+}
+.tablex table thead th{
+    width: 12.3%;
+    height: 24px;
+    text-align: left;
+    font-weight: 400;
+}
+.tablex table tbody tr td{
+    width: 12.3%;
+    height: 22px;
+    text-align: left;
+}
+.tablex table tbody tr td input{
+    width: 100%;
+    border: none;
+}
+.receipt .rece_title{
+    height: 68px;
+    line-height: 17px;
+    position: absolute;
+    top: 145px;
+    left: 168px;
+}
+.total{
+    width: 460px;
+    height: 40px;
+    position: absolute;
+    bottom: 132px;
+    right: 70px;
+}
+.total p{
+    height: 16px;
+}
+.total .tota_number1{
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+.total .tota_number2{
+    position: absolute;
+    top: 0;
+    right: 50px; 
+}
+.total .tota_number3{
+    position: absolute;
+    top: 22px;
+    left: 0;
+}
+.total .tota_number4{
+    position: absolute;
+    top: 22px;
+    right: 100px;
+}
+
+
+
+
+.sale{
+    width: 280px;
+    height: 70px;
+    position: absolute;
+    bottom: 55px;
+    left: 168px;
+}
+.sale p{
+    line-height: 18px;
+}
+.receipt p.votex{
+    position: absolute;
+    bottom: 24px;
+    right: 312px;
+}
+.tick_jiage{
+    display: block;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 4px;
+    right: 150px;
+    cursor: pointer;
+}
+.tick_jiage:hover{
+    border-left: 2px solid #A1A1A1;
+    border-top: 2px solid #A1A1A1;
+}
+.tick_out{
+    display: block;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    cursor: pointer;
+}
+.tick_out:hover{
+    border-left: 2px solid #A1A1A1;
+    border-top: 2px solid #A1A1A1;
+}
+
+.query{
+    width: 490px;
+    height: 260px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 110px;
+    left: 230px;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+
+.query .query_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.query .query_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.query .query_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.query .query_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.query .query_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.query .query_box{
+    width: 460px;
+    height: 140px;
+    border: 1px solid #C5D5EB;
+    margin: 25px auto;
+    border-radius: 5px;
+}
+.query .query_box h3{
+    position: absolute;
+    top: 44px;
+    left: 32px;
+    font-size: 16px;
+    background-color: #fff;
+}
+.choice{
+    position: absolute;
+    top: 100px;
+    left: 38px;
+}
+
+.choice dl dt{
+    float: left;
+    margin-right: 40px;
+}
+.choice dl dt h3{
+    font-weight: 400;
+    font-size: 18px;
+}
+.choice dl dt select{
+    width: 110px;
+    height: 22px;
+    font-size: 18px;
+    margin-left: -28px;
+}
+
+.choice .choi_btn{
+    width: 240px;
+    height: 35px;
+    position: absolute;
+    bottom: -122px;
+    right: 60px;
+    overflow: hidden;
+}
+.choice .choi_btn span{
+    width: 100px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.choice .choi_btn .choi_yes{
+    float: left;
+}
+.choice .choi_btn .choi_no{
+    float: right;
+}
+.optionsx{
+    width: 960px;
+    height: 483px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.optionsx .optio_img{
+    height: 17px;
+    position: absolute;
+    top: 36px;
+    right: 29px;
+}
+.optionsx .optio_img a{
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+.optionsx .optio_img .option_see{
+    position: absolute;
+    top: 2px;
+    right: 293px;
+}
+.optionsx .optio_img .option_out{
+    position: absolute;
+    top: 0;
+    right: 6px;
+}
+.optionsx .optio_img a:hover{
+    padding: 3px 0 3px 3px;
+    border-left: 2px solid #A1A1A1;
+    border-top: 2px solid #A1A1A1; 
+    margin: -3px 0 -3px -3px; 
+}
+
+.watchx{
+    height: 368px;
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    right: 0;
+}
+.watchx .watchx_scroll .watchx_cont table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.watchx .watchx_scroll .watchx_cont table thead{
+    background-color: #1487c6;
+    color: #fff;
+}
+.watchx .watchx_scroll .watchx_cont table .wat_left{
+    width: 1%;
+    background-color: #1487c6;
+}
+.watchx .watchx_scroll .watchx_cont table thead th{
+    width: 7%;
+    height: 25px;
+    text-align: left;
+    font-weight: 400;
+}
+.watchx .watchx_scroll .watchx_cont table tbody tr td{
+    width: 7%;
+    height: 20px;
+    text-align: left;
+}
+.watchx .watchx_scroll .watchx_cont table tbody tr:hover{
+    background-color: #7d95b9;
+    color: #fff;  
+}
+.optionsx .optio_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.optionsx .optio_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.fill{
+    position: absolute;
+    top: 266px;
+    right: 405px;
+    background-color: #fff;
+    z-index: 10;
+    padding: 3px 6px 3px 6px;
+    border: 1px solid #5e8fc7;
+    display: none;
+}
+.fill p{
+    line-height: 20px;
+    cursor: pointer;
+}
+.fill p:hover{
+   background-color: #5e8fc7; 
+}
+
+.ordinary{
+    width: 371px;
+    height: 165px;
+    background-color: #fff;
+    position: absolute;
+    top: 170px;
+    left: 276px;
+    z-index: 10;
+    display: none;
+}
+.ordinary p{
+    float: right;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.ordinary p:hover{
+    color: #fff;
+}
+.ordinary span{
+    display: block;
+    width: 45px;
+    height: 24px;
+    background-color: #289ad8;
+    position: absolute;
+    bottom: 11px;
+    right: 12px;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.flour{
+    width: 426px;
+    height: 286px;
+    background-color: #fff;
+    position: absolute;
+    top: 90px;
+    left: 240px;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.flour .flour_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.flour .flour_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.flour .flour_btn{
+    height: 30px;
+    position: absolute;
+    bottom: 8px;
+    right: 123px;
+    overflow: hidden;
+}
+.flour .flour_btn span{
+    width: 70px;
+    height: 30px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.flour .flour_btn .flour_yes{
+    float: left;
+}
+.flour .flour_btn .flour_no{
+    float: right;
+}
+.flour .figures{
+    width: 220px;
+    height: 70px;
+    position: absolute;
+    bottom: 64px;
+    left: 180px;
+    overflow: hidden;
+}
+.flour .figures p{
+    font-size: 16px;
+    line-height: 25px;
+    color: #d804d3;
+}
+
+.Issue{
+    width: 770px;
+    height: 590px;
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    left: 100px;
+    z-index: 20;
+    border: 3px solid #a6bddc;
+    display: none;}
+.Issue .Issue_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.Issue .Issue_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.Issue .Issue_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.Issue .Issue_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.Issue .Issue_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.particulars{
+    width: 770px;
+    height: 560px;
+    overflow: hidden;
+    position: relative;
+}
+.particulars .part_title{
+    position: absolute;
+    top: 64px;
+    left: 271px;
+    font-size: 18px;
+    /*font-family: "宋体"*/
+}
+.particulars .part_title input{
+	display: block;
+	border: none;
+	width: 60px;
+	font-weight: bold;
+	font-size: 19px;
+	font-family: "楷体";
+	text-align:right;
+}
+
+.particulars .part_tit{
+    /* width: 478px; */
+    height: 25px;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+}
+ .particulars .part_tit a.part_tit_a9{
+	position: absolute;
+	top: 0;
+	left: -216px;
+}  
+
+.particulars .part_tit a.part_tit_a9:hover{
+	position: absolute;
+	top: 0;
+	left: -231px;
+	border-top:2px solid #A1A1A1;
+	border-left:2px solid #A1A1A1;
+}
+
+.particulars .part_tit a{
+    display: block;
+    width: 57px;
+    height: 25px;
+    float: left;
+    cursor: pointer;
+}
+
+.particulars .part_tit a:hover{
+    border-left: 2px solid #A1A1A1;
+    border-top: 2px solid #A1A1A1;
+}
+/* .particulars .part_tit .part_tit_a3{
+    margin-left: 54px;
+}
+.particulars .part_tit .part_tit_a6{
+    margin-left: 12px;
+} */
+.particulars .part_tit .part_tit_a7{
+    margin-left: 18px;
+}
+.particulars .bianhao{
+    width: 470px;
+    height: 20px;
+    position: absolute;
+    top: 80px;
+    left: 170px;
+}
+.particulars .bianhao .bianhao_p1{
+    float: left;
+}
+.particulars .bianhao .bianhao_p2{
+    float: right;
+}
+.particulars .part_date{
+    position: absolute;
+	top: 114px;
+	right: 33px;
+}
+
+.particulars .part_date input{
+	display:block;
+	border:none;
+
+}
+.particulars .part_buyer{
+    height: 68px;
+    line-height: 17px;
+    position: absolute;
+    top: 145px;
+    left: 175px;
+}
+.particulars .part_buyer input{
+    display: block;
+    width: 226px;
+    line-height: 18px;
+    border: 0;
+}
+.particulars .grid{
+    width: 15px;
+    height: 72px;
+    position: absolute;
+    top: 141px;
+    left: 405px
+}
+.particulars .grid a{
+    width: 15px;
+    height: 13px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+.particulars .part_password{
+    width: 240px;
+    height: 70px;
+    position: absolute;
+    top: 145px;
+    right: 72px;
+}
+.listing{
+    width: 637px;
+    height: 164px;
+    background-color: #fff;
+    position: absolute;
+    top: 218px;
+    left: 67px;
+    overflow: hidden;
+}
+.listing .list_scroll table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.listing .list_scroll table thead th{
+    height: 22px;
+    text-align: center;
+    font-weight: 400;
+}
+.listing .list_scroll table tbody tr td{
+    height: 20px;
+    text-align: left;
+}
+.listing .list_scroll table tbody tr td input{
+    width: 64px;
+    font-size: 12px;
+    line-height: 20px;
+    border: 0;
+    display: block;
+}
+.listing .list_scroll table .list_tab_tit{
+    width: 150px;
+}
+
+.price{
+    width: 460px;
+    height: 40px;
+    position: absolute;
+    bottom: 132px;
+    right: 70px;
+    overflow: hidden;
+}
+.price input{
+    display: block;
+    height: 16px;
+    border: 0;
+    font-size: 12px;
+}
+.price .price_number1{
+    position: absolute;
+    top: 0;
+    left: 58px;
+}
+.price .price_number2{
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+.price .price_number3{
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 260px;
+}
+.price .price_number4{
+    position: absolute;
+    top: 22px;
+    right: -15px;
+}
+
+.papers{
+    width: 280px;
+    height: 80px;
+    position: absolute;
+    bottom: 45px;
+    left: 168px;
+}
+.papers input{
+    display: block;
+    width: 260px;
+    line-height: 19px;
+    border: 0;
+}
+.notice{
+    width: 240px;
+    height: 70px;
+    position: absolute;
+    bottom: 53px;
+    right: 72px;
+}
+.notice textarea{
+    font-size: 12px;
+    display: block;
+}
+.namex{
+    position: absolute;
+    bottom: 22px;
+    right: 234px;
+    width: 100px;
+    font-size: 12px;
+    border: 0;
+}
+
+.customer{
+    width: 790px;
+    height: 430px;
+    background-color: #fff;
+    position: absolute;
+    top: 35px;
+    left: -11px;
+    z-index: 10;
+    display: none;
+}
+.customer .cus_close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.customer .cus_close img {
+    margin: 0 0 0 -16px;
+}
+
+.customer .reports {
+    width: 550px;
+    height: 355px;
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+}
+.customer .reports .scr_cont table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.customer .reports .scr_cont table thead {
+    background-color: #1487c6;
+    color: #fff;
+}
+.customer .reports .scr_cont table .ta_left {
+    width: 1%;
+    background-color: #1487c6;
+}
+.customer .reports .scr_cont table thead th {
+    width: 12.3%;
+    height: 22px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.customer .reports .scr_cont table tbody tr td {
+    width: 12.3%;
+    height: 20px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.customer .reports .scr_cont table tbody tr.selected{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.customer .reports .scr_cont table tbody tr.selected input{
+    background-color: #7d95b9;
+    cursor: pointer;
+	color:#fff;
+}
+.customer .reports .scr_cont table tbody tr:hover input{
+    background-color: #7d95b9;
+    cursor: pointer;
+	color:#fff;
+}
+/*
+.customer .reports .scr_cont table tbody tr:hover{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+*/
+.customer .reports .scr_cont table tbody tr td input{
+    display:block;
+	background-color:#fff;
+	border:none;
+	outline:none;
+}
+
+/*商品编码*/
+.commodity{
+    width: 790px;
+    height: 430px;
+    background-color: #fff;
+    position: absolute;
+    top: 66px;
+    left: -8px;
+    z-index: 11;
+    overflow: hidden;
+    display: none;
+}
+.commodity .comm_close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.commodity .comm_close img {
+    margin: 0 0 0 -16px;
+}
+
+.forxx{
+    width: 550px;
+    height: 355px;
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+}
+.forxx .forxx_scroll .forxx_con table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.forxx .forxx_scroll .forxx_con table thead{
+    background-color: #1487c6;
+    color: #fff;
+}
+.forxx .forxx_scroll .forxx_con table .t_left{
+    width: 1%;
+    background-color: #1487c6;
+}
+.forxx .forxx_scroll .forxx_con table thead th{
+    width: 7%;
+    height: 24px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+.forxx .forxx_scroll .forxx_con table tbody tr td{
+    width: 7%;
+    height: 22px;
+    text-align: left;
+}
+.forxx .forxx_scroll .forxx_con table tbody tr.selected{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.forxx .forxx_scroll .forxx_con table tbody tr:hover{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.listing .list_scroll table tbody tr.selected{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.listing .list_scroll table tbody tr:hover{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.listing .list_scroll table tbody tr:hover input{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.listing .list_scroll table tbody tr.selected input{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.listing .list_scroll table tbody tr.discount{
+    background-color: #bfd6f9;
+    cursor: pointer;
+}
+.listing .list_scroll table tbody tr.discount input{
+    background-color: #bfd6f9;
+    cursor: pointer;
+}
+.biaoge .biaoge_scroll table tbody tr.selected{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.biaoge .biaoge_scroll table tbody tr:hover{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.biaoge .biaoge_scroll table tbody tr:hover input{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.biaoge .biaoge_scroll table tbody tr.selected input{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.biaoge .biaoge_scroll table tbody tr.discount{
+    background-color: #bfd6f9;
+    cursor: pointer;
+}
+.biaoge .biaoge_scroll table tbody tr.discount input{
+    background-color: #bfd6f9;
+    cursor: pointer;
+}
+/*商品编码 end*/
+.typed{
+    width: 371px;
+    height: 165px;
+    background-color: #fff;
+    z-index: 20;
+    position: absolute;
+    top: 180px;
+    left: 190px;
+    overflow: hidden;
+    display: none;
+}
+.typed p{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.typed p:hover{
+    color: #fff;
+}
+.typed span{
+    display: block;
+    width: 56px;
+    height: 26px;
+    background-color: #299dda;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.orders{
+    width: 820px;
+    height: 518px;
+    background-color: #fff;
+    z-index: 10;
+    overflow: hidden;
+    position: absolute;
+    top: 35px;
+    left: -18px;
+    display: none;
+}
+.orders .orders_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.orders .orders_close img{
+    margin: 0 0 0 -16px;
+}
+
+.orders .orders_tit{
+    width: 451px;
+    height: 30px;
+    position: absolute;
+    top: 36px;
+    right: 19px;
+}
+.orders .orders_tit a{
+    display: block;
+    width: 62px;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+}
+.orders .orders_tit a:hover{
+    border-left: 2px solid #A1A1A1;
+    border-top: 2px solid #A1A1A1;
+}
+.orders .orders_tit .orders_tit_a6{
+    margin-left: 72px;
+}
+.orders .orders_ref{
+    position: absolute;
+    top: 90px;
+    left: 25px;
+}
+.orders .orders_ref p{
+    float: left;
+    margin-right: 50px;
+    color: blue;
+    font-size: 15px;
+}
+
+.biaoge{
+    width: 806px;
+    height: 390px;
+    background-color: #fff;
+    position: absolute;
+    top: 120px;
+    left: 6px;
+    overflow: hidden;
+}
+.biaoge .biaoge_scroll table{
+    width: 100%;
+    border-collapse: collapse;
+    /*border: 1px solid #dfdfdf;*/
+}
+.biaoge .biaoge_scroll table .biaoge_tab_tit{
+    width: 150px;
+}
+.biaoge .biaoge_scroll table thead th{
+    height: 22px;
+    text-align: center;
+    font-weight: 400;
+}
+.biaoge .biaoge_scroll table tbody tr td{
+    height: 20px;
+    text-align: left;
+}
+.biaoge .biaoge_scroll table tbody tr td input{
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    border: 0;
+    display: block;
+}
+
+.redcolor{
+    z-index: 10;
+    position: absolute;
+    top: 58px;
+    left: 200px;
+    z-index: 10;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #5e8fc7;
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+}
+.redcolor p{
+    line-height: 20px;
+    cursor: pointer;   
+}
+.redcolor p:hover{
+     background-color: #5e8fc7;
+}
+
+.equivalent{
+    width: 464px;
+    height: 326px;
+    background-color: #fff;
+    position: absolute;
+    top: 85px;
+    left: 140px;
+    overflow: hidden;
+    z-index: 10;
+    display: none;
+}
+.equivalent .equi_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.equivalent .equi_close img{
+    margin: 0 0 0 -16px;
+}
+
+.equivalent .equi_btn{
+    height: 30px;
+    position: absolute;
+    bottom: 11px;
+    right: 140px;
+    overflow: hidden;
+}
+.equivalent .equi_btn span{
+    width: 70px;
+    height: 30px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.equivalent .equi_btn .equi_yes{
+    float: left;
+}
+.equivalent .equi_btn .equi_no{
+    float: right;
+}
+.equivalent table{
+    width: 340px;
+    height: 80px;
+    position: absolute;
+    bottom: 78px;
+    left: 52px;
+}
+.errorx{
+    width: 372px;
+    height: 165px;
+    background-color: #fff;
+    position: absolute;
+    top: 165px;
+    left: 186px;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.errorx p{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.errorx p:hover{
+    color: #fff;
+}
+.errorx span{
+    display: block;
+    width: 56px;
+    height: 26px;
+    background-color: #299dda;
+    position: absolute;
+    bottom: 11px;
+    right: 15px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.gmfp{
+	width: 351px;
+	height: 238px;
+	background-color: #fff;
+	position: absolute;
+	top:165px;
+	left:335px;
+	z-index: 10;
+	overflow: hidden;
+	 display: none; 
+	background:url("/assets/fp/gmfp.png");
+}
+.cloxx{
+    width: 20px;
+    height: 20px;
+   /*  border: 1px solid red; */
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor:pointer;
+}
+
+.readinfox{
+    width: 800px;
+    height: 230px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 145px;
+    left: 90px;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.readinfox .inf_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.readinfox .inf_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.readinfox .inf_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.readinfox .inf_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.readinfox .inf_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.readinfox h3{
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.readinfox .read_scroll table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.readinfox .read_scroll table thead{
+    /*background-color: #1487c6;*/
+}
+.readinfox .read_scroll table thead th{
+    width: 14.1%;
+    height: 25px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+}
+.readinfox .read_scroll table .ta_left{
+    width: 1%;
+    background-color: #1487c6;
+}
+.readinfox .read_scroll table tbody tr td{
+    width: 14.1%;
+    height: 22px;
+    text-align: left;
+}
+.readinfox .read_scroll table tbody tr td input{
+    display: block;
+    width: 110px;
+    border: 0;
+    height: 22px;
+    /*cursor: pointer;*/
+}
+
+.readinfox .inf_btn{
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    margin-right: -30px;
+    overflow: hidden;
+}
+.readinfox .inf_btn span{
+    width: 70px;
+    height: 30px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 45px;
+}
+.readinfox .inf_btn .inf_yes{
+    float: left;
+}
+.readinfox .inf_btn .inf_no{
+    float: right;
+}
+
+.readmsg{
+	width: 370px;
+	height: 165px;
+	background-color: #fff;
+	position: absolute;
+	top:165px;
+	left:335px;
+	z-index: 100;
+	overflow: hidden;
+	display: none;
+}
+
+
+.readmsg p{
+	float: right;
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.readmsg p:hover{
+	color: #fff;
+}
+.readmsg input{
+    display: block;
+    width: 45px;
+    height: 24px;
+    background-color: #289ad8;
+    position: absolute;
+    bottom: 11px;
+    right: 12px;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 0;
+}
+.readmsg span{
+    display: block;
+    position: absolute;
+    bottom: 11px;
+    top: 55px;
+    margin-left: 80px;
+}
+
+.drfp {
+    width: 415px;
+    height: 282px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -205px;
+    display: none;
+    z-index: 20;
+}
+.drfp .rub_btn {
+    width: 240px;
+    height: 35px;
+    position: absolute;
+    bottom: 24px;
+    right: 50%;
+    margin-right: -124px;
+    overflow: hidden;
+}
+.drfp .rub_btn span {
+    width: 100px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.drfp .rub_btn span.rub_btn_ok {
+    float: left;
+}
+.drfp .rub_btn span.rub_btn_no {
+    float: right;
+}
+.drfp .rub_close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.drfp .rub_close img {
+    margin: 0 0 0 -16px;
+}
+/** 打印发票预览样式 */
+.preview{
+    width: 709px;
+    height: 588px;
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    left: 100px;
+    z-index: 20;
+    border: 3px solid #a6bddc;
+    display: none;
+}
+
+.preview .preview_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.preview .preview_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.preview .preview_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.preview .preview_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.preview .preview_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.preview input{
+	background-color:transparent;
+}
+/* 添加折扣行弹窗start */
+.zhekou{
+	width: 400px;
+	height: 300px;
+	border: 1px solid #5e8fc7;
+	border-top: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -200px;
+	font-size: 14px;
+	overflow: hidden;
+	background-color: #fff;
+	z-index: 11;
+	display: none;
+}
+.zhekou .zhekou_tit{
+	width: 100%;
+	height: 30px;
+	background-color:#ABC4DF;
+	overflow: hidden;
+}
+.zhekou .zhekou_tit .zhekou_logo{
+	float: left;
+	margin: 2px 0 0 0;
+}
+.zhekou .zhekou_tit h4{
+	line-height: 30px;
+	float: left;
+	font-size: 14px;
+}
+.zhekou .zhekou_tit .zhekou_close{
+	display: block;
+	float: right;
+	width: 16px;
+	height: 16px;
+	margin: 8px 6px 0 0;
+	cursor: pointer;
+	overflow: hidden;
+}
+.zhekou .zhekou_tit .zhekou_close img{
+    margin: 0px 0 0 -16px;
+}
+
+.zhekou .zhekou_co{
+	width: 90%;
+	height: 200px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.zhekou .zhekou_co dl dt{
+	float: left;
+	width: 25%;
+	height: 22px;
+	line-height: 22px;
+	margin-bottom: 25px;
+	text-align: right;
+}
+.zhekou .zhekou_co dl dd{
+	float: left;
+	width: 70%;
+	height: 22px;
+	margin-bottom: 25px;
+}
+.zhekou .zhekou_co dl dd input{
+	display: block;
+	width: 96%;
+	height: 22px;
+	text-align: right;
+	padding-right: 5px;
+	outline: none;
+}
+
+.zhekou .zhekou_btn{
+	width: 100%; 
+	height: 40px;
+	margin-top: -24px;
+}
+.zhekou .zhekou_btn button{
+    float: right;
+    width: 70px;
+    height: 30px;
+    background-color: #00A3F0;
+    color: #fff;
+    border: 0;
+    outline: none;
+    margin: 5px 18px 0 0;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* 添加折扣行弹窗 end*/
+/* 发票库存查询start */
+.querie{
+	width: 950px;
+    height: 480px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-240px 0 0 -475px; 
+    z-index: 12;
+    font-size: 14px;
+    overflow: hidden;
+    border: 1px solid #9FB5DA;
+    display: none;
+}
+.querie .quer_tit{
+	width: 100%;
+	height: 45px;
+}
+.querie .quer_tit .tit_left{
+	float: left;
+	width: 55%;
+	height: 30px;
+	margin: 6px 0 0 5px;
+	overflow: hidden;
+}
+
+.querie .quer_tit .tit_left dl dt{
+	float: left;
+	line-height: 30px;
+}
+.querie .quer_tit .tit_left dl dd{
+	float: left;
+	line-height: 30px;
+	margin-right: 10px;
+}
+.querie .quer_tit .tit_left dl dd select{
+	border: 0;
+	width: 70px;
+}
+
+.querie .quer_tit .tit_right{
+	float: right;
+	height: 30px;
+	margin: 6px 0 0 5px;
+	overflow: hidden;
+}
+
+.querie .quer_tit .tit_right ul{
+	float: right;
+	height: 22px;
+	margin: 5px 8px 0 0;
+}
+.querie .quer_tit .tit_right ul li{
+	float: right;
+	margin-left: 5px;
+}
+.querie .quer_tit .tit_right ul li a{
+    display: block;
+}
+.querie .quer_tit .tit_right ul li a:hover{
+	padding: 3px 0 3px 3px;
+    border-left: 2px solid #A1A1A1;
+    border-top: 2px solid #A1A1A1; 
+    margin: -3px 0 -3px -3px; 
+}
+.querie .quer_table{
+	width: 100%;
+	height: 435px;
+	overflow-y: scroll;
+}
+.querie .quer_table table{
+	width: 180%;
+	border-collapse: collapse;
+	border: 1px solid green;
+}
+.querie .quer_table table thead th{
+	width: 12.5%;
+	height: 30px;
+	text-align: center;
+	border: 1px solid #dfdfdf;
+	background-color: #1587CA;
+	color: #fff;
+}
+.querie .quer_table table tbody tr td{
+	height: 26px;
+	border: 1px solid #dfdfdf;
+}
+
+.querie .quer_table table tbody tr td input{
+    display: block;
+    width: 95%;
+    border: 0;
+    outline: none;
+    padding-left: 5px;
+}
+/* 发票库存查询end */
+/* 已开发票查询start */
+.xuanzes {
+	width: 983px;
+	height: 480px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 55%;
+	margin: -240px 0 0 -540px;
+	z-index: 12;
+	font-size: 14px;
+	overflow: hidden;
+	border: 1px solid #9FB5DA;
+	display: none;
+}
+
+.xuanzes .xuanz_tit {
+	width: 100%;
+	height: 45px;
+}
+
+.xuanzes .xuanz_tit .xuanz_left {
+	float: left;
+	height: 30px;
+	margin: 6px 0 0 5px;
+	overflow: hidden;
+}
+
+.xuanzes .xuanz_tit .xuanz_left select {
+	border: 0;
+	width: 65px;
+	margin-top: 8px;
+}
+
+.xuanzes .xuanz_tit .xuanz_left input {
+	display: inline-block;
+	width: 80px;
+	height: 20px;
+	outline: none;
+	font-size: 12px;
+}
+
+.xuanzes .xuanz_tit .xuanz_right {
+	float: right;
+	height: 30px;
+	margin: 6px 0 0 5px;
+	overflow: hidden;
+}
+
+.xuanzes .xuanz_tit .xuanz_right ul {
+	float: right;
+	height: 22px;
+	margin: 5px 8px 0 0;
+}
+
+.xuanzes .xuanz_tit .xuanz_right ul li {
+	float: right;
+	margin-left: 5px;
+}
+
+.xuanzes .xuanz_tit .xuanz_right ul li a {
+	display: block;
+}
+
+/* .xuanzes .xuanz_tit .xuanz_right ul li a:hover {
+	padding: 3px 0 3px 3px;
+	border-left: 2px solid #A1A1A1;
+	border-top: 2px solid #A1A1A1;
+	margin: -3px 0 -3px -3px;
+}
+ */
+.xuanzes .xuanz_table {
+	width: 100%;
+	height: 435px;
+	overflow-y: scroll;
+}
+
+.xuanzes .xuanz_table table {
+	width: 340%;
+	border-collapse: collapse;
+	border: 1px solid green;
+}
+
+.xuanzes .xuanz_table table thead th {
+	height: 35px;
+	text-align: center;
+	border: 1px solid #dfdfdf;
+	background-color: #1587CA;
+	color: #fff;
+	font-weight: 400;
+}
+
+.xuanzes .xuanz_table table tbody tr td {
+	height: 26px;
+	border: 1px solid #dfdfdf;
+}
+
+.xuanzes .xuanz_table table tbody tr td input {
+	display: block;
+	width: 95%;
+	border: 0;
+	outline: none;
+	padding-left: 5px;
+}
+
+.Prints {
+	width: 100px;
+	padding: 10px 0 10px 0;
+	border: 1px solid #A1A1A1;
+	position: absolute;
+	top: 35px;
+	right: 18px;
+	background-color: #fff;
+	overflow: hidden;
+	display: none;
+}
+
+.Prints ul li {
+	width: 100%;
+	line-height: 22px;
+}
+
+.Prints ul li a {
+	display: block;
+	text-align: center;
+	color: #000;
+}
+
+.Prints ul li:hover {
+	background-color: #dfdfdf;
+}
+.xuanzes .xuanz_table table tbody tr.selected{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.xuanzes .xuanz_table table tbody tr:hover{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+
+/* 已开发票查询end */
+/* 销售货物或者提供应税劳务清单start */
+.orderslist {
+	width: 960px;
+	height: 556px;
+	position: absolute;
+	top: 43%;
+	left: 50%;
+	margin: -225px 0 0 -480px;
+	border: 1px solid #9FB5DA;
+	font-size: 14px;
+	z-index: 20;
+	overflow: hidden;
+	background-color: #fff;
+	display: none;
+}
+.orderslist .preview_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.orderslist .preview_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.orderslist .preview_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.orderslist .preview_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.orderslist .preview_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.orderslist h2 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.orderslist .orderslist_top {
+	width: 96%;
+	margin: 10px auto;
+	overflow: hidden;
+}
+
+.orderslist .orderslist_top dl {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+.orderslist .orderslist_top dl dt {
+	float: left;
+	line-height: 30px;
+}
+
+.orderslist .orderslist_top dl dd {
+	float: left;
+}
+
+.orderslist .orderslist_top dl dd input {
+	display: block;
+	width: 250px;
+	height: 20px;
+	margin-top: 5px;
+	border: 0;
+	font-size: 14px;
+	padding-left: 5px;
+	outline: none;
+}
+
+.orderslist .orderslist_table {
+	width: 96%;
+	margin: 10px auto;
+}
+
+.orderslist .orderslist_table table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #dfdfdf;
+}
+
+.orderslist .orderslist_table table thead th {
+	border: 1px solid #dfdfdf;
+	height: 28px;
+}
+
+.orderslist .orderslist_table table tbody tr td {
+	border-left: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
+	height: 28px;
+	overflow: hidden;
+}
+
+.orderslist .orderslist_table table tbody tr td input {
+	display: block;
+	width: 95%;
+	text-align: right;
+	padding-right: 5px;
+	border: 0;
+	outline: none;
+}
+/* 销售货物或者提供应税劳务清单end */
+/* 打印预览弹出的打印页面start */
+.printxlist{
+	width: 447px;
+	height: 288px;
+	background-color: #fff;
+	position: absolute;
+	top: 115px;
+	left: 252px;
+	z-index: 30;
+	display: none;
+}
+.printxlist .prin_close{
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.printxlist .prin_close img{
+	margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.printxlist .printxlist_btn{
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 50%;
+    margin-right: -155px;
+    overflow: hidden;
+}
+.printxlist .printxlist_btn span{
+	width: 90px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.printxlist .printxlist_btn .printxlist_yl{
+	float: left;
+}
+.printxlist .printxlist_btn .printxlist_yes{
+	float: left;
+}
+.printxlist .printxlist_btn .printxlist_no{
+	float: left;
+	margin-right: 0;
+}
+.part_area{
+	display: block;
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 94px;
+	left: 363px;
+	z-index: 5;
+	width: 40px;
+	text-align: center;
+	background-color: rgba(255,255,255,.1);
+	color: red;
+	font-weight: bold;
+}
+/* 打印预览弹出的打印页面end */
+
+/* 添加差额弹窗start */
+.balance{
+	width: 400px;
+	height: 208px;
+	border: 1px solid #5e8fc7;
+	border-top: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -200px;
+	font-size: 14px;
+	overflow: hidden;
+	background-color: #fff;
+	z-index: 11;
+	display: none;
+}
+.balance .balance_tit{
+	width: 100%;
+	height: 30px;
+	background-color:#ABC4DF;
+	overflow: hidden;
+}
+.balance .balance_tit .balance_logo{
+	float: left;
+	margin: 2px 0 0 0;
+}
+.balance .balance_tit h4{
+	line-height: 30px;
+	float: left;
+	font-size: 14px;
+}
+.balance .balance_tit .balance_close{
+	display: block;
+	float: right;
+	width: 16px;
+	height: 16px;
+	margin: 8px 6px 0 0;
+	cursor: pointer;
+	overflow: hidden;
+}
+.balance .balance_tit .balance_close img{
+    margin: 0px 0 0 -16px;
+}
+
+.balance .balance_co{
+	width: 90%;
+	height: 25px;
+	margin: 20px auto;
+	overflow: hidden;
+	margin-top: 33px;
+}
+.balance .balance_co dl dt{
+	float: left;
+	width: 25%;
+	height: 22px;
+	line-height: 22px;
+	margin-bottom: 25px;
+	text-align: right;
+}
+.balance .balance_co dl dd{
+	float: left;
+	width: 70%;
+	height: 22px;
+	margin-bottom: 25px;
+}
+.balance .balance_co dl dd input{
+	display: block;
+	width: 96%;
+	height: 22px;
+	text-align: right;
+	padding-right: 5px;
+	outline: none;
+}
+
+.balance .balance_btn{
+	width: 90%; 
+	height: 40px;
+}
+.balance .balance_btn button{
+    float: right;
+    width: 70px;
+    height: 30px;
+    background-color: #00A3F0;
+    color: #fff;
+    border: 0;
+    outline: none;
+    margin: 5px 18px 0 0;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+/* 添加差额弹窗 end*/
+

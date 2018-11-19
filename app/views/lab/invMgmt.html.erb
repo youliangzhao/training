@@ -1,0 +1,4727 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://lab1.ruby.com:8081/course/operate-invoice-001001004.html -->
+<html lang="en" slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="/assets/default.css" rel="stylesheet" id="lhgdialoglink">
+<!--<base href="http://lab1.ruby.com:8081/">--><base href=".">
+
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta http-equiv="proma" content="no-cache">
+<meta http-equiv="cache-control" content="no cache">
+<meta http-equiv="expires" content="0">
+<link rel="stylesheet" type="text/css" href="/assets/SimpleTree.css">
+<link rel="stylesheet" type="text/css" href="/assets/main_page.css">
+<link rel="stylesheet" type="text/css" href="/assets/operate.css">
+<link rel="stylesheet" type="text/css" href="/assets/invoice.css">
+<script type="text/javascript" src="/assets/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="/assets/jquery.validate.js"></script>
+<script type="text/javascript" src="/assets/formutil.js"></script>
+<script type="text/javascript" src="/assets/function.js"></script>
+<script type="text/javascript" src="/assets/WdatePicker.js"></script><link href="/assets/WdatePicker.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/assets/opacity.js"></script>
+<script type="text/javascript" src="/assets/SimpleTree.js"></script>
+<link rel="stylesheet" href="/assets/iblue.css">
+<link rel="stylesheet" type="text/css" href="/assets/Draging.css">
+<script type="text/javascript" src="/assets/lhgdialog.min.js"></script>
+<script type="text/javascript" src="/assets/lhgdialog-notice.js"></script>
+<script type="text/javascript" src="/assets/Tdrag.js"></script>
+<!--浏览器兼容提示框start-->
+<style>
+.opacity{
+	display:none;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: none;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    position: absolute;
+    z-index: 99999999998;
+    opacity: 0.1;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto;
+    background-color: rgb(0, 0, 0);
+}
+#norightbro {
+	display:none;
+	width: 830px;
+	margin-left: -415px;
+    position: absolute;
+    z-index: 99999999999;
+    background-color: #fff;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    border: 2px solid #2E5473;
+}
+#norightbro .mod_tit span {
+    display: block;
+    margin: 3px 0 0 7px;
+}
+
+#norightbro .mod_tit {
+    width: 831px;
+    height: 24px;
+    background-color: #2E5473;
+    color: #fff;
+    overflow: hidden;
+    margin-left: -1px;
+}
+#norightbro .mod_con {
+    width: 80%;
+    margin: 17px auto;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#norightbro .mod_fo {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+#norightbro .mod_con p {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#norightbro .mod_fo .mod_fo_con .mod_confirm {
+    float: right;
+	margin-right:20px;
+}
+#norightbro .mod_fo .mod_fo_con button {
+    display: block;
+    width: 60px;
+    height: 25px;
+    color: #fff;
+    background-color: #2E5473;
+    outline: none;
+    border: 0;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    cursor: pointer;
+}
+</style>
+</head><body><div style="left: 0px; top: 0px; visibility: hidden; position: absolute;" class=""><table class="ui_border"><tbody><tr><td class="ui_lt"></td><td class="ui_t"></td><td class="ui_rt"></td></tr><tr><td class="ui_l"></td><td class="ui_c"><div class="ui_inner"><table class="ui_dialog"><tbody><tr><td colspan="2"><div class="ui_title_bar"><div class="ui_title" unselectable="on" style="cursor: move;"></div><div class="ui_title_buttons"><a class="ui_min" href="javascript:void(0);" title="最小化" style="display: inline-block;"><b class="ui_min_b"></b></a><a class="ui_max" href="javascript:void(0);" title="最大化" style="display: inline-block;"><b class="ui_max_b"></b></a><a class="ui_res" href="javascript:void(0);" title="还原"><b class="ui_res_b"></b><b class="ui_res_t"></b></a><a class="ui_close" href="javascript:void(0);" title="关闭(esc键)" style="display: inline-block;">×</a></div></div></td></tr><tr><td class="ui_icon" style="display: none;"></td><td class="ui_main" style="width: auto; height: auto;"><div class="ui_content" style="padding: 10px;"></div></td></tr><tr><td colspan="2"><div class="ui_buttons" style="display: none;"></div></td></tr></tbody></table></div></td><td class="ui_r"></td></tr><tr><td class="ui_lb"></td><td class="ui_b"></td><td class="ui_rb" style="cursor: se-resize;"></td></tr></tbody></table></div><div class="opacity">
+</div>
+<!-- 用户使用浏览器不正确 start -->
+<div id="norightbro">
+	 <div class="mod_tit">
+	     <span>温馨提示</span>
+	 </div>
+
+	 <div class="mod_con" style="color:red">
+		<p>税务操作实验室系统，仅支持谷歌或火狐浏览器，如果做题过程中出现问题，请换成火狐或者谷歌浏览器！</p>
+	 </div>
+	 <div class="mod_fo">
+	      <div class="mod_fo_con">
+	          <button type="button" class="mod_confirm" id="norightbrosure">确定</button>
+	      </div>
+	 </div>
+</div>
+<script type="text/javascript">
+;$(function(){
+	$("#norightbrosure").bind("click",function(){//浏览器兼容温馨提示确定按钮
+		hideBro();
+	});
+	bro();
+});
+function bro(){ 
+    var broName = ''; 
+	var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");//application/vnd.chromium.remoting-viewer可能为360特有
+    if (isChrome() && is360) { 
+	   broName="360浏览器";
+    }else{
+		 if(window.navigator.userAgent.indexOf('MSIE')!=-1&&window.navigator.appName.indexOf("Microsoft") != -1){ 
+			broName = 'IE';  
+		}  
+		if(window.navigator.userAgent.indexOf('Firefox')!=-1){  
+			broName = 'Firefox';  
+		}  
+		if(window.navigator.userAgent.indexOf('Chrome')!=-1){ 
+			broName = 'Chrome';  
+		}
+	}
+	if(broName!="Chrome" && broName!="Firefox"){
+		$(".opacity").show();
+		$("#norightbro").show();
+	}  
+}   
+function hideBro(){
+	$("#norightbro").hide();
+	$(".opacity").hide();
+}
+ //检测是否是谷歌内核(可排除360及谷歌以外的浏览器)
+ function isChrome(){
+	 var ua = navigator.userAgent.toLowerCase();
+	 return ua.indexOf("chrome") > 1;
+ }
+ //测试mime
+ function _mime(option, value) {
+	 var mimeTypes = navigator.mimeTypes;
+	 for (var mt in mimeTypes) {
+		 if (mimeTypes[mt][option] == value) {
+			 return true;
+		 }
+	 }
+	 return false;
+ }
+ </script><!--浏览器兼容提示框end-->
+<!--挤掉账号的websocket start-->
+<script type="text/javascript">
+var userName = "2850653086";
+var websocket=null;
+$(function () {
+    if (userName != null && userName != '') {
+        webSocketMsg();
+    }
+});
+//获取WebSocket推送的数据
+function webSocketMsg() {
+	// 判断当前浏览器是否支持WebSocket
+	if ('WebSocket' in window) {
+		websocket = new WebSocket("ws://" + window.location.host + "/hostWebSocket?"+userName );
+	} else {
+		alert('当前浏览器 Not support websocket');
+	}
+	// 连接发生错误的回调方法
+	websocket.onerror = function() {
+		console.log("WebSocket连接发生错误");
+	};
+	// 连接成功建立的回调方法
+	websocket.onopen = function() {
+		console.log("WebSocket连接成功");
+	}
+	// 接收到消息的回调方法
+	websocket.onmessage = function(event) {
+		 var objTemp = JSON.parse(event.data);
+	     var result = objTemp.success;
+	     var msg = objTemp.code;
+	     var content = objTemp.msg;
+	     if (result && "KickOut" == msg) {
+	    	 alert(content);
+	    	 top.location = "http://" + window.location.host + "/logout.html";
+	     }
+//	     if (result && "online" == msg) {
+//	    	 if($("#online")){
+//	    		 $("#online").text("已学习课程人数："+content+"人");
+//	    	 }
+//	     }
+	}
+	// 连接关闭的回调方法
+	websocket.onclose = function() {
+		console.log("WebSocket连接关闭");
+	}
+	// 监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。
+	window.onbeforeunload = function() {
+		closeWebSocket();
+	}
+}
+// 关闭WebSocket连接
+function closeWebSocket() {
+	websocket.close();
+}
+// 发送消息
+function send() {
+	var message = document.getElementById('text').value;
+	websocket.send(message);
+}</script>
+<!--挤掉账号的websocket end--><script type="text/javascript" src="/assets/bgbill.js"></script>
+<script type="text/javascript" src="/assets/pagination.js"></script>
+<script>
+$(function(){
+	//页面跳转
+	$('div.main_power_btn').find('dt').click(function(){
+		if($(this).attr('id') != "invoice"){
+			location='http://lab1.ruby.com:8081/course/operate-'+$(this).attr('id')+'-001001004.html';
+		}
+	});
+	//退出
+	$('.operate_close').click(function() {
+		//获取正在进行中的li
+		var li_go = $('.whole .whole_right .whole_r_go').parent().parent();
+		if(li_go.attr("id") == '001001001005' || li_go.attr("id") == '001001002005' || 
+				li_go.attr("id") == '001001003009' || li_go.attr("id") == '001001004013') {
+			location = li_go.find('.whole_left a').attr("href");
+		} else {
+			location='http://lab1.ruby.com:8081/course/operate-fwsk_login-001001004.html';
+		}
+	});
+	
+	$(".zclassify").mouseleave(function(){
+		$(".zclassify").hide();
+	});
+	var khTreeFlag = true;
+	$(".st_tree").SimpleTree({
+	
+		/* 可无视代码部分*/
+		click:function(a){
+			
+//			if(!$(a).attr("hasChild")) {
+//				alert($(a).attr("ref"));
+//			}
+			if($(a).attr('ref') == "khbm") {
+				loadCustomers(null,$('#menuTrainingCode').val());
+//				$(".zclassify").show();
+//				if(khTreeFlag) 
+//					khTreeFlag = false;
+//				else
+//					khTreeFlag = true;
+			} else if($(a).attr('ref') == "spbm") {
+				loadProducts(null,$('#menuTrainingCode').val());
+//			} else {
+//				$(".zclassify").hide();
+//			}
+//			if(khTreeFlag) {
+//				$(".zclassify").hide();
+			}
+		}
+		
+	});
+	
+		
+});
+
+/**
+ * 选中上级编码在其中的a标签中添加样式，用于修改该编码
+ */
+function chooseFatherCode(fatherCode, trainingCode, obj) {
+	loadCustomers(fatherCode, trainingCode, null);
+	$(".st_tree ul li a").removeClass('st_tree_choose').css({"color":"#000"});
+	$(obj).addClass('st_tree_choose');
+	$(obj).css({"color":"#fff"});
+	if($(obj).attr('ref') != "khbm") {
+		$(".zchange").removeClass('active');
+	} else {
+		$(".zchange").addClass('active');
+	}
+//	$('.reports .re_scroll #customerTable').find("input[id='code']").each(function() {
+//		if($(this).val() == $(obj).attr('ref')) {
+//			$(this).parent().parent().addClass('selected');
+//		}
+//	});
+}
+$(function(){
+	jQuery.ajax({
+		url:'http://lab1.ruby.com:8081/course/list-001001004.html',
+		success:function(data){
+			$(".side").append(data);
+			//判断如果“未开始”项存不存在，存在则点击第一个“未开始”项，不存在则点击“进行中”项
+			if($(".side .side_box .whole li .whole_r_no:first").length == 1) {
+				$(".side .side_box .whole li .whole_r_no:first").click();
+			} else {
+				$(".side .side_box .whole li .whole_r_go").click();
+			}
+		}
+	});
+	$(".side").on("click",".side_box .whole li",function(){
+		if($(this).attr("id")){
+			if($(this).prev().find(".whole_right a").text() == "已结束" ||
+					$(this).prev().find(".whole_right a").text() == "")
+				loadRight($(this).attr("id"));
+			else {
+				alert("请按照业务顺序进行操作。");
+				return false;
+			}
+		}
+	});
+});
+
+function loadRight(code){
+	if(typeof(code) == "undefined") {
+		code = $(".side .side_box .whole li .whole_r_color:last").parent().parent().attr("id");
+	}
+	jQuery.ajax({
+		url:'http://lab1.ruby.com:8081/course/questionlist-'+code+'.html',
+		success:function(data){
+			$(".side").html(data);
+		}
+	});
+}
+
+function subNormalQuestion(questionId){
+	//说明不是全国防伪税控购买发票这一题，可以点击确认按钮
+	if($('.gmfp_buttom').length == 0) {
+		jQuery.ajax({
+			url:'http://lab1.ruby.com:8081/course/subnormalquestion-'+questionId+'.json',
+			success:function(data){
+				alert(data.msg);
+				loadRight($(".whole_r_go").parent().parent().next().attr("id"));
+			}
+		});
+	} else {
+		alert("请购买发票。");
+	}
+}
+
+/**
+ * 提交题目
+ * @param questionId
+ */
+function submitQuestion(questionId){
+	jQuery.ajax({
+		url:'http://lab1.ruby.com:8081/course/subnormalquestion-'+questionId+'.json',
+		success:function(data){
+			loadRight($(".whole_r_go").parent().parent().next().attr("id"));
+		}
+	});
+}
+
+/**
+ * 提交题目
+ * @param questionId
+ */
+function submitQuestionAndUrl(questionId, url){
+	jQuery.ajax({
+		url:'http://lab1.ruby.com:8081/course/subnormalquestion-'+questionId+'.json',
+		success:function(data){
+			loadRight($(".whole_r_go").parent().parent().next().attr("id"));
+			if(url != null) {
+				location = url;
+			}
+		}
+	});
+}
+/**
+ * 查看当前进行中的业务是否为指定的业务名，如果是则将该题提交答案
+ * @param trainingName 业务名称
+ * @param url 转向地址
+ */
+function checkCurrentIsNeedSubmitAndTurnURL(trainingName, url){
+	//获取正在进行中的li，如果为trainingName则将这道题变为已答状态
+	var li_go = $('.whole .whole_right .whole_r_go').parent().parent();
+	var span = li_go.find('span').attr("title");
+	if(typeof(span) == "undefined") {
+		span = $('.whole .whole_left').find('a').attr("title")
+	}
+	if(span == trainingName) {
+		jQuery.ajax({
+			url:'http://lab1.ruby.com:8081/course/subnormalquestion-'+$('#questionId').val()+'.json',
+			success:function(data){
+				loadRight($(".whole_r_go").parent().parent().next().attr("id"));
+				if(url != null) {
+					location = url;
+				}
+			}
+		});
+	} else {
+		if(url != null) {
+			location = url;
+		}
+	}
+}
+/**
+ * 验证所填表单是否跟当前业务匹配，如果不匹配给予提示，其中弹出的公共窗口在最外层公用share的vm页面中
+ * @param trainingCode 点击表单所属的业务，精确到12位，例：001003001002
+ * @returns {Boolean}
+ */
+function compareCurrentTrainingCode(trainingCode) {
+	var flag=true;
+	$('.whole .whole_right .whole_r_no', top.window.document).each(function(){
+		var rightTrainingCode = $(this).parent().parent().attr("id");
+		//alert(rightTrainingCode);
+		if(typeof(rightTrainingCode) != "undefined" && rightTrainingCode == trainingCode){
+//			$(".content").text("所选择填写的报表，与当前实操助手不匹配！");
+//			$(".keep").show();
+			flag=false;
+			return false;
+		}
+	})
+	if(!flag){
+		return false;
+	}
+	return true;
+}
+
+function showVideo(){
+	var dialog = jQuery.dialog({
+		title: '操作视频',
+		content: '<video width="320" height="240" controls="controls"><source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg"><source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4">你的浏览器不支持video标签</video>'
+    });
+}</script>
+<script type="text/javascript" src="/assets/invoice.js"></script>
+<title>报税处理</title>
+
+
+	<!-- 根据此可区分是在哪个父级菜单做的题目 -->
+	<input type="hidden" id="menuTrainingCode" value="001001004">
+	<div class="main_page">
+		<div class="main_page_file">
+			<!--头部 start-->
+			<div id="main_files" class="menu">
+				<ul>
+					<li style="color: rgb(0, 0, 0);"><a href="javascript:void(0)">发票领用管理</a>
+	<ul>
+		<li class="icon1 fp_wrong"><a>发票库存查询</a></li>
+		<li class="icon2 tit_readx"><a>读入新购发票</a></li>
+		<li class="icon3 fp_wrong"><a>网上领票</a></li>
+		<li class="icon4"><a>已购发票退回</a></li>
+	</ul></li>
+<li style="color: rgb(0, 0, 0);"><a href="javascript:void(0)">发票管理</a>
+	<ul>
+		<li class="expand icon2"><a>发票填开</a>
+			<ul>
+				<li class="icon5"><a>增值税专用发票填开</a></li>
+				<li class="icon6"><a>增值税普通发票填开</a></li>
+			</ul></li>
+		<li class="undefined"><a>已开发票查询</a></li>
+		<li class="undefined"><a>已开发票作废</a></li>
+		<li class="expand icon2"><a>未开发票作废</a>
+			<ul>
+				<li class="icon5 fp_wrong"><a>增值税专用发票作废</a></li>
+				<li class="icon6 fp_wrong"><a>增值税普通发票作废</a></li>
+			</ul></li>
+		<li class="undefined fp_wrong"><a>发票修复</a></li>
+		<li class="undefined fp_wrong"><a>抵扣发票下载导出</a></li>
+	</ul></li>
+<li style="color: rgb(0, 0, 0);"><a href="javascript:void(0)">红字发票信息表</a>
+	<ul>
+		<li class="icon1" style="width: 280px"><a>红字增值税专用发票信息表填开</a></li>
+		<li class="icon1 fp_wrong" style="width: 280px"><a>红字增值税专用发票信息表查询导出</a></li>
+		<li class="icon1 fp_wrong" style="width: 280px"><a>红字货物运输业增值税专用发票信息表填开</a></li>
+		<li class="icon1 fp_wrong" style="width: 280px"><a>红字货物运输业增值税专用发票信息表查询导出</a></li>
+	</ul></li>
+					<li style="color: rgb(0, 0, 0);"><a>帮助</a> 
+						<ul> 
+							<li class="undefined tit_bs_0"><a>在线支持</a></li> 
+							<li class="undefined tit_bs_0"><a>帮助</a></li> 
+							<li class="undefined tit_bs_0"><a>关于</a></li> 
+						</ul> 
+					</li> 
+				</ul>
+			</div>
+			<!--end 头部-->
+		</div>
+		<div class="main_power_btn">
+			<dl id="main_function" class="main_power_deputy_btn">
+							    				<dt id="set" lang="set">
+    					<span class="main_system_set_rgb"></span>系统设置
+    				</dt>
+				    				<dt id="invoice" style="color: #858a90;" lang="invoice">
+    					<span class="main_system_invoice_gray"></span>发票管理
+    				</dt>
+				    				<dt id="tax" lang="tax">
+    					<span class="main_system_tax_rgb"></span>报税处理
+    				</dt>
+				    				<dt id="maintenance" lang="maintenance">
+    					<span class="main_system_maintenance_rgb"></span>系统维护
+    				</dt>
+							</dl>
+		</div>
+		<script type="text/javascript"> 
+$(function() {
+	//清空商品表单数据
+	$(".biaoge .biaoge_scroll table tbody tr:not(:first)").remove();
+	$('#productOrderForm')[0].reset();
+	//将负数发票状态设置为0，正数
+	$(".particulars #isMinus").val(0);
+	//将差额扣除数归零
+	$(".balance_deduction").val("0");
+	$(".frocount_table").hide();
+	/**发票购买读入模块start*/
+//	alert("0");
+	if("0" > 0) {
+			} else {
+		$("table tbody input").val("");
+	}
+	//当进行过的发票读入则该条记录不予显示
+	$("#readgmfp .read_scroll table tbody tr").each(function(){
+		var isRemove=false;
+		$(this).find("input").each(function(i,e){
+			if(($(e).attr("name") == "isRead[0]" && $(e).val() == "1") || 
+					($(e).attr("name") == "isRead[1]" && $(e).val() == "1")) {
+				isRemove = true;
+				return false;
+			}
+			if($(e).val() == "" && $(e).attr("name") != "isRead[0]" && $(e).attr("name") != "isRead[1]"){
+				isRemove=true;
+				return false;
+			}
+		});
+		if(isRemove){
+			$(this).remove();
+		}
+	});
+	//将没有显示的购买发票信息那一行remove掉
+	$(".inf_scroll table tbody tr").each(function(){
+		var isRemove=true;
+		$(this).find("input").each(function(i,e){
+			if(($(e).attr("name") == "isRead[0]" && $(e).val() == "1") || 
+					($(e).attr("name") == "isRead[1]" && $(e).val() == "1")) {
+				isRemove = false;
+				return false;
+			}
+//			if($(e).val()){
+//				isRemove=false;
+//				return false;
+//			}
+		});
+		if(isRemove){
+			$(this).remove();
+		}
+	});
+	$(".frocount_table table tbody tr").each(function(){
+		var isRemove=false;
+		$(this).find("input").each(function(i,e){
+			if($(e).val() == ""){
+				isRemove=true;
+				return false;
+			}
+		});
+		if(isRemove){
+			$(this).remove();
+		}
+	});
+	//发票库存模块将没有显示的购买发票信息那一行remove掉
+	$(".querie .quer_table table tbody tr").each(function(){
+		var isRemove=true;
+		$(this).find("input").each(function(i,e){
+			if(($(e).attr("name") == "isRead[0]" && $(e).val() == "1") || 
+					($(e).attr("name") == "isRead[1]" && $(e).val() == "1")) {
+				isRemove = false;
+				return false;
+			}
+//			if($(e).val()){
+//				isRemove=false;
+//				return false;
+//			}
+		});
+		//修改卷终止号，将其在起始号码的基础上加上20，由于其实号码存在00开头的情况，所以进行截取计算再放入
+		var startNum = $(this).find(".quer_endNumber").val();
+		if(startNum.length > 3) {
+			var lastNumber = parseInt(startNum.substr(startNum.length-3,3)) + 19;
+			 $(this).find(".quer_endNumber").val(startNum.substr(0,5) + lastNumber);
+		}
+		if(isRemove){
+			$(this).remove();
+		}
+	});
+	// 发票读入
+	$(".inv_a1").click(function() {
+//		var pt = ;
+//		var zy = ;
+		//判断是否有发票，没有发票则显示.read
+		if("0" == 0) {
+			$(".read").show();
+		} else {
+			if($("#readgmfp .read_scroll table tbody tr").length == 0) {
+				$(".read").show();
+			} else {
+				$(".drfp").show();
+			}
+		}
+//		$("#readgmfp").show();
+//		$(".gmfp").show();
+	});
+	
+	//发票读入确认
+	$(".readinfox_confirm").click(function() {
+		$("#readgmfp").hide();
+		for(var i=0; i<2; i++) {
+			//查看是否有此需要读入的发票
+			if($("input[name='questionId[" + i + "]']").length == 1) {
+				var gmfpData = [];
+				gmfpData.push({questionId:$("input[name='questionId[" + i + "]']").val(),answerCode:"isRead[" + i + "]",answerDetail:"1"});
+				$.ajax({
+					url:"../question/saveanswernotdelete.json",
+					data:JSON.stringify(gmfpData),
+					contentType:"application/json",
+					dataType:"json",
+					type:"post",
+					success:function(data){
+						if(data.success){
+							alert("发票读入成功。");
+						}
+						location.reload();
+					}
+				});
+			}
+		}
+	});
+	/**发票购买读入模块end*/
+	if("0" > 0) {
+			}
+	
+	//点击确认按钮显示红字单据
+	$(".infor_confirm").click(function() {//点击确认弹出红色表单
+		$("#redbill_info_choose").hide();// 取消--隐藏
+		$("#redbill_confirm").hide();// 取消--隐藏
+		
+		//将数据填入红字单据
+		$("#redbill_bName").val($("#open_main_bName").html());
+		$("#redbill_bTaxId").val($("#open_main_bTaxId").html());
+		if("001001004" == "001001001") {
+			$("#redbill_cName").val("北京三和贸易有限公司");
+			$("#redbill_cTaxId").val("110104719571032");
+			$("#redbill_name").val("除锈剂");
+			$("#redbill_spec").val("WD-40");
+			$("#redbill_unit").val("瓶");
+			$("#redbill_number").val("-20");
+			$("#redbill_price").val("35.00");
+			$("#redbill_money").val("-700.00");
+			$("#redbill_taxRate").val("0.17");
+			$("#redbill_taxMoney").val("-119.00");
+			$("#redbill_totalNoTaxMoney").val("-700.00");
+			$("#redbill_totalTaxMoney").val("-119.00");
+		} else {
+			$("#redbill_cName").val("重庆仁和贸易有限公司");
+			$("#redbill_cTaxId").val("110105539548703");
+			$("#redbill_name").val("办公用品");
+			$("#redbill_spec").val("");
+			$("#redbill_unit").val("");
+			$("#redbill_number").val("-1000");
+			$("#redbill_price").val("30.00");
+			$("#redbill_money").val("-30000.00");
+			$("#redbill_taxRate").val("0.17");
+			$("#redbill_taxMoney").val("-5100.00");
+			$("#redbill_totalNoTaxMoney").val("-30000.00");
+			$("#redbill_totalTaxMoney").val("-5100.00");
+		}
+		$("#redbill_fill").show();// 取消--隐藏
+	});
+	
+	//计算根据数量单价算出总价，含税价
+	$("#redbill_tables").on("keyup","tr",function(){
+		var e=$(this).parent().parent();//取得当前tr
+//		var number=$(this).val(($(this).val())).val();
+//		var number=$(this).val(parseInt($(this).val())||"").val();//替换后的数量（整数）
+		var _number=e.find("#redbill_number");
+		var _money=e.find("#redbill_money");
+		var _price=e.find("#redbill_price");
+		var _taxRate=e.find("#redbill_taxRate");
+		var _taxMoney=e.find("#redbill_taxMoney");
+		if(e.find("#redbill_number") && e.find("#redbill_price").val() && 
+				e.find("#redbill_taxRate").val()) {
+			var price=parseFloat(_price.val());//表单内的价格（含税/不含税）
+			var money=parseFloat(_number.val()*price).toFixed(2);//将要填入表单的金额（含税/不含税）
+			var taxRate=parseFloat(_taxRate.val());//表单内的税率
+			var noTaxMoney = 0;
+//			noTaxMoney=(particulars_haveTax?(money/(1+taxRate)).toFixed(2):money);
+			_money.val(money);
+//			var test = $("#money_tab").html();
+			if($("#money_tab").html() == "金额(不含税)") {
+				noTaxMoney = money;
+			} else {
+				noTaxMoney=(money/(1+taxRate)).toFixed(2);
+			}
+			_taxMoney.val((noTaxMoney*taxRate).toFixed(2));
+			$("#redbill_totalNoTaxMoney").val(noTaxMoney);
+			$("#redbill_totalTaxMoney").val((noTaxMoney*taxRate).toFixed(2));
+		}
+	});
+
+	//红字单据模块点击价格按钮后计算含税和不含税的价格
+	var i=1;
+	var mo=0;
+	var pr=0;
+	$("#changeTaxTab").click(function(){ 
+		var totalNoTaxMoney=parseInt($("#redbill_totalNoTaxMoney").val());
+		var totalTaxMoney=parseInt($("#redbill_totalTaxMoney").val());
+		var money=parseFloat($("#redbill_money").val());
+		var price=parseFloat($("#redbill_price").val());
+		var num=parseInt($("#redbill_number").val());
+        if(i==1){
+       	 	mo=money;
+        	pr=price;
+        	$("#price_tab").text("单价(含税)");
+        	$("#money_tab").text("金额(含税)");
+        	var sum=totalNoTaxMoney+totalTaxMoney;
+        	var persum=sum/num;
+        	$("#redbill_money").val(sum.toFixed(2));
+        	$("#redbill_price").val(persum);
+        }else{
+        	$("#price_tab").text("单价(不含税)");
+        	$("#money_tab").text("金额(不含税)");
+        	$("#redbill_money").val(mo.toFixed(2));
+        	$("#redbill_price").val(pr.toFixed(2));
+        }
+       	i=i*(-1);
+    });
+	
+	$(".redbill_prin_ok").click(function(){ 
+		//答案数据
+		var data=[];
+		var formData=$("#addRedBillInvoiceForm").serializeArray();
+		for(var i=0;i<formData.length;i++){
+			var inputData=formData[i];
+			data.push({questionId:$("#questionId").val(),answerCode:inputData.name,answerDetail:inputData.value});
+		}
+		$.ajax({
+			url:"../course/saveanswer.json",
+			data:JSON.stringify(data),
+			contentType:"application/json",
+			dataType:"json",
+			type:"post",
+			success:function(data){
+				if(data.success){
+					alert("打印成功");
+				}
+				$("#redbill_fill").hide();
+				$(".redbill_printx").hide();
+				$("#addRedBillInvoiceForm")[0].reset();
+				$(".Issue").hide();
+				$(".side .side_box .whole li .whole_r_no:first").click();
+			}
+		});
+	});
+	
+	// 增值税发票填开
+
+	$(".reports .scr_cont table tbody").on("click","tr",function(){
+		$(this).addClass("selected").siblings().removeClass("selected");
+	}).on("dblclick","tr",function(){
+		$(this).removeClass("selected").siblings().removeClass("selected");
+		$("#ticket_particulars")[0].reset();
+		var invoiceNumber = $(this).parent().find(".watchx_invoiceNumber").html();
+				$(".ticket").show();// 弹出--增值税发票填开
+	});
+	
+	// 4、双击表格--tr td
+	$(".watchx .watchx_scroll .watchx_cont table tbody tr td").dblclick(
+			function() {
+				$("#ticket_particulars")[0].reset();
+				var invoiceNumber = $(this).parent().find(".watchx_invoiceNumber").html();
+				//				$(".ticket .receipt .tablex tbody tr").each(function(){
+//					var isRemove=true;
+//					$(this).find("input").each(function(i,e){
+//						if($(e).val()){
+//							isRemove=false;
+//							return false;
+//						}
+//					});
+//					if(isRemove){
+//						$(this).remove();
+//					}
+//				});
+				
+				$(".ticket").show();// 弹出--增值税发票填开
+	});
+	
+
+	/** 开具红字负数发票js代码start */
+
+	$("#dyxx_yes").click(function() {
+		if($("#dyxx_text1").val() == "") {
+			alertInfo("请输入信息表编号。");
+			return false;
+		}
+		if($("#dyxx_text2").val() == "") {
+			alertInfo("请再次输入。");
+			return false;
+		}
+		if($("#dyxx_text2").val() != $("#dyxx_text1").val()) {
+			alertInfo("两次输入不一致。");
+			return false;
+		}
+		if($("#dyxx_text1").val() != "0002958") {
+			$(".errorx").show();// 弹窗---错误信息
+			return false;
+		}
+		$(".equivalent_text1").val("");
+		$(".equivalent_text2").val("");
+		$(".equivalent").hide();
+		$("#dyxx2").show();
+//		$(".bianhao_p3").show();
+//		$(".errorx").show();// 弹窗---错误信息
+	});
+
+	$("#dyxx2_yes").click(function() {
+		if($("#dyxx2_text1").val() == "") {
+			alertInfo("请输入发票代码。");
+			return false;
+		}
+		if($("#dyxx2_text2").val() == "") {
+			alertInfo("请输入发票号码。");
+			return false;
+		}
+		if($("#dyxx2_text1").val() != "3302151130") {
+//			alert("发票号码输入不正确。");
+			$(".errorx").show();// 弹窗---错误信息
+			return false;
+		}
+		if($("#dyxx2_text2").val() != "01404611") {
+//			alert("发票号码输入不正确。");
+			$(".errorx").show();// 弹窗---错误信息
+			return false;
+		}
+		$(".equivalent").hide();
+		$("#dyxx3").show();
+	});
+
+	$("#dyxx3_yes").click(function() {
+		$("#notice_textarea").html("开具红字增值税专用发票信息表号：0002958");
+		$(".equivalent_text1").val("");
+		$(".equivalent_text2").val("");
+		$(".equivalent").hide();
+		$(".particulars #isMinus").val(1);
+		$(".bianhao_p3").show();
+	});
+	/** 开具红字负数发票js代码end */
+	/** 开具发票清单填开start */
+	//商品编码弹窗
+	$(".biaoge .biaoge_scroll table tbody").on("click","tr",function(){
+		if($(this).next().hasClass('discount')) {
+			alertInfo("请删除关联折扣行后再编辑该行数据。");
+			return false;
+		}
+		$(this).addClass("selected").siblings().removeClass("selected");
+	}).on("dblclick","tr #name",function(){
+		$(this).parent().parent().addClass("selected").siblings().removeClass("selected");
+		$(".commodity").show();
+	});
+	//转发票
+	$(".orders .orders_tit_a1").click(function(){
+		$(".listing .list_scroll table tbody tr").remove();
+		$(".biaoge .biaoge_scroll table tbody tr").clone().appendTo(".listing .list_scroll table tbody");
+		getAllMoney();
+//		productOrdersIsUse = true;
+		$('.orders').hide();
+	});
+	//折扣
+	$(".orders .orders_tit_a2").click(function(){
+		//发票填开页面选中商品
+		var bindTr=$(".listing .list_scroll table tbody tr.selected");
+		//清单页面选中商品
+		var orderTr = $(".biaoge .biaoge_scroll table tbody tr.selected");
+		if(bindTr.length == 0 && orderTr.length == 0) {
+			alertInfo("请选中一条商品信息后再点击折扣。");
+			return false;
+		} else {
+			$('.zhekou_rownum').val("0");
+			$('.zhekou_totalmoney').val("0.00");
+			$('.zhekou_rate').val("0.00");
+			$('.zhekou_discountmoney').val("0.00");
+			$(".zhekou").show();
+		}
+	});
+	//价格
+	$(".orders .orders_tit_a3").click(function(){
+		if(particulars_haveTax){
+			$(".biaoge .biaoge_scroll table thead tr #price").html("单价(不含税)");
+			$(".biaoge .biaoge_scroll table thead tr #money").html("金额(不含税)");
+			particulars_haveTax=false;
+			$(".biaoge .biaoge_scroll table tbody tr").each(function(i,e){
+				var priceEle=$(e).find("#price");
+				var moneyEle=$(e).find("#money");
+				var taxRate=$(e).find("#taxRate").val();
+				var number=$(e).find("#number").val();
+				if(taxRate){priceEle.val((priceEle.val()/(1+parseFloat(taxRate)/100)).toFixed(5));}
+				if(number){moneyEle.val(parseFloat(number*priceEle.val()).toFixed(2));}
+			});
+		}else{
+			$(".biaoge .biaoge_scroll table thead tr #price").html("单价(含税)");
+			$(".biaoge .biaoge_scroll table thead tr #money").html("金额(含税)");
+			particulars_haveTax=true;
+			$(".biaoge .biaoge_scroll table tbody tr").each(function(i,e){
+				var priceEle=$(e).find("#price");
+				var moneyEle=$(e).find("#money");
+				var taxRate=$(e).find("#taxRate").val();
+				var number=$(e).find("#number").val();
+				if(taxRate){priceEle.val((priceEle.val()*(1+parseFloat(taxRate)/100)).toFixed(5));}
+				if(number){moneyEle.val(parseFloat(number*priceEle.val()).toFixed(2));}
+			});
+		}
+	});
+	//增行
+	$(".orders .orders_tit_a4").click(function(){
+		$(".biaoge .biaoge_scroll table tbody tr:first").clone().appendTo(".biaoge .biaoge_scroll table tbody").find("input").each(function(){$(this).val("")});
+	});
+	//减行
+	$(".orders .orders_tit_a5").click(function(){
+		if($(".biaoge .biaoge_scroll table tbody tr").length>1&&confirm("你确定要删除这条记录吗？")){
+			$(".biaoge .biaoge_scroll table tbody tr.selected").remove();
+		};
+	});
+	//完成
+	$(".orders .orders_tit_a6").click(function(){
+		var money = 0.00, taxRate = 0.17, taxMoney = 0.00;
+		
+		$(".biaoge .biaoge_scroll table tbody tr").each(function(i,e){
+			money += checkNumAndParseFloat($(e).find("#money").val());
+			taxMoney += checkNumAndParseFloat($(e).find("#taxMoney").val());
+			taxRate = $(e).find("#taxRate").val();
+		});
+		$(".listing .list_scroll table tbody").remove();
+		var str = "<tr><td class='list_tab_tit'><input id='listing_id' type='hidden' />" +
+		"<input id='name' maxlength='60' value='（详见销货清单）' class='list_tab_tit' autocomplete='off'" +
+		"onclick=\"javascript:$('.orders').show()\"/></td>" +
+		"<td><input id='spec' maxlength='50' value='' /></td>" +
+		"<td><input id='unit' maxlength='50' value='' /></td>" +
+		"<td><input id='number' maxlength='50' value=''/></td>" +
+		"<td><input id='price' maxlength='50' value='' class='listing_price'/></td>" +
+		"<td><input id='money' maxlength='50' value='" + money.toFixed(2) + 
+		"' class='listing_money' readonly /></td>" +
+		"<td><input id='taxRate' maxlength='50' value='" + taxRate + "'  readonly /></td>" +
+		"<td><input id='taxMoney' maxlength='50' value='" + taxMoney.toFixed(2) + "' readonly /></td></tr>";
+		$(".listing .list_scroll table").append(str);
+		getAllMoney();
+		productOrdersIsUse = true;
+		$('.orders').hide();
+	});
+	
+	$(".biaoge .biaoge_scroll table tbody").on("keyup","tr #number",function(){
+		var e=$(this).parent().parent();//取得当前tr
+		var number=$(this).val(($(this).val())).val();
+//		var number=$(this).val(parseInt($(this).val())||"").val();//替换后的数量（整数）
+		var _number=$(this);
+		var _money=e.find("#money");
+		var _price=e.find("#price");
+		var _taxRate=e.find("#taxRate");
+		var _taxMoney=e.find("#taxMoney");
+		if(isDoCount(e)){
+			var price=parseFloat(_price.val());//表单内的价格（含税/不含税）
+			var money=parseFloat(number*price).toFixed(2);//将要填入表单的金额（含税/不含税）
+//			var taxRate=parseFloat(_taxRate.val());//表单内的税率
+			var taxRate=parseFloat(_taxRate.val())/100;
+			var noTaxMoney=(particulars_haveTax?(money/(1+taxRate)).toFixed(2):money);
+			_money.val(money);
+//			if(particulars_haveTax) {
+//				_taxMoney.val("0.00");
+//			} else {
+//				_taxMoney.val((noTaxMoney*taxRate).toFixed(2));
+//			}
+			
+			//税额显示方式改
+			var taxMoney = 0;
+			if(particulars_haveTax) {
+				//（金额-差额）/（1+税率）*税率
+				taxMoney = (money)/(1 + taxRate) * taxRate;
+			} else {
+				//（金额-差额）*税率
+				taxMoney = (money) * taxRate;
+			}
+			_taxMoney.val(taxMoney.toFixed(2));
+			
+			
+		}
+	}).on("blur","tr #price",function(){
+		var e=$(this).parent().parent();
+		$(this).val(parseFloat($(this).val())||"0.00");
+		var _number=e.find("#number");
+		var _money=e.find("#money");
+		var _price=$(this);
+		var _taxRate=e.find("#taxRate");
+		var _taxMoney=e.find("#taxMoney");
+		if(isDoCount(e)){
+//			_money.val((_price.val()*_number.val()*(particulars_haveTax?(1+parseFloat(_taxRate.val())):1)).toFixed(2));
+			_money.val((parseFloat(_price.val()*_number.val())).toFixed(2));
+//			if(particulars_haveTax) {
+//				_taxMoney.val("0.00");
+//			} else {
+////				_taxMoney.val((_money.val()*_taxRate.val()).toFixed(2));
+//				_taxMoney.val((_money.val()*parseFloat(_taxRate.val())/100).toFixed(2));
+//			}
+			
+			
+			//税额显示方式改
+			var taxMoney = 0;
+			if(particulars_haveTax) {
+				//（金额-差额）/（1+税率）*税率
+				taxMoney = (_money.val())/(1 + parseFloat(_taxRate.val())/100) * parseFloat(_taxRate.val())/100;
+			} else {
+				//（金额-差额）*税率
+				taxMoney = (_money.val()) * parseFloat(_taxRate.val())/100;
+			}
+			_taxMoney.val(taxMoney.toFixed(2));
+			
+		}
+		if(parseFloat($(this).val())%1 === 0 || parseFloat($(this).val())*10%1 === 0) {
+			$(this).val(parseFloat($(this).val()).toFixed(2));
+		}
+	}).on("blur","tr #taxRate",function(){
+//		if($(this).val().indexOf("%") > 0) {
+		if($(this).val().indexOf("%") < 0) {
+//			$(this).val((parseFloat($(this).val())/100).toFixed(2)||"");
+			$(this).val(((parseFloat($(this).val())*100).toFixed(2) + "%")||"");
+		} else {
+			$(this).val((parseFloat($(this).val()).toFixed(2) + "%")||"");
+		}
+		if(isDoCount($(this).parent().parent())){
+//			$(this).val(parseFloat($(this).val()).toFixed(2)||"");
+			if($(this).val().indexOf("%") < 0) {
+				$(this).val(((parseFloat($(this).val())*100).toFixed(2) + "%")||"");
+			} else {
+				$(this).val((parseFloat($(this).val()).toFixed(2) + "%")||"");
+			}
+			var e=$(this).parent().parent();
+			var _number=e.find("#number");
+			var _money=e.find("#money");
+			var _price=e.find("#price");
+//			var _taxRate=$(this);
+			var _taxRateValue=parseFloat($(this).val())/100;
+			var _taxMoney=e.find("#taxMoney");
+			_money.val((parseFloat(_price.val()*_number.val())).toFixed(2));
+//			if(particulars_haveTax) {
+//				_taxMoney.val("0.00");
+//			} else {
+////				_taxMoney.val((_money.val()*_taxRate.val()).toFixed(2));
+//				_taxMoney.val((_money.val()*_taxRateValue).toFixed(2));
+//			}
+			
+			
+			//税额显示方式改
+			var taxMoney = 0;
+			if(particulars_haveTax) {
+				//（金额-差额）/（1+税率）*税率
+				taxMoney = (_money.val())/(1 + _taxRateValue) * _taxRateValue;
+			} else {
+				//（金额-差额）*税率
+				taxMoney = (_money.val()) * _taxRateValue;
+			}
+			_taxMoney.val(taxMoney.toFixed(2));
+			
+			
+			getAllMoney();
+		}
+	});
+	/** 开具发票清单填开end */
+	/** 添加折扣行弹窗start */
+	//添加折扣行弹窗关闭
+	$(".zhekou_close").click(function() {
+		$(".zhekou").hide();// 关闭
+	});
+	$('.zhekou .zhekou_co').on("blur",".zhekou_rownum",function(){//折扣行数按下时发生
+		var rownum = checkNumAndParseInt($('.zhekou_rownum').val());
+		//发票填开页面选中商品
+		var bindTr=$(".listing .list_scroll table tbody tr.selected");
+		//清单页面选中商品
+		var orderTr = $(".biaoge .biaoge_scroll table tbody tr.selected");
+		var selectTr;
+		if(bindTr.length == 0)
+			selectTr = orderTr;
+		else
+			selectTr = bindTr;
+		//商品金额总计
+		var sumMoney = 0.00;
+		for(var i=0; i<rownum; i++) {
+			if(i == 0) {
+				sumMoney += checkNumAndParseFloat(selectTr.find("#money").val());
+			} else {
+				selectTr = selectTr.prev();
+				if(selectTr.length == 0) {
+					$('.zhekou_rownum').val(i);
+					alertInfo("该选中商品行上层没有这么多行数，已调整为最大行数。");
+					break;
+				}
+				sumMoney += checkNumAndParseFloat(selectTr.find("#money").val());
+			}
+		}
+		$('.zhekou_totalmoney').val(sumMoney.toFixed(2));
+		$('.zhekou_discountmoney').val((checkNumAndParseFloat($('.zhekou_totalmoney').val()) 
+				* checkNumAndParseFloat($('.zhekou_rate').val()) / 100).toFixed(2));
+	}).on("keyup",".zhekou_rate",function(){//折扣率按下时发生
+		var rate = checkNumAndParseFloat($('.zhekou_rate').val()) / 100;
+		$('.zhekou_discountmoney').val((parseFloat($('.zhekou_totalmoney').val()) 
+		* rate).toFixed(2));
+	}).on("keyup",".zhekou_discountmoney",function(){//折扣金额按下时发生
+		var discountmoney = checkNumAndParseFloat($('.zhekou_discountmoney').val()) * 100;
+		$('.zhekou_rate').val((discountmoney / 
+				parseFloat($('.zhekou_totalmoney').val())).toFixed(2));
+	});
+	//确认添加折扣行
+	$(".zhekou_confirm").click(function() {
+		var rownum = checkNumAndParseInt($('.zhekou_rownum').val());
+		var rate = -checkNumAndParseFloat($('.zhekou_rate').val()) / 100;
+		//发票填开页面选中商品
+		var bindTr=$(".listing .list_scroll table tbody tr.selected");
+		//清单页面选中商品
+		var orderTr = $(".biaoge .biaoge_scroll table tbody tr.selected");
+		var selectTr;
+		if(bindTr.length == 0)
+			selectTr = orderTr;
+		else
+			selectTr = bindTr;
+		for(var i=0; i<rownum; i++) {
+			if(i > 0) {
+				selectTr = selectTr.prev();
+			}
+			
+			//计算税额
+			var taxMoney = 0;
+			if(particulars_haveTax) {
+				taxMoney = parseFloat(selectTr.find("#taxRate").val())/100
+				* checkNumAndParseFloat(selectTr.find("#money").val()) * rate 
+				/ (1 + parseFloat(selectTr.find("#taxRate").val())/100);
+			} else {
+				taxMoney = parseFloat(selectTr.find("#taxRate").val())/100
+				* checkNumAndParseFloat(selectTr.find("#money").val()) * rate;
+			}
+			var str = "<tr class='discount'><td class='list_tab_tit'><input id='listing_id' type='hidden' />" +
+			"<input id='name' maxlength='60' value='" + selectTr.find("#name").val() + 
+			"' class='list_tab_tit' autocomplete='off'/></td>" +
+			"<td><input id='spec' maxlength='50' value='' /></td>" +
+			"<td><input id='unit' maxlength='50' value='' /></td>" +
+			"<td><input id='number' maxlength='50' value=''/></td>" +
+			"<td><input id='price' maxlength='50' value='' class='listing_price'/></td>" +
+			"<td><input id='money' maxlength='50' value='" + 
+			(checkNumAndParseFloat(selectTr.find("#money").val()) * rate).toFixed(2) + 
+			"' class='listing_money' readonly /></td>" +
+			"<td><input id='taxRate' maxlength='50' value='" + selectTr.find("#taxRate").val() + "'  readonly /></td>" +
+			"<td><input id='taxMoney' maxlength='50' value='" + taxMoney.toFixed(2) + 
+					"' readonly /></td></tr>";
+			selectTr.after(str);
+		}
+		//更新发票合计数值
+		getAllMoney();
+		$(".zhekou").hide();// 关闭
+	});
+	/** 添加折扣行弹窗end */
+	/** 已开发票查询弹窗start */
+	//退出
+	$('.xuanzes .xuz_close').click(function() {
+		$(".xuanzes").hide();
+	});
+	//打印菜单
+	$('.xuanzes .xuz_print').click(function() {
+		if($(".xuanzes .xuanz_table table tbody .selected").length == 1) {
+			var invoiceNumber = $(".xuanzes .xuanz_table table tbody .selected").find(".xuanz_invoiceNumber").html();
+						//将销货清单列表有数据的序号填上
+			var index = 0;
+			$(".orderslist .orderslist_table table tbody tr").each(function(){
+				if($(this).find("input[name='name[discount" + index + "]']").val() != "") {
+					$(this).find("input[name='ordersNum']").val(index + 1);
+				}
+				index++;
+			});
+			$(".xuanzes .Prints").show();
+		} else
+			alertInfo("请选择一条记录。");
+	});
+	//鼠标移开隐藏打印弹出菜单
+//	$(".xuanzes .Prints").mouseleave(function(){
+//		$(".xuanzes .Prints").hide();
+//	});
+	//点击表单列表改变该列样式
+	$(".xuanzes .xuanz_table table tbody").on("click","tr",function(){
+		$(this).addClass("selected").siblings().removeClass("selected");
+	});
+	$('.xuanzes .Prints_invoice').click(function() {
+		printType = 1;
+		$(".xuanzes .Prints").hide();
+		$('.printxlist').show();
+//		$('.preview').show();
+	});
+	$('.xuanzes .Prints_orders').click(function() {
+		if($(".xuanzes .xuanz_table table tbody .selected").find(".xuanz_isOrders").text() == "是") {
+			printType = 2;
+			$(".xuanzes .Prints").hide();
+			$('.printxlist').show();
+//			$('.orderslist').show();
+		}else
+			alertInfo("该发票没有销货清单，请重新选择。");
+	});
+	$('.printxlist .printxlist_yes').click(function() {
+		$('.printxlist').hide();
+		if(printType == 1) {
+			$('.preview').show();
+			checkCurrentIsNeedSubmitAndTurnURL("发票查询", null);
+		} else if(printType == 2) {
+			$('.orderslist').show();
+			checkCurrentIsNeedSubmitAndTurnURL("发票查询", null);
+		} else {
+			alertInfo("请确认是否选择打印发票或打印销货清单。");
+		}
+	});
+	/** 已开发票查询弹窗end */
+	
+	/** 添加差额开票功能start */
+//	//验证扣除额是否输入为数字或小数
+//	$(".balance_deduction").blur(function(){
+//		
+//	});
+	//退出或取消按钮
+	$(".balance_close").click(function() {
+		//判断确认按钮是否还可用，如果不可用说明之前已经点击了确认按钮，则不清空扣除额
+		if(!$(".balance_confirm").prop("disabled")) {
+			//清除扣除额数据，以免加入开票计算
+			$(".balance_deduction").val("0");
+		}
+		$(".balance").hide();
+	});
+	//确认差额扣除额
+	$(".balance_confirm").click(function() {
+		//判断扣除额是否有值，如果有值则保存才生效
+		if($(".balance_deduction").val() != "0") {
+			$(".balance_deduction").attr("readonly","readonly");
+			$(".balance_confirm").prop("disabled", true);
+			$(".balance_confirm").css("background-color","#aeaaaa");
+			$(".balance").hide();
+		} else {
+			alertInfo("请输入有效数值后再点击确认。");
+		}
+	});
+	/** 添加差额开票功能end */
+	
+});
+//购买发票数据
+var gmfpData = [];
+function opengmfp() {
+	$('.gmfp').show();
+}
+
+function closegmfp() {
+	$('.gmfp').hide();
+}
+
+function checkAccount(account) {
+	if(account == "" || account == null) {
+		$('#account_pass').hide();
+		$('#account_error').show();
+		return false;
+	}
+	if(/^[0-9]*$/.test(account)) {
+		$('#account_pass').show();
+		$('#account_error').hide();
+	} else {
+		$('#account_pass').hide();
+		$('#account_error').show();
+	}
+	return false;
+}
+/**
+ * 购买发票
+ * @returns
+ */
+function gmfpSubmit() {
+	//当没有购买发票时才进行发票购买
+	if($('.for_cont_reel').length < 2) {
+		var questionId = $('#questionId').val();
+		if($('.for_cont_reel').length == 1) {
+			questionId = parseInt(questionId) + 1;
+		}
+		var account = $('#account').val();
+		if(account == "" || account == null) {
+			$("#account").focus();
+			$('#account_pass').hide();
+			$('#account_error').show();
+			return false;
+		}
+		var invoiceType = $('#gmfp_type').val();
+		if(account != 20) {
+			alertInfo("请结合实操助手提供的业务说明进行发票购买！");
+			return false;
+		}
+		//为梦园商贸有限公司（小规模纳税人2月份筹建期）模块中的购买发票，此模块只购买20张普通发票
+		if("001001004" == "001001001") {
+			//此模块只用购买普通发票，因此length==1说明已经购买了
+			if($('.for_cont_reel').length > 0) {
+				alertInfo("发票购买业务已经完成。");
+				return false;
+			}
+			//1为普通发票
+			if(invoiceType == 1) {
+				gmfpData.push({questionId:questionId,answerCode:"questionId[0]",answerDetail:questionId});
+				gmfpData.push({questionId:questionId,answerCode:"type[0]",answerDetail:"普通发票"});
+				gmfpData.push({questionId:questionId,answerCode:"quota[0]",answerDetail:"9999999.99"});
+				gmfpData.push({questionId:questionId,answerCode:"categoryCode[0]",answerDetail:"4200041140"});
+				gmfpData.push({questionId:questionId,answerCode:"categoryName[0]",answerDetail:"湖北省普通发票"});
+				gmfpData.push({questionId:questionId,answerCode:"startNumber[0]",answerDetail:"0029891"});
+				gmfpData.push({questionId:questionId,answerCode:"invoiceAccount[0]",answerDetail:account});
+				gmfpData.push({questionId:questionId,answerCode:"getTime[0]",answerDetail:"2019-02-08"});
+			} else {
+				alertInfo("请结合实操助手提供的业务说明进行发票购买！");
+				return false;
+			}
+			
+		} else {
+			//用来验证是否买过此类型发票，0为买过普通发票；1为买过专用发票
+			var reelType = null;
+			if($('.for_cont_reel').length == 1) {
+				reelType = $('.for_cont_reel').text();
+			}
+//			alert(reelType);
+			//1为普通发票
+			if(invoiceType == 1) {
+				if(reelType == 1) {
+					alertInfo("已经购买过的发票类型请不要进行重复购买！");
+					return false;
+				}
+				gmfpData.push({questionId:questionId,answerCode:"questionId[0]",answerDetail:questionId});
+				gmfpData.push({questionId:questionId,answerCode:"type[0]",answerDetail:"普通发票"});
+				gmfpData.push({questionId:questionId,answerCode:"quota[0]",answerDetail:"9999999.99"});
+				gmfpData.push({questionId:questionId,answerCode:"categoryCode[0]",answerDetail:"4200041140"});
+				gmfpData.push({questionId:questionId,answerCode:"categoryName[0]",answerDetail:"湖北省普通发票"});
+				gmfpData.push({questionId:questionId,answerCode:"startNumber[0]",answerDetail:"0029891"});
+				gmfpData.push({questionId:questionId,answerCode:"invoiceAccount[0]",answerDetail:account});
+				gmfpData.push({questionId:questionId,answerCode:"getTime[0]",answerDetail:"2018-12-03"});
+			} else {
+				if(reelType == 0) {
+					alertInfo("已经购买过的发票类型请不要进行重复购买！");
+					return false;
+				}
+				gmfpData.push({questionId:questionId,answerCode:"questionId[1]",answerDetail:questionId});
+				gmfpData.push({questionId:questionId,answerCode:"type[1]",answerDetail:"专用发票"});
+				gmfpData.push({questionId:questionId,answerCode:"quota[1]",answerDetail:"9999999.99"});
+				gmfpData.push({questionId:questionId,answerCode:"categoryCode[1]",answerDetail:"4200041142"});
+				gmfpData.push({questionId:questionId,answerCode:"categoryName[1]",answerDetail:"湖北省专用发票"});
+				gmfpData.push({questionId:questionId,answerCode:"startNumber[1]",answerDetail:"0029885"});
+				gmfpData.push({questionId:questionId,answerCode:"invoiceAccount[1]",answerDetail:account});
+				gmfpData.push({questionId:questionId,answerCode:"getTime[1]",answerDetail:"2018-12-03"});
+			}
+		}
+//		$('.gmfp').hide();
+		opacitybg();
+		//购买发票
+		$.ajax({
+//			url:"../question/saveanswernotdelete.json",
+			url:"../question/saveMemberAnswersNotCompareIstrue.json",
+			data:JSON.stringify(gmfpData),
+			contentType:"application/json",
+			dataType:"json",
+			type:"post",
+			success:function(data){
+				if(data.success){
+					alert("购买成功。");
+				}
+				location.reload();
+			}
+		});
+	} else {
+		alertInfo("发票购买业务已经完成。");
+		return false;
+	}
+
+}
+//红字发票信息表信息选择--radio
+function selectRadio(t, n, className) {
+	
+	var obj = $("." + className).find("input");
+	if (t == 0 && n == "a") {
+		obj.each(function () {
+			if ($(this).attr("name") == "choose12") {
+				$(this).removeAttr("disabled");
+			} else {
+				if ($(this).attr("name") != "choose1") {
+					$(this).attr("disabled", "disabled");
+					$(this).removeAttr("checked");
+				}
+			}
+		});
+	}
+	if (t == 1 && n == "a") {
+		obj.each(function () {
+			if ($(this).attr("name") == "choose21") {
+				$(this).removeAttr("disabled");
+			} else {
+				if ($(this).attr("name") != "choose1") {
+					$(this).attr("disabled", "disabled");
+					$(this).removeAttr("checked");
+				}
+			}
+		});
+	}
+	if (t == 1 && n == "b") {
+		obj.each(function () {
+			if ($(this).attr("name") == "choose121") {
+				$(this).removeAttr("disabled");
+			} else {
+				if ($(this).attr("name") != "choose1" && $(this).attr("name") != "choose12") {
+					$(this).attr("disabled", "disabled");
+					$(this).removeAttr("checked");
+				}
+			}
+		});
+	}
+	if (t == 0 && n == "b") {
+		obj.each(function () {
+			if ($(this).attr("name") != "choose1" && $(this).attr("name") != "choose12") {
+				$(this).attr("disabled", "disabled");
+				$(this).removeAttr("checked");
+			}
+		});
+	}
+}
+
+/**
+ * 将客户列表中的指定信息填入发票中
+ * @param element 指定信息对应的tr
+ */
+function fillTableCustomer(element) {
+	$("#part_buyer_id").val($(element).find("#rece_title_id").text());
+	$("#cName").val($(element).find("td").find("#name").val());
+	$("#cTaxId").val($(element).find("td").find("#taxId").val());
+	$("#cAddress").val($(element).find("td").find("#address").val());
+	$("#cAccounts").val($(element).find("td").find("#accounts").val());
+}
+/**
+ * 将商品列表中的指定信息填入发票中
+ * @param element 指定信息对应的tr
+ */
+function fillTableProduct(element) {
+	//如果tr有多个，保留第一个，其余删除
+	if($(".listing .list_scroll table tbody tr").size() > 1)
+		$(".listing .list_scroll table tbody tr:not(:first)").remove();
+	$(".listing .list_scroll table tbody tr").find("#listing_id")
+			.val($(element).find("#forxx_scroll_id").text());
+	$(".listing .list_scroll table tbody tr").find("#name").val($(element).find("#name").text());
+	$(".listing .list_scroll table tbody tr").find("#spec").val($(element).find("#spec").text());
+	$(".listing .list_scroll table tbody tr").find("#unit").val($(element).find("#unit").text());
+	$(".listing .list_scroll table tbody tr").find("#price").val($(element).find("#price").text());
+	$(".listing .list_scroll table tbody tr").find("#taxRate").val($(element).find("#taxRate").text());
+}
+/**
+ * 将商品列表中的指定信息添加到发票中，用于两条及以上商品信息
+ * @param element 指定信息对应的tr
+ */
+function appendTableProduct(element) {
+	$(".listing .list_scroll table tbody").append("<tr><td class='list_tab_tit'>" +
+			"<input id='listing_id' type='hidden' value='" + $(element).find("#forxx_scroll_id").text() + 
+			"'/><input id='name' maxlength='60' value='" + $(element).find("#name").text() + 
+			"' class='list_tab_tit' autocomplete='off'/></td><td><input id='spec' maxlength='50' value='" +
+			$(element).find("#spec").text() + "'/></td><td><input id='unit' maxlength='50' value='" +
+			$(element).find("#unit").text() + "'/></td><td><input id='number' maxlength='50' value=''/></td>" +
+			"<td><input id='price' maxlength='50' value='" + $(element).find("#price").text() + 
+			"' class='listing_price'/></td><td><input id='money' maxlength='50' value='' " +
+			"class='listing_money' readonly/></td><td><input id='taxRate' maxlength='50' value='" +
+			$(element).find("#taxRate").text() + "'/></td><td><input id='taxMoney' maxlength='50' value='' " +
+			"readonly/></td></tr>");
+}</script>
+<!-- 根据此可区分是在哪个父级菜单做的题目 -->
+
+<input type="hidden" id="zyNumber" value="">
+<input type="hidden" id="ptNumber" value="">
+<input type="hidden" id="gmfpIndex" value="">
+<div class="main_content">
+	<a title="发票退回" class="inv_a2"> </a>
+	<a title="发票读入" class="inv_a1"> </a>
+	<a title="专用发票填开" class="inv_a3"> </a>
+	<a title="发票查询" class="inv_a4"> </a>
+	<a title="发票作废" class="inv_a5"> </a>
+	<a title="信息表" class="inv_a6"> </a>
+	<a title="库存查询" class="inv_a7"> </a>
+	<img src="/assets/invoice.png" border="0">
+	<!-- 非实训 start -->
+	<div class="wrong">
+		<img src="/assets/fpzl.png">
+		<p>x</p>
+		<span>确定</span>
+	</div>
+	<!-- end 非实训 -->
+	
+	<!-- 提示信息 start -->
+	<div class="readmsg">
+		<img src="/assets/fp_msg.png">
+		<p>x</p>
+		<span id="readmsg"></span>
+		<input type="submit" value="确定">
+	</div>
+	<!-- end 提示信息 -->
+	
+	<!-- 发票读入 start -->
+	<div class="read">
+		<img src="/assets/fp_dr.png">
+		<p>x</p>
+		<!-- <span>确定</span> -->
+		<input class="inf_no" type="submit" value="确定">
+	</div>
+	<!-- end 发票读入 -->
+	
+	<!-- 发票读入 start -->
+	<div class="gmfp">
+		<!--<img src="/assets/fp/gmfp.png" />-->
+		<a class="cloxx" href="javascript:void(0)" onclick="closegmfp();"></a>
+		<table style="width:94%;z-index:20;margin:40px auto;" class="formtable" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td>
+					<h3 style="font-size: 20px;font-family: 宋体;height:30px;line-height: 30px;margin-bottom:4px;background-color:#f7f7f7;text-align:center;">我要购买发票</h3>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table style="width:100%;">
+						<tbody>
+							<tr>
+							<td style="width:30%;height:30px;border:1px solid #7f9db9;text-align:right;background-color:#F2F7FE;">
+								<label>
+									<p style="font-size: 14px;color:#5E7595;"><span style="color:#f00;margin-right: 4px;font-weight: 700;">*</span>发票种类:</p>
+								</label>
+							</td>
+							<td style="width:66%;height:30px;border:1px solid #7f9db9;">
+								<select id="gmfp_type" name="type" style="width:120px;height:24px;">
+									<option selected="selected" value="0">
+										增值税专用发票
+									</option>
+									<option value="1">
+										增值税普通发票
+									</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="width:30%;height:30px;border:1px solid #7f9db9;text-align:right;background-color:#F2F7FE;">
+								<label>
+									<p style="font-size: 14px;color:#5E7595;"><span style="color:#f00;margin-right: 4px;font-weight: 700;">*</span>购买数:</p>
+								</label>
+							</td>
+							<td style="width:66%;height:30px;border:1px solid #7f9db9;">
+								<input id="account" name="invoiceAccount" style="width: 70px;height:20px;" onblur="checkAccount(this.value);">
+								<span id="account_error" style="color: red;padding-left: 20px;white-space: nowrap;display:none;">请填写购买数</span>
+								<span id="account_pass" style="color: #71b83d;padding-left: 20px;white-space: nowrap;display:none;">通过验证！</span>
+							</td>
+						</tr>
+
+
+					</tbody></table>
+				</td>
+			</tr>
+			<tr>
+				<td class="value" align="center" width="100%">
+					&nbsp;
+				</td>
+
+			</tr>
+			<tr>
+				<td class="value" align="center" width="100%">
+					<button onclick="gmfpSubmit();" style="width: 50px;height: 26px;font-size: 14px;display:block;">
+						确定
+					</button>
+					
+				</td>
+
+			</tr>
+		</tbody></table>
+	</div>
+	<!-- end 发票读入 -->
+	
+	<!-- 发票退回 start -->
+	<div class="returnx">
+		<img src="/assets/fp_fh.png">
+		<div class="ret_close">
+			<img src="/assets/panel_tools.png">
+		</div>
+		<div class="ret_tit">
+			<ul>
+				<li>
+					<a class="tit_printx">
+						<img src="/assets/fp_fh_1.png">
+					</a>
+				</li>
+				<li>
+					<!-- <a> -->
+					<img src="/assets/fp_fh_2.png" class="ret_tit_disab">
+					<!-- </a> -->
+				</li>
+				<li>
+					<a class="ret_return">
+						<img src="/assets/fp_fh_3.png">
+					</a>
+				</li>
+				<li>
+					<a class="ret_out">
+						<img src="/assets/fp_fh_4.png">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 退回金税—-表格 start -->
+        <div class="formx">
+		    <!-- re_scroll start -->
+		    <div class="for_scroll " style="width: 706px;height: 258px;overflow:scroll;border: 1px solid #dfdfdf;">
+ 
+                <div class="for_cont inf_scroll" style="width: 1100px;height: 241px;">
+					<table border="1">
+						<thead>
+							<tr>
+							    <th class="ta_left"></th>
+							    <th>发票种类</th>
+							    <th>开票限额</th>
+							    <th>卷号</th>
+							    <th>类别代码</th>
+							    <th>类别名称</th>
+							    <th>起始号码</th>
+							    <th>发票张数</th>
+							    <th>领购日期</th>
+							</tr>
+						</thead>
+						<tbody>
+							   
+            					
+						</tbody>
+					</table>
+				</div>
+            </div>
+          <!-- end re_scroll -->
+		</div>
+		<!-- end 退回金税——表格 -->
+		<!-- 返回 start -->
+		<div class="back">
+			<img src="/assets/back.png">
+			<p>x</p>
+			<div class="back_btn">
+				<span class="back_btn_yes">是</span>
+				<span class="back_btn_no">否</span>
+			</div>
+		</div>
+		<!-- end 返回 -->
+	 </div>
+	 <!-- end 发票退回 -->
+	 <!-- 打印 start -->
+	 <div class="printx">
+		 <img src="/assets/dayin.png">
+         <div class="prin_close">
+		  	  <img src="/assets/panel_tools.png">
+		 </div>
+         <div class="prin_btn">
+	         <span class="prin_yl">预览</span>
+	         <span class="prin_yes">打印</span>
+	         <span class="prin_no">不打印</span>
+	     </div>
+	</div>
+	<!-- end 打印 -->
+	
+	<!-- 红票单据打印 start -->
+	 <div class="redbill_printx">
+		 <img src="/assets/dayin.png">
+         <div class="prin_close">
+		  	  <img src="/assets/panel_tools.png" style="margin: 0 0 0 -16px;cursor: pointer;">
+		 </div>
+         <div class="prin_btn">
+	         <span class="prin_yl" style="float: left;">预览</span>
+	         <span style="float: left;" class="redbill_prin_ok">打印</span>
+	         <span class="prin_no" style="float: left;">不打印</span>
+	     </div>
+	</div>
+	<!-- 红票单据end 打印 -->
+	
+	<!-- 从金税设备读入新购发票 start -->
+   <div class="readinfox" id="readgmfp">
+   	    <div class="inf_tit">
+			 <img src="/assets/logo1.png">
+			 <span>从金税设备读入新购发票</span>
+		</div>
+
+		<div class="inf_close">
+		  	   <img src="/assets/panel_tools.png">
+		</div>
+
+		<h3>从金税设备读入新购发票完毕，发票卷信息如下：</h3>
+
+		<!-- 退回发票卷信息表格 start -->
+        <div class="read_scroll" style="width: 800px;height: 108px;overflow-y:scroll;">
+			
+			<table border="1">
+				<thead>
+					<tr>
+					    <th class="ta_left"></th>
+					    <th>发票种类</th>
+					    <th>开票限额</th>
+					    <th>类别代码</th>
+					    <th>类别名称</th>
+					    <th>起始号码</th>
+					    <th>发票张数</th>
+					    <th>领购日期</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					
+					
+					
+					
+				</tbody>
+			</table>
+        </div>
+        <!-- end 退回发票卷信息表格 -->
+
+        <div class="inf_btn">
+		     <!-- <span class="inf_yes">确定</span> -->
+		     <span class="readinfox_confirm">确定</span>
+		</div>
+
+   </div>
+   <!-- end 从金税设备读入新购发票-->
+
+   <!-- 确认将发票卷退回金税设备 start -->
+   <div class="infox">
+   	    <div class="inf_tit">
+			 <img src="/assets/logo1.png">
+			 <span>确认将发票卷退回金税设备</span>
+		</div>
+
+		<div class="inf_close">
+		  	   <img src="/assets/panel_tools.png">
+		</div>
+
+		<h3>本次退回发票卷信息如下，请确认是否退回！</h3>
+
+		<!-- 退回发票卷信息表格 start -->
+        <div class="inf_scroll" style="width: 800px;height: 108px;overflow-y:scroll;">
+			
+			<table border="1">
+				<thead>
+					<tr>
+					    <th class="ta_left"></th>
+					    <th>发票种类</th>
+					    <th>开票限额</th>
+					    <th>类别代码</th>
+					    <th>类别名称</th>
+					    <th>起始号码</th>
+					    <th>发票张数</th>
+					    <th>领购日期</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					
+					
+				</tbody>
+			</table>
+        </div>
+        <!-- end 退回发票卷信息表格 -->
+
+        <div class="inf_btn">
+		     <span class="inf_yes">确定</span>
+		     <span class="inf_no">取消</span>
+		</div>
+
+   </div>
+   <!-- end 确认将发票卷退回金税设备-->
+
+   <!-- 读入介质选择 start -->
+   <div class="drfp">
+		<img src="/assets/fp_drfp.png">
+
+		<div class="rub_btn">
+			<span style="float: left;" id="drfp_ok">确定</span>
+			<span class="rub_btn_no">取消</span>
+		</div>
+
+		<div class="rub_close">
+			<img src="/assets/panel_tools.png">
+		</div>
+   </div>
+   <!-- end 读入介质选择 -->
+   
+   <!-- 退回介质选择 start -->
+   <div class="rubric">
+		<img src="/assets/thjz.png">
+
+		<div class="rub_btn">
+			<span class="rub_btn_ok">确定</span>
+			<span class="rub_btn_no">取消</span>
+		</div>
+
+		<div class="rub_close">
+			<img src="/assets/panel_tools.png">
+		</div>
+   </div>
+   <!-- end 退回介质选择 -->
+
+   <!-- 退回介质选择——信息 start -->
+   <div class="details">
+		<img src="/assets/thjz_xx.png">
+
+		<div class="det_close">
+			<img src="/assets/panel_tools.png">
+		</div>
+
+		<span>确认</span>
+   </div>
+	<!-- end 退回介质选择——信息 -->
+
+	<!-- 信息表 start -->
+	<div class="Category">
+ 	     <p class="cat_p1">红字增值税专用发票信息表填开</p>
+ 	     <p class="cat_p2">红字货物运输业增值税专用发票信息表填开</p>
+	</div>
+	<!-- end 信息表 -->
+
+	<!-- 红字发票信息表信息确认 start -->
+	<div class="information" id="redbill_confirm">
+		<!-- 红字发票信息表信息选择 start -->
+
+	<div class="infor_tit">
+		 <img src="/assets/logo1.png">
+		 <span>红字发票信息表信息选择</span>
+	 </div>
+
+     <div class="infor_close">
+	  	   <img src="/assets/panel_tools.png">
+	 </div>
+
+	 <p class="infor_h3_1">本张发票可以开红字发票！</p>
+	 <p class="infor_h3_1">但在当前库没有找到对应信息。</p>
+
+	 <!-- radio start -->
+	 <div class="open_main" id="open_main_" style="width: 420px; height: 320px; border: 1px solid; margin: 11px;">
+
+		
+			<p style="margin: 10px; font-size: 14px; color: blue;">类别代码:1101126240</p>
+			<p style="margin: 10px; font-size: 14px; color: blue;">发票号码:74928405</p>
+							<p style="margin: 10px; font-size: 14px; color: blue;">购方名称:
+                    <span id="open_main_bName">北京三和贸易有限公司</span>
+				</p>
+    			<p style="margin: 10px; font-size: 14px; color: blue;">购方税号:
+					<span id="open_main_bTaxId">110104719571032</span>
+				</p>
+    			<p style="margin: 10px; font-size: 14px; color: blue;">购方地址电话:北京市海淀区中关村东路18号1楼15层C1811</p>
+    			<p style="margin: 10px; font-size: 14px; color: blue;">购方银行账号:中国农业银行北京青年支行 6441282509275232345</p>
+    			<p style="margin: 10px; font-size: 14px; color: blue;">合计金额(不含税):30000.00</p>
+    			<p style="margin: 10px; font-size: 14px; color: blue;">合计税额:35100.00</p>
+    			<p style="margin: 10px; font-size: 14px; color: blue;">主要商品名称:办公用品</p>
+						<p style="margin: 10px; font-size: 14px; color: blue;">所属月份:2017年01月</p>
+	 </div>
+	 <!-- end radio -->
+
+	 <div class="infor_btn">
+         <span class="infor_pre">上一步</span>
+         <span class="infor_confirm">确定</span>
+         <span class="infor_no">取消</span>
+	 </div>
+
+
+<!-- end 红字发票信息表信息选择 -->	</div>
+	<!-- end 红字发票信息表信息确认 -->
+	
+	<!-- 红字发票信息表信息确认 start -->
+	<div class="information" id="redbill_fill" style="width: 920px; height: 560px;top: 35px;left: 28px;overflow:hidden;">
+		<style>
+.invoice_session1 {
+	position: absolute;
+}
+
+.invoice_session1 .taxBillDate {
+	position: absolute;
+	top: 65px;
+	left: 90px;
+	width: 120px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #D804D3;
+	background: none;
+}
+
+.invoice_session1 .drawer {
+	position: absolute;
+	top: 65px;
+	left: 360px;
+	width: 120px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #D804D3;
+	background: none;
+}
+
+.invoice_session1 .taxBillNo {
+	position: absolute;
+	top: 65px;
+	left: 505px;
+	width: 120px;
+	font-weight: bold;
+	font-size: 16px;
+	color: #D804D3;
+	background: none;
+}
+
+
+.invoice_customer0 {
+    position: absolute;
+    top: 122px;
+    left: 140px;
+    width: 240px;
+    height: 44px;
+	overflow:hidden;
+}
+
+.invoice_customer0 dl {
+	margin: 0px;
+	padding: 0px;
+}
+
+.invoice_customer0 dt {
+	height: 16px;
+	margin-bottom: 5px;
+}
+
+.invoice_customer0 span {
+	float: left;
+}
+
+
+
+.invoice_customer0 input {
+	width: 363px;
+	border: 0px;
+	background: #fff;
+	color: #000;
+	height: 14px;
+	border:1px solid #b4c0ca;
+}
+
+.invoice_customer0 dt input {
+	width: 222px;
+}
+
+.invoice_customer1 {
+    position: absolute;
+    top: 122px;
+    left: 500px;
+    width: 300px;
+}
+
+.invoice_customer1 dl {
+	margin: 0px;
+	padding: 0px;
+}
+
+.invoice_customer1 dt {
+	height: 16px;
+	margin-bottom: 8px; *+
+	margin-bottom: 7px;
+}
+
+.invoice_customer1 span {
+	float: left;
+}
+
+
+
+.invoice_customer1 input {
+	width: 358px;
+	border: 0px;
+	background: #fff;
+	color: #000;
+	height: 14px;
+	border:1px solid #b4c0ca;
+}
+
+.invoice_customer1 dt input {
+	width: 218px;
+}
+
+.invoice_corr_info {
+	position: absolute;
+}
+
+.invoice_corr_info .corrTaxBillCode {
+	position: absolute;
+	top: 390px;
+	left: 575px;
+	width: 120px;
+	font-size: 12px;
+	color: #D804D3;
+	background: none;
+}
+
+.invoice_corr_info .corrTaxBillNo {
+	position: absolute;
+	top: 409px;
+	left: 575px;
+	width: 120px;
+	font-size: 12px;
+	color: #D804D3;
+	background: none;
+}
+
+.invoice_corr_info .corrTaxBillName {
+	position: absolute;
+	top: 429px;
+	left: 575px;
+	width: 120px;
+	font-size: 12px;
+	color: #D804D3;
+	background: none;
+}
+
+.invoice_total1 {
+	position: absolute;
+	border: 1px solid #000;
+}
+
+.invoice_total1 input {
+	background: #fff;
+	border: 0px;
+	position: absolute;
+}
+
+.invoice_total1 .money_total {
+	width: 100px;
+	height: 16px; *+
+	height: 14px;
+	top: 276px;
+	left: 520px;
+	color: #000;
+}
+
+.invoice_total1 .tax_total {
+	width: 100px;
+	top: 276px;
+	left: 716px;
+}
+
+.invoice_product_main1 {
+	position: absolute;
+	top: 190px;
+	left: 19px;
+	overflow: scroll;
+	width: 875px;
+	height: 110px;
+}
+
+.phoneandcontent {
+	position: absolute;
+}
+
+.phoneandcontent .buyerAddress {
+	position: absolute;
+	left: 575px;
+	top: 450px;
+	width: 120px;
+	font-size: 12px;
+	color: #D804D3;
+	background: none;
+}
+
+.phoneandcontent .remark {
+	position: absolute;
+	left: 575px;
+	top: 476px;
+	width: 200px;
+	font-size: 12px;
+	color: #D804D3;
+	background: none;
+}
+
+.invoice_red_radio_three {
+    position: absolute;
+    top: 333px;
+    left: 50px;
+    width: 385px;
+    height: 210px;
+}
+
+.invoice_red_radio_three dt {
+	line-height: 18px;
+}
+
+.invoice_red_radio_three input {
+	width: auto;
+}
+
+.invoice_red_deductible {
+	margin-left: 44px;
+	margin-top: 6px\0;
+}
+
+.invoice_red_notdeductible {
+	margin-left: 72px;
+	margin-bottom: 5px\0;
+}
+
+.invoice_red_sellerapp {
+	margin-left: 28px;
+	margin-bottom: 5px\0;
+}
+#xlkbj{
+    background: url('../images/xlkbj.png') -20px -12px;
+    display: block;
+    background-position: no-repeat;
+    width: 205px;
+    height: 20px;
+    overflow: hidden;
+    margin: -21px 0 0 -61px;
+    text-indent: 1em;
+}
+
+.invoice_print_statis_fromat {
+	left: 605px;
+    width: 300px;
+    height: 26px;
+    position: absolute;
+    top: 37px;
+    right: 10px;
+}
+.invoice_print_statis_fromat a {
+	display: block;
+    width: 55px;
+    height: 25px;
+    float: left;
+    cursor: pointer;
+	margin-right:2px;
+}
+.invoice_print_statis_fromat a.xx_1:hover{
+    padding: 3px 0 3px 3px;
+    border-left: 2px solid #A1A1A1;
+    border-top: 2px solid #A1A1A1; 
+    margin: -3px 0 -3px -3px; 
+}
+
+.redbill_printx {
+    width: 447px;
+    height: 288px;
+    background-color: #fff;
+    position: absolute;
+    top: 115px;
+    left: 252px;
+    z-index: 30;
+    display: none;
+}
+.redbill_printx .prin_close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.redbill_printx .prin_btn {
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 50%;
+    margin-right: -155px;
+    overflow: hidden;
+}
+.redbill_printx .prin_btn span {
+    width: 90px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+</style>
+	<div class="infor_tit">
+        <img src="/assets/logo1.png">
+        <span>红字发票申请单信息</span>
+    </div>
+    
+    <div class="infor_close">
+    	<img src="/assets/panel_tools.png">
+    </div>
+	
+<form id="addRedBillInvoiceForm">
+	
+	<div class="invoice_print_statis_fromat">
+		<a href="javascript:void(0)" title="减行"></a>
+		<a href="javascript:void(0)" title="增行"></a>
+		<a href="javascript:void(0)" title="税价" id="changeTaxTab" class="xx_1"></a>
+		<a href="javascript:void(0)" title="打印" class="xx_1" onclick="$(&#39;.redbill_printx&#39;).show();"></a>
+		<a href="javascript:void(0)" style="margin-left: 5px;" title="退出" class="xx_1" onclick="$(&#39;#redbill_fill&#39;).hide();"></a>
+	</div>
+	<div class="invoice_session1">
+		<input class="taxBillDate" id="redbill_createTime" name="createTime" type="text" value="2017年02月21日" onfocus="WdatePicker({readOnly:true,dateFmt:&#39;yyyy年MM月dd日&#39;})">
+		<input class="drawer" type="text" id="redbill_drawer" readonly="" value="张晨">
+		<input class="taxBillNo" type="text" id="redbill_taxBillNo" readonly="" value="22345678">
+	</div>
+	<div class="invoice_customer0">
+		<dl>
+			<dt>
+				<span><input id="redbill_cName" name="cName" type="text" value="" class="moveborder" style="border:none;"></span>
+			</dt>
+			<dt>
+				<span><input id="redbill_cTaxId" name="cTaxId" type="text" value="" class="moveborder" style="border:none;"></span>
+			</dt>
+		</dl>
+	</div>
+	<div class="invoice_customer1">
+		<dl>
+			<dt>
+				<span><input id="redbill_bName" name="bName" type="text" value="" class="moveborder" style="border:none;">
+			</span></dt>
+			<dt>
+				<span><input id="redbill_bTaxId" name="bTaxId" type="text" value="" class="moveborder" style="border:none;"></span>
+			</dt>
+		</dl>
+	</div>
+
+	<div class="invoice_product_main1">
+		<table border="0" cellpadding="0" cellspacing="0" width="1200" id="redbill_tables" style="margin-left:-3px;">
+			<tbody><tr id="firsttr">
+				<td class="customer_main_tb">&nbsp;</td>
+				<td class="customer_main_tb_title w180" style="background: #830009;">商品名称</td>
+				<td class="customer_main_tb_title w146">规格型号</td>
+				<td class="customer_main_tb_title w99">计量单位</td>
+				<td class="customer_main_tb_title w88">数量</td>
+				<td class="customer_main_tb_title w180" id="price_tab">单价(不含税)</td>
+				<td class="customer_main_tb_title w180" id="money_tab">金额(不含税)</td>
+				<td class="customer_main_tb_title w88">税率</td>
+				<td class="customer_main_tb_title w180">税额</td>
+			</tr>
+			<tr>
+				<td class="customer_main_tb">
+					&nbsp;
+				</td>
+				<td class="customer_main_common_tb yellow">
+					<input name="name[0]" type="text" value="" id="redbill_name">
+				</td>
+				<td class="customer_main_common_tb green">
+					<input name="spec[0]" type="text" value="" id="redbill_spec">
+				</td>
+				<td class="customer_main_common_tb green">
+					<input type="text" value="" name="unit[0]" id="redbill_unit">
+				</td>
+				<td class="customer_main_common_tb green">
+					<input type="text" name="number[0]" value="" id="redbill_number">
+				</td>
+				<td class="customer_main_common_tb green">
+					<input type="text" value="" name="price[0]" id="redbill_price">
+				</td>
+				<td class="customer_main_common_tb green">
+					<input type="text" value="" name="money[0]" id="redbill_money">
+				</td>
+				<td class="customer_main_common_tb green">
+					<input type="text" value="" name="taxRate[0]" id="redbill_taxRate">
+				</td>
+				<td class="customer_main_common_tb green">
+					<input type="text" value="" name="taxMoney[0]" id="redbill_taxMoney">
+				</td>
+			</tr>
+		</tbody></table>
+
+	</div>
+	<div class="invoice_total1">
+		<input class="money_total" type="text" id="redbill_totalNoTaxMoney" name="totalNoTaxMoney" value="">
+		<input class="tax_total" type="text" id="redbill_totalTaxMoney" name="totalTaxMoney" value="">
+	</div>
+	<div class="invoice_corr_info">
+		<input class="corrTaxBillCode" type="text" value="1102073140">
+		<input class="corrTaxBillNo" type="text" value="46381049">
+		<input class="corrTaxBillName" type="text" value="增值税专用发票">
+	</div>
+
+	<div class="phoneandcontent">
+		<input type="text" value="" class="buyerAddress" style="background: #FFF">
+		<select name="remark" style="position: absolute; top: 90px; color: rgb(216, 4, 211);">
+			<option value="购货方纳税识别号有误">
+					购货方纳税识别号有误</option>
+			<option value="商品数量有误">
+					商品数量有误</option>
+			<option value="无购货方纳税识别号">
+					无购货方纳税识别号</option>
+		</select>
+	</div>
+	
+	<img src="/assets/invoice_red_main.jpg" border="0">
+	<dl class="invoice_red_radio_three">
+		<dt>
+			<input type="radio" name="choose1" value="gmfsq" onclick="selectRadio(0,&#39;a&#39;, &#39;invoice_red_radio_three&#39;)">
+			一、购买方申请
+		</dt>
+		<dt class="invoice_red_deductible">
+			对应蓝字专用发票抵扣增值税销项税额情况
+		</dt>
+		<dt class="invoice_red_deductible">
+			<input type="radio" name="choose12" onclick="selectRadio(0,&#39;b&#39;, &#39;invoice_red_radio_three&#39;)" value="beydk" disabled="disabled">
+			1.己抵扣
+		</dt>
+		<dt class="invoice_red_deductible">
+			<input type="radio" name="choose12" value="bewdk" onclick="selectRadio(1,&#39;b&#39;, &#39;invoice_red_radio_three&#39;)" disabled="disabled">
+			2.未抵扣
+		</dt>
+		<dt class="invoice_red_notdeductible">
+			<input type="radio" name="choose121" value="wfrz" disabled="disabled">
+			(1).无法认证
+		</dt>
+		<dt class="invoice_red_notdeductible">
+			<input type="radio" name="choose121" value="taxpayerIdWrong" disabled="disabled">
+			(2).纳税人识别号认证不符
+		</dt>
+		<dt class="invoice_red_notdeductible">
+			<input type="radio" name="choose121" value="billNumWrong" disabled="disabled">
+			(3).增值税专用发票代码、号码认证不符
+		</dt>
+		<dt class="invoice_red_notdeductible">
+			<input type="radio" name="choose121" value="bsyzzzdkfw" disabled="disabled">
+			(4).所购货物不属于增值税扣税项目范围
+		</dt>
+		<dt>
+			<input type="radio" name="choose1" value="xsfsq" onclick="selectRadio(1,&#39;a&#39;, &#39;invoice_red_radio_three&#39;)">
+			二、销售方申请
+		</dt>
+
+		<dt class="invoice_red_sellerapp">
+			<input type="radio" name="choose21" value="kpywjs">
+			(1).因开票有误购买方拒收的
+		</dt>
+		<dt class="invoice_red_sellerapp">
+			<input type="radio" name="choose21" value="kpywwjf">
+			(2).因开票有误等原因尚未交付的
+		</dt>
+	</dl>
+	
+</form>	</div>
+	<!-- end 红字发票信息表信息确认 -->
+	
+	<!-- 红字发票信息表信息选择 start -->
+	<div class="information" id="redbill_info_choose">
+		<div class="infor_tit">
+			 <img src="/assets/logo1.png">
+			 <span>红字发票信息表信息选择</span>
+		 </div>
+
+         <div class="infor_close">
+		  	   <img src="/assets/panel_tools.png">
+		 </div>
+
+		 <h3 class="infor_h3_1">开具红字发票信息选择</h3>
+
+		 <!-- radio start -->
+		 <div class="open_main" id="open_main_" style="height: 255px; width: 443px; overflow: hidden; position: relative; background: rgb(255, 255, 255);">
+
+			<form action="http://lab1.ruby.com:8081/iv.html?invoiceRedNeg" name="red" id="red" method="post">
+				<input type="hidden" name="testId" value="6ecc8419b0815211e38de9232db0b53e">
+				<input type="hidden" name="enterpriseId" value="a6f0edeb0dcc627d0870645e16cf7ceb">
+
+				<dl class="invoice_red_radio_two">
+					<dt>
+						<input type="radio" name="choose1" value="gmfsq" onclick="selectRadio(0,&#39;a&#39;, &#39;invoice_red_radio_two&#39;)">
+						一、购买方申请
+					</dt>
+					<dt class="invoice_red_deductible">
+						对应蓝字专用发票抵扣增值税销项税额情况
+					</dt>
+					<dt class="invoice_red_deductible">
+						<input type="radio" name="choose12" onclick="selectRadio(0,&#39;b&#39;, &#39;invoice_red_radio_two&#39;)" value="beydk" disabled="disabled">
+						1.己抵扣
+					</dt>
+					<dt class="invoice_red_deductible">
+						<input type="radio" name="choose12" value="beydk" onclick="selectRadio(1,&#39;b&#39;, &#39;invoice_red_radio_two&#39;)" disabled="disabled">
+						2.未抵扣
+					</dt>
+					<dt class="invoice_red_notdeductible">
+						<input type="radio" name="choose121" value="wfrz" disabled="disabled">
+						(1).无法认证
+					</dt>
+					<dt class="invoice_red_notdeductible">
+						<input type="radio" name="choose121" value="taxpayerIdWrong" disabled="disabled">
+						(2).纳税人识别号认证不符
+					</dt>
+					<dt class="invoice_red_notdeductible">
+						<input type="radio" name="choose121" value="billNumWrong" disabled="disabled">
+						(3).增值税专用发票代码、号码认证不符
+					</dt>
+					<dt class="invoice_red_notdeductible">
+						<input type="radio" name="choose121" value="bsyzzzdkfw" disabled="disabled">
+						(4).所购货物不属于增值税扣税项目范围
+					</dt>
+					<dt>
+						<input type="radio" name="choose1" value="xsfsq" onclick="selectRadio(1,&#39;a&#39;, &#39;invoice_red_radio_two&#39;)">
+						二、销售方申请
+					</dt>
+
+					<dt class="invoice_red_sellerapp">
+						<input type="radio" name="choose21" value="kpywjs">
+						(1).因开票有误购买方拒收的
+					</dt>
+					<dt class="invoice_red_sellerapp">
+						<input type="radio" name="choose21" value="kpywwjf">
+						(2).因开票有误等原因尚未交付的
+					</dt>
+				</dl>
+				
+			</form>
+		 </div>
+		 <!-- end radio -->
+
+		 <div class="infor_sele">
+		 	 <h3>对应蓝字增值税专用发票信息</h3>
+
+             <table width="100%">
+				<tbody>
+
+					<tr>
+						<td align="right">
+							发票种类：
+						</td>
+
+						<td>
+							<select style="width: 110px;">
+						       <option selected="selected">专用发票</option>
+						    </select>
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							发票代码：
+						</td>
+
+						<td>
+							<input class="infor_sele_invoice_code" type="text" maxlength="20" name="" value="" style="width: 110px;">
+						</td>
+
+						<td align="right">
+							发票号码：
+						</td>
+
+						<td>
+							<input class="infor_sele_invoice_number" type="text" maxlength="20" name="" value="" style="width: 110px;">
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		 </div>
+
+		 <div class="infor_btn">
+	         <span class="infor_next">下一步</span>
+	         <span class="infor_ok">确定</span>
+	         <span class="infor_no">取消</span>
+		 </div>
+
+		 <div class="messagex">
+		 	  <img src="/assets/xxb.png">
+		 	  <p>x</p>
+		 	  <span>确定</span>
+		 </div>
+
+	</div>
+	<!-- end 红字发票信息表信息选择 -->
+
+	<!-- 发票作废 start -->
+	 <div class="invalid">
+		 <div class="inv_tit">
+			 <img src="/assets/logo1.png">
+			 <span>选择发票号码作废</span>
+		 </div>
+
+         <div class="inv_close">
+		  	   <img src="/assets/panel_tools.png">
+		 </div>
+
+		 <div class="inv_pic">
+			<ul>
+				<li>
+					<a class="inv_scrap">
+						<img src="/assets/fp_fh_5.png">
+					</a>
+				</li>
+
+				<li>
+					<a class="inv_detailed">
+						<img src="/assets/fp_fh_6.png">
+					</a>
+				</li>
+
+				<li>
+					<a class="inv_li_border">
+						<img src="/assets/fp_fh_7.png">
+					</a>
+				</li>
+
+				<li>
+					<a class="inv_li_border">
+						<img src="/assets/fp_fh_2.png">
+					</a>
+				</li>
+
+				<li>
+					<a class="tit_printx">
+						<img src="/assets/fp_fh_1.png">
+					</a>
+				</li>
+
+				<li>
+					<a class="inv_hide">
+						<img src="/assets/fp_fh_4.png">
+					</a>
+				</li>
+
+			</ul>
+		</div>
+
+        <!-- 选择发票号码作废——表格 start -->
+        <div class="reports">
+		    <!-- re_scroll start -->
+		    <div class="re_scroll" style="width: 660px;height: 375px;overflow:scroll;">
+ 
+                <div class="scr_cont" style="width: 1710px;height: 358px;">
+				
+					<table border="1">
+						<thead>
+							<tr>
+							    <th class="ta_left"></th>
+							    <th style="width: 60px;">发票种类</th>
+							    <th style="width: 80px;">类别代码</th>
+							    <th style="width: 80px;">发票号码</th>
+							    <th style="width: 80px;">开票机号码</th>
+							    <th style="width: 160px;">购方名称</th>
+							    <th style="width: 140px;">购方税号</th>
+							    <th style="width: 150px;">购方地址电话</th>
+								<th style="width: 150px;">购方银行账号</th>
+								<th style="width: 100px;">开票日期</th>
+							    <th style="width: 60px;">报送状态</th>
+								<th style="width: 60px;">报送日志</th>
+								<th style="width: 80px;">所属月份</th>
+							    <th style="width: 60px;">合计金额</th>
+								<th style="width: 40px;">税率</th>
+							    <th style="width: 60px;">合计税额</th>
+								<th style="width: 60px;">打印标志</th>
+								<th style="width: 60px;">作废标志</th>
+								<th style="width: 60px;">清单标志</th>
+								<th style="width: 60px;">修复标志</th>
+								<th style="width: 100px;">作废日期</th>
+							</tr>
+						</thead>
+
+						<tbody>
+													</tbody>
+					</table>
+
+				</div>
+            </div>
+          <!-- end re_scroll -->
+
+		</div>
+		<!-- end 选择发票号码作废——表格 -->
+
+		<!-- 查看作废明细 start -->
+		<div class="detailedx">
+			<img src="/assets/zfmx.png">
+
+			<div class="detai_close">
+		  	   <img src="/assets/panel_tools.png">
+		    </div>
+
+		    <a class="detai_no"></a>
+		</div>
+		<!-- end 查看作废明细 -->
+
+		<div class="count">
+			<img src="/assets/zf_01.png">
+
+			<p>x</p>
+            <div class="count_btn">
+			 	 <input type="submit" value="确定" class="count_btn_ok">
+			 	 <input type="reset" value="取消" class="count_btn_no">
+		 	 </div>
+		</div>
+
+		<div class="sure">
+			<img src="/assets/zf_02.png">
+			<p>x</p>
+			<button type="submit">确定</button>
+		</div>
+
+	 </div>
+	<!-- end 发票作废 -->
+
+	<!-- 增值税发票填开 start -->
+	 <div class="ticket">
+	<form id="ticket_particulars">
+    
+	 <div class="tick_tit">
+		 <img src="/assets/logo1.png">
+		 <span>增值税发票填开</span>
+	 </div>
+
+	 <div class="tick_close">
+	  	   <img src="/assets/panel_tools.png">
+	 </div>
+
+	<!-- receipt start -->
+	 <div class="receipt">
+	 	<img id="ticket_img1">
+
+	    <a class="tick_jiage" title="价格"></a>
+	    <a class="tick_out" title="退出"></a>
+
+	    <h2 class="rece_city">湖北省</h2>
+
+	 	<!-- 购买方 start -->
+	 	<div class="rece_title">
+	 		<p name="cName">北京鸿润水泥厂</p>
+	 		<p name="cTaxId">110115025789752</p>
+	 		<p name="cAddress">湖北省洪山区民族大道1号010-22342521</p>
+	 		<p name="cAccounts">中国建设银行湖北省洪山支行3501264945702852473</p>
+	 	</div>
+	 	<!-- end  购买方-->
+
+	 	<!-- 密码区 start -->
+	 	<div class="passwordx">
+	 		4+-087430/*03-/53442005562-+ 5566&lt;&lt;56+--+4566--6455466316 5125+*-00022+--8*+-5+55/5/56 546-+430/*03-/5344200&gt;47&gt;2++
+	 	</div>
+	 	<!-- end 密码区 -->
+	
+		 <!-- 表格 start -->
+         <div class="tablex">
+			<table border="1">
+				<thead>
+					<tr>
+					    <th class="tab_left"></th>
+					    <th>商品名称</th>
+					    <th>规格型号</th>
+					    <th>计量单位</th>
+					    <th>数量</th>
+					    <th>单价(含税)</th>
+					    <th>金额(含税)</th>
+					    <th>税率</th>
+					    <th>税额</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td class="tab_left"></td>
+						<td><input name="name[0]" type="text" value=""></td>
+						<td><input name="spec[0]" type="text" value=""></td>
+						<td><input name="unit[0]" type="text" value=""></td>
+						<td><input name="number[0]" type="text" value=""></td>
+						<td><input name="price[0]" type="text" value=""></td>
+						<td><input name="money[0]" type="text" value=""></td>
+						<td><input name="taxRate[0]" type="text" value=""></td>
+						<td><input name="taxMoney[0]" type="text" value=""></td>
+					</tr>
+					<tr>
+						<td class="tab_left"></td>
+						<td><input name="name[1]" type="text" value=""></td>
+						<td><input name="spec[1]" type="text" value=""></td>
+						<td><input name="unit[1]" type="text" value=""></td>
+						<td><input name="number[1]" type="text" value=""></td>
+						<td><input name="price[1]" type="text" value=""></td>
+						<td><input name="money[1]" type="text" value=""></td>
+						<td><input name="taxRate[1]" type="text" value=""></td>
+						<td><input name="taxMoney[1]" type="text" value=""></td>
+					</tr>
+					<tr>
+						<td class="tab_left"></td>
+						<td><input name="name[2]" type="text" value=""></td>
+						<td><input name="spec[2]" type="text" value=""></td>
+						<td><input name="unit[2]" type="text" value=""></td>
+						<td><input name="number[2]" type="text" value=""></td>
+						<td><input name="price[2]" type="text" value=""></td>
+						<td><input name="money[2]" type="text" value=""></td>
+						<td><input name="taxRate[2]" type="text" value=""></td>
+						<td><input name="taxMoney[2]" type="text" value=""></td>
+					</tr>
+					<tr>
+						<td class="tab_left"></td>
+						<td><input name="name[3]" type="text" value=""></td>
+						<td><input name="spec[3]" type="text" value=""></td>
+						<td><input name="unit[3]" type="text" value=""></td>
+						<td><input name="number[3]" type="text" value=""></td>
+						<td><input name="price[3]" type="text" value=""></td>
+						<td><input name="money[3]" type="text" value=""></td>
+						<td><input name="taxRate[3]" type="text" value=""></td>
+						<td><input name="taxMoney[3]" type="text" value=""></td>
+					</tr>
+					<tr>
+						<td class="tab_left"></td>
+						<td><input name="name[4]" type="text" value=""></td>
+						<td><input name="spec[4]" type="text" value=""></td>
+						<td><input name="unit[4]" type="text" value=""></td>
+						<td><input name="number[4]" type="text" value=""></td>
+						<td><input name="price[4]" type="text" value=""></td>
+						<td><input name="money[4]" type="text" value=""></td>
+						<td><input name="taxRate[4]" type="text" value=""></td>
+						<td><input name="taxMoney[4]" type="text" value=""></td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		<!-- end 表格 -->
+
+		<!-- 销售方 start -->
+		<div class="sale">
+			<p name="bName">湖北省仁和机电设备有限公司</p>
+			<p name="bTaxId">110105539548703</p>
+			<p name="bAddress">湖北省洪山区民族大道1号010-22342521</p>
+			<p name="bAccounts">中国建设银行湖北省洪山支行3501264945702852473</p>
+		</div>
+		<!-- end 销售方 -->
+
+		<!-- 开票人 start -->
+		<p class="votex">张晨</p>
+		<!-- end 开票人 -->
+
+		<!-- 合计、价税合计 start -->
+		<div class="total">
+			 <p class="tota_number1" name="totalNoTaxMoney">0.00</p>
+			 <p class="tota_number2" name="totalTaxMoney">0.00</p>
+			 <p class="tota_number3" name="upMoney">零</p>
+			 <p class="tota_number4" name="totalMoney">0.00</p>
+		</div>
+		<!-- end 合计、价税合计 -->
+
+		<!-- No编号 start -->
+		<div class="numberx">
+			<h3 class="num_p1" name="categoryCode">1102073150</h3>
+			<h3 class="num_p2" name="invoiceNumber">34100005</h3>
+		</div>
+		<!-- end No编号 -->
+
+		<!-- 开票日期 start -->
+		<div class="datex"><input name="createTime" value="2015年02月24日" style="border: none;"></div>
+		<!-- end 开票日期 -->
+
+		<!-- 备注 start -->
+		<div class="remarks">
+             <textarea style="width: 240px; height: 70px;border: 0;" maxlength="200" name="bRemark">此客户很重要！</textarea>
+		</div>
+		<!-- end 备注 -->
+
+	 </div>
+	<!-- end receipt -->
+	</form>
+</div>	<!-- end 增值税发票填开 -->
+	<!-- 发票预览 start -->
+	 <div class="preview">
+	 <div class="preview_tit">
+		 <img src="/assets/logo1.png">
+		 <span>打印发票预览</span>
+	 </div>
+
+	 <div class="preview_close">
+	  	   <img src="/assets/panel_tools.png">
+	 </div>
+
+	<!-- receipt start -->
+	 <div class="receipt">
+		<form id="preview_particulars">
+        
+	 	<img id="preview_img1" src="/assets/fp_print_pt.png">
+	    <h2 class="rece_city" style="top: 9px;left: 235px;font-family: 楷体;">湖北省</h2>
+
+	 	<!-- 购买方 start -->
+	 	<div class="rece_title" style="top: 86px;left: 133px;">
+	 		<p name="cName">北京鸿润水泥厂</p>
+	 		<p name="cTaxId">110115025789752</p>
+	 		<p name="cAddress">湖北省洪山区民族大道1号010-22342521</p>
+	 		<p name="cAccounts">中国建设银行湖北省洪山支行3501264945702852473</p>
+	 	</div>
+	 	<!-- end  购买方-->
+
+	 	<!-- 密码区 start -->
+	 	<div class="passwordx" style="top: 86px;right: 81px;">
+	 		4+-087430/*03-/53442005562-+ 5566&lt;&lt;56+--+4566--6455466316 5125+*-00022+--8*+-5+55/5/56 546-+430/*03-/5344200&gt;47&gt;2++
+	 	</div>
+	 	<!-- end 密码区 -->
+	
+		 <!-- 表格 start -->
+         <div class="tablex" style="height: 218px;top: 175px;left: 44px;">
+			<table style="border:0px;">
+				<tbody>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[0]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[0]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[0]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[0]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[0]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[0]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[0]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[0]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[1]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[1]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[1]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[1]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[1]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[1]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[1]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[1]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[2]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[2]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[2]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[2]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[2]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[2]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[2]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[2]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[3]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[3]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[3]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[3]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[3]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[3]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[3]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[3]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[4]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[4]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[4]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[4]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[4]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[4]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[4]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[4]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[5]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[5]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[5]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[5]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[5]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[5]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[5]" type="text" value=""></td>
+						<td style="height: 18px;width: 95px;"><input name="taxMoney[5]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[6]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[6]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[6]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[6]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[6]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[6]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[6]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[6]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[7]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[7]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[7]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[7]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[7]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[7]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[7]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[7]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[8]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[8]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[8]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[8]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[8]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[8]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[8]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[8]" type="text" value=""></td>
+					</tr>
+					<tr>
+						
+						<td style="height: 18px;width: 156px;"><input name="name[9]" type="text" value=""></td>
+						<td style="height: 18px;width: 82px;"><input name="spec[9]" type="text" value=""></td>
+						<td style="height: 18px;width: 40px;"><input name="unit[9]" type="text" value=""></td>
+						<td style="height: 18px;width: 66px;"><input name="number[9]" type="text" value=""></td>
+						<td style="height: 18px;width: 65px;"><input name="price[9]" type="text" value=""></td>
+						<td style="height: 18px;width: 98px;"><input name="money[9]" type="text" value=""></td>
+						<td style="height: 18px;width: 36px;"><input name="taxRate[9]" type="text" value=""></td>
+						<td style="height: 18px;width: 94px;"><input name="taxMoney[9]" type="text" value=""></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- end 表格 -->
+
+		<!-- 销售方 start -->
+		<div class="sale" style="width: 325px;bottom: 31px;left: 134px;">
+			<p name="bName">湖北省仁和机电设备有限公司</p>
+			<p name="bTaxId">110105539548703</p>
+			<p name="bAddress">湖北省洪山区民族大道1号010-22342521</p>
+			<p name="bAccounts">中国建设银行湖北省洪山支行3501264945702852473</p>
+		</div>
+		<!-- end 销售方 -->
+
+		<!-- 开票人 start -->
+		<p class="votex" name="receiver" style="bottom: 17px;margin-right: 317px;">张晨</p>
+		<p class="votex" name="reviewer" style="bottom: 17px;margin-right: 148px;">张晨</p>
+		<p class="votex" name="drawer" style="bottom: 17px;">张晨</p>
+		<!-- end 开票人 -->
+
+		<!-- 合计、价税合计 start -->
+		<div class="total" style="bottom: 104px;right: 99px;">
+			 <p class="tota_number1" name="totalNoTaxMoney" style="left: 245px;">0.00</p>
+			 <p class="tota_number2" name="totalTaxMoney" style="right: 26px;">0.00</p>
+			 <p class="tota_number3" name="upMoney">零</p>
+			 <p class="tota_number4" name="totalMoney" style="right: 26px;">0.00</p>
+		</div>
+		<!-- end 合计、价税合计 -->
+
+		<!-- No编号 start -->
+		<div class="numberx" style="top: 12px;left: 541px;">
+			<h3 name="categoryCode">1102073150</h3>
+			<h3 name="invoiceNumber">34100005</h3>
+		</div>
+		<!-- end No编号 -->
+
+		<!-- 开票日期 start -->
+		<div class="datex" style="top: 59px;right: 62px;"><input name="createTime" value="2015年02月24日" style="border: none;"></div>
+		<!-- end 开票日期 -->
+
+		<!-- 备注 start -->
+		<div class="remarks" style="width: 220px;height: 55px;bottom: 38px;right: 107px;">
+             <textarea style="width: 220px; height: 55px;border: 0;" maxlength="200" name="bRemark"></textarea>
+		</div>
+		<!-- end 备注 -->
+		</form>
+
+	 </div>
+	<!-- end receipt -->
+
+</div>	 <div class="orderslist">
+	<div class="preview_tit">
+		 <img src="/assets/logo1.png">
+		 <span>销货清单预览</span>
+	 </div>
+
+	 <div class="preview_close">
+	  	   <img src="/assets/panel_tools.png">
+	 </div>
+	<h2>销售货物或者提供应税劳务清单</h2>
+
+	<form id="preview_orders">
+	<div class="orderslist_top">
+		<dl>
+			<dt>购买方名称：</dt>
+			<dd>
+				<input type="text" name="cName" value="">
+			</dd>
+		</dl>
+
+		<dl>
+			<dt>销售方名称：</dt>
+			<dd>
+				<input type="text" name="bName" value="">
+			</dd>
+		</dl>
+
+		<dl style="width: 50%; float: left;">
+			<dt>所属增值税专用发票代码：</dt>
+			<dd>
+				<input type="text" name="categoryCode" value="">
+			</dd>
+		</dl>
+
+		<dl style="width: 48%; float: left;">
+			<dt>号码：</dt>
+			<dd>
+				<input type="text" name="invoiceNumber" value="">
+			</dd>
+		</dl>
+
+	</div>
+
+	<div class="orderslist_table">
+		<table>
+			<thead>
+				<tr><th style="width: 4%">序号</th>
+				<th style="width: 25%">货物(劳务)名称</th>
+				<th style="width: 10%">规格型号</th>
+				<th style="width: 6%">单&nbsp;位</th>
+				<th style="width: 6%">数&nbsp;量</th>
+				<th style="width: 17%">单&nbsp;价</th>
+				<th style="width: 17%">金&nbsp;额</th>
+				<th style="width: 6%">税&nbsp;率</th>
+				<th style="width: 17%">税&nbsp;额</th>
+			</tr></thead>
+
+			<tbody>
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount0]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount0]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount0]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount0]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount0]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount0]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount0]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount0]" value="">
+					</td>
+				</tr>
+
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount1]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount1]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount1]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount1]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount1]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount1]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount1]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount1]" value="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount2]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount2]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount2]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount2]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount2]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount2]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount2]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount2]" value="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount3]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount3]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount3]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount3]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount3]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount3]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount3]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount3]" value="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount4]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount4]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount4]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount4]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount4]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount4]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount4]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount4]" value="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount5]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount5]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount5]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount5]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount5]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount5]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount5]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount5]" value="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount6]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount6]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount6]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount6]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount6]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount6]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount6]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount6]" value="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount7]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount7]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount7]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount7]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount7]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount7]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount7]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount7]" value="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount8]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount8]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount8]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount8]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount8]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount8]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount8]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount8]" value="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center">
+						<input type="text" name="ordersNum" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="name[discount9]" value="" style="text-align: left; padding-left: 5px;">
+					</td>
+					<td>
+						<input type="text" name="spec[discount9]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="unit[discount9]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="number[discount9]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="price[discount9]" value="">
+					</td>
+					<td>
+						<input type="text" name="money[discount9]" value="">
+					</td>
+					<td>
+						<input type="text" name="taxRate[discount9]" value="" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" name="taxMoney[discount9]" value="">
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+	</form>
+
+</div>	<!-- end 发票预览 -->
+
+	<!-- 发票查询 start -->
+	<div class="query">
+         <div class="query_tit">
+			 <img src="/assets/logo1.png">
+			 <span>发票查询</span>
+		 </div>
+
+		 <div class="query_close">
+		  	   <img src="/assets/panel_tools.png">
+		 </div>
+
+		 <div class="query_box">
+		 	   <h3>&nbsp;选择查询年月&nbsp;</h3>
+		 </div>
+
+         <div class="choice">
+	        <dl>
+	            <dt>
+	                 <h3>年份</h3>
+	            </dt>
+
+	            <dt>
+	            	<select name="">
+				        <option>2014年</option>
+				        <option>2015年</option>
+				        <option>2016年</option>
+				        <option selected="selected">2017年</option>
+				    </select>
+	            </dt>
+
+	            <dt>
+	                 <h3>月份</h3>
+	            </dt>
+
+	            <dt>
+	            	<select name="">
+				        <option>1月份</option>
+				        <option selected="selected">2月份</option>
+				        <option>3月份</option>
+				        <option>4月份</option>
+				        <option>5月份</option>
+				        <option>6月份</option>
+				        <option>7月份</option>
+				        <option>8月份</option>
+				        <option>9月份</option>
+				        <option>10月份</option>
+				        <option>11月份</option>
+				        <option>12月份</option>
+				    </select>
+	            </dt>
+		    </dl>
+
+			<div class="choi_btn">
+			     <span class="choi_yes">确定</span>
+			     <span class="choi_no">取消</span>
+			</div>
+		</div>
+
+	</div>
+	<!-- end 发票查询 -->
+
+	<!-- 选择发票号码查询 start -->
+	<div class="optionsx">
+		<img src="/assets/chaxun.png">
+
+		<div class="optio_close">
+		  	 <img src="/assets/panel_tools.png">
+		</div>
+
+		<div class="optio_img">
+			<a class="option_see">
+				<img src="/assets/fp_fh_6.png">
+			</a>
+
+			<a class="option_out">
+				<img src="/assets/fp_fh_4.png">
+			</a>
+		</div>
+
+		<!-- 表格 start -->
+        <div class="watchx">
+		    <div class="watchx_scroll" style="width: 958px;height: 385px;overflow:scroll;">
+ 
+                <div class="watchx_cont" style="width: 2400px;height: 368px;">
+				
+					<table border="1">
+						<thead>
+							<tr>
+							    
+							    <th>发票种类</th>
+							    <th>类别代码</th>
+							    <th>发票号码</th>
+							    <th>开票机号码</th>
+							    <th>购方名称</th>
+							    <th>购方税号</th>
+							    <th>购方地址电话</th>
+							    <th>购方银行账号</th>
+							    <th>身份证</th>
+							    <th>开票日期</th>
+							    <th>报送状态</th>
+							    <th>报送日志</th>
+							    <th>合计金额</th>
+							    <th>合计税率</th>
+							</tr>
+						</thead>
+
+						<tbody>
+													</tbody>
+					</table>
+
+				</div>
+            </div>
+
+		</div>
+		<!-- end 表格 -->
+
+	</div>
+	<!-- end 选择发票号码查询 -->
+
+	<!-- 发票填开 start -->
+	<dir class="fill">
+		<p class="fil_p1">增值税专用发票填开</p>
+		<p class="fil_p2">增值税普通发票填开</p>
+	</dir>
+	<!-- end 发票填开 -->
+
+	<!-- 增值税普通发票填开——弹窗 start -->
+	<div class="ordinary">
+		<img src="/assets/ptfp.png">
+
+		<p>x</p>
+		<span>确定</span>
+	</div>
+	<!-- end 增值税普通发票填开——弹窗 -->
+
+	<!-- 增值税专用发票填开 start -->
+	<div class="flour" id="flour_zy">
+		<img src="/assets/fpqr.png">
+
+		<div class="flour_close">
+		  	   <img src="/assets/panel_tools.png">
+		</div>
+
+		<div class="flour_btn">
+			<span class="flour_yes" onclick="showIssue(1)">确定</span>
+			<span class="flour_no">取消</span>
+		</div> 
+
+		<!-- 发票种类、代码、号码 start -->
+		<div class="figures">
+			<p>专用发票</p>
+			<p name="categoryCode[1]"></p>
+			<p class="startNumber" name="startNumber[1]"></p>
+			<input name="isRead[1]" type="hidden" value="">
+		</div>
+		<!-- end 发票种类、代码、号码 -->
+	</div>
+	<!-- end 增值税专用发票填开 -->
+	
+	<!-- 增值税普通发票填开 start -->
+	<div class="flour" id="flour_pt">
+		<img src="/assets/fpqr.png">
+
+		<div class="flour_close">
+		  	   <img src="/assets/panel_tools.png">
+		</div>
+
+		<div class="flour_btn">
+			<span class="flour_yes" onclick="showIssue(0)">确定</span>
+			<span class="flour_no">取消</span>
+		</div> 
+
+		<!-- 发票种类、代码、号码 start -->
+		<div class="figures">
+			<p>普通发票</p>
+			<p name="categoryCode[0]"></p>
+			<p class="startNumber" name="startNumber[0]"></p>
+			<input name="isRead[0]" type="hidden" value="">
+		</div>
+		<!-- end 发票种类、代码、号码 -->
+	</div>
+	<!-- end 增值税普通发票填开 -->
+
+	<div class="Issue">
+		<!-- 开具增值税专用发票 start -->
+    			<div class="Issue_tit">
+	<img src="/assets/logo1.png">
+	<span>开具增值税专用发票</span>
+</div>	
+<div class="Issue_close">
+	<img src="/assets/panel_tools.png">
+</div>
+<!-- 发票详情 -->
+<form id="addTaxSpecialInvoiceForm">
+<div class="particulars">
+	<!-- <img src="images/fp/fptk.png" /> -->
+	<img id="fptk_bgimg" src="/assets/fptk_pt.jpg">
+	<div class="part_tit">
+		<a class="part_tit_a9" alt="差额"></a>
+		<a class="part_tit_a1" alt="红字"></a>
+		<a class="part_tit_a2" alt="清单"></a>
+		<a class="part_tit_a8" alt="折扣"></a>
+		<a class="part_tit_a3" alt="价格"></a>
+		<a class="part_tit_a4" alt="增行"></a>
+		<a class="part_tit_a5" alt="减行"></a>
+		<a class="part_tit_a6" alt="打印"></a>
+		<a class="part_tit_a7" alt="退出"></a>
+	</div>
+	<div class="bianhao">
+		<h3 name="categoryCode" class="bianhao_p1"></h3>
+		<h3 name="invoiceNumber" class="bianhao_p2"></h3>
+		<input name="type" type="hidden" value="">
+		<input name="categoryCode" type="hidden" value="">
+		<input name="invoiceNumber" type="hidden" value="">
+		<input id="isMinus" name="isMinus" type="hidden" value="0">
+		<h3 style="margin-top: 20px; display: none;" class="bianhao_p3">销项负数</h3>
+		<input type="hidden" name="fatherCode" value="001001004">
+	</div>
+	<h2 class="part_title"><input type="text" value="湖北省" title="" readonly=""></h2>
+	<input value="湖北" class="part_area" type="text">
+	<div class="part_date"><input type="text" name="createTime" value="2018年12月05日" title="" onfocus="WdatePicker({readOnly:true,dateFmt:&#39;yyyy年MM月dd日&#39;})"></div>
+	<div class="part_buyer">
+		<input id="part_buyer_id" type="hidden">
+		<input id="cName" name="cName" type="text">
+		<input id="cTaxId" name="cTaxId" type="text">
+		<input id="cAddress" name="cAddress" type="text">
+		<input id="cAccounts" name="cAccounts" type="text">
+	</div>
+	<div class="grid">
+		<a class="grid_p1"></a>
+		<a class="grid_p1"></a>
+		<a class="grid_p1"></a>
+		<a class="grid_p1"></a>
+	</div>
+	<div class="part_password">
+		
+	</div>
+	<!-- listing start -->
+	<div class="listing">
+		<div class="list_scroll" style="width: 635px;height: 163px;overflow-y:scroll;border: 1px solid #dfdfdf;">
+			<table border="1">
+				<thead>
+					<tr>
+						<th class="list_tab_tit">货物或应税劳务、服务名称</th>
+						<th>规格型号</th>
+						<th>单位</th>
+						<th>数量</th>
+						<th id="price">单价(不含税)</th>
+						<th id="money">金额(不含税)</th>
+						<th>税率</th>
+						<th>税额</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="list_tab_tit">
+							<input id="listing_id" type="hidden" value="">
+							<input id="name" maxlength="60" value="" class="list_tab_tit" autocomplete="off">
+						</td>
+						<td>
+							<input id="spec" maxlength="50" value="">
+						</td>
+						<td>
+							<input id="unit" maxlength="50" value="">
+						</td>
+						<td>
+							<input id="number" maxlength="50" value="">
+						</td>
+						<td>
+							<input id="price" maxlength="50" value="" class="listing_price">
+						</td>
+						<td>
+							<input id="money" maxlength="50" value="" class="listing_money" readonly="">
+						</td>
+						<td>
+							<input id="taxRate" maxlength="50" value="">
+						</td>
+						<td>
+							<input id="taxMoney" maxlength="50" value="" readonly="">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- end listing -->
+	</div>
+	<!-- end particulars -->
+	<div class="price">
+		<input id="totalNoTaxMoney" name="totalNoTaxMoney" type="text" value="" class="price_number1">
+		<input id="totalTaxMoney" name="totalTaxMoney" type="text" value="" class="price_number2">
+		<input id="upMoney" name="upMoney" type="text" value="" class="price_number3">
+		<input id="totalMoney" name="totalMoney" type="text" value="" class="price_number4">
+	</div>
+	<div class="papers">
+		<input name="bName" type="text" value="湖北仁和服饰有限公司">
+		<input name="bTaxId" type="text" value="420104783587294888">
+		<input name="bAddress" type="text" value="武汉市桥口区太平洋102号027-83886888">
+		<input name="bAccounts" type="text" value="中国工商银行武汉市太平洋支行421863308018000655446">
+	</div>			 
+	<div class="notice">
+		<textarea style="width: 240px; height: 70px;border: 0;" maxlength="200" id="notice_textarea" name="bRemark"></textarea>
+	</div>
+	<input type="text" value="" class="namex" style="right: 545px;">
+	<input type="text" value="" class="namex" style="right: 384px;">
+	<input type="text" name="drawer" value="魏玉敏" class="namex">
+</div>
+</form><!-- end 发票详情 -->
+<!-- 客户编码选择-弹窗 -->
+<div class="customer">
+	<img src="/assets/kehu2.png">
+	<div class="cus_close">
+		<img src="/assets/panel_tools.png">
+	</div>
+	<!-- 左侧分类树start -->
+	<div class="st_tree" style="width:400px;margin:0 auto;position: absolute;top: 55px;left: 4px;">
+		<ul>
+        	<li class="folder open"><a class="st_tree_khbm" href="javascript:void();" ref="khbm" haschild="true">客户编码</a></li>
+        	<ul class="kh_tree" show="true" style="display: block;">
+</ul>
+		</ul>
+	</div>
+	<!-- 左侧分类树end -->
+	<!-- 搜索菜单栏start -->
+	<div class="cus_tit" style="height: 25px;position: absolute;top: 30px;right: 10px;">
+		<ul>
+			<li style="width: 190px;">
+        		<a class="comm_search" style="display: block;width: 42px;height: 20px;margin-top: 6px;" onclick="javascript:loadCustomers(null,&quot;001001004&quot;,$(&quot;.comm_info_search&quot;).val());" href="javascript:void(0);">
+        			<img src="/assets/search.png" style="display:block;position: absolute;top: 8px;right: 510px;">
+        		</a>
+        		<input class="comm_info_search" style="display: block;position: absolute;top: 6px;right: 386px;
+        			width: 120px;height: 21px;outline:none;">
+        		
+        	</li>
+		</ul>
+	</div>
+	<!-- 搜索菜单栏end -->
+	<!-- 客户编码表格 start -->
+	<div class="reports">
+	    <!-- re_scroll start -->
+	    <div class="re_scroll" style="width: 548px;height: 350px;overflow:scroll;border: 1px solid #dfdfdf;">
+            <div id="customerTable" class="scr_cont" style="width: 1100px;height: 300px;"><table border="1">
+	<thead>
+		<tr>
+			<th class="ta_left"></th>
+			<th>编码</th>
+			<th>名称</th>
+			<th>简码</th>
+			<th>税号</th>
+			<th>地址电话</th>
+			<th>银行账号</th>
+			<th>邮件地址</th>
+			<th>备注</th>
+		</tr>
+	</thead>
+	<tbody>
+			</tbody>
+</table></div>
+        </div>
+      <!-- end re_scroll -->
+	</div>
+	<!-- end 客户编码表格 -->
+</div><!-- end 客户编码选择-弹窗 -->
+<div class="commodity">
+	<img src="/assets/shangpin2.png">
+	<div class="comm_close">
+		<img src="/assets/panel_tools.png">
+	</div>
+	<!-- 左侧分类树start -->
+	<div class="st_tree" style="width:400px;margin:0 auto;position: absolute;top: 55px;left: 4px;">
+		<ul>
+        	<li class="folder open"><a href="javascript:void(0);" ref="spbm" haschild="true">商品编码</a></li>
+        	<ul show="true" style="display: block;">
+    			<li><a href="javascript:void(0);" ref="001" onclick="loadProducts(&quot;001&quot;,&quot;001001004&quot;);" haschild="false">一般货物</a></li>
+    			<li><a href="javascript:void(0);" ref="002" onclick="loadProducts(&quot;002&quot;,&quot;001001004&quot;);" haschild="false">简易征收</a></li>
+        		<li><a href="javascript:void(0);" ref="003" onclick="loadProducts(&quot;003&quot;,&quot;001001004&quot;);" haschild="false">应税服务</a></li>
+    			<li><a href="javascript:void(0);" ref="006" onclick="loadProducts(&quot;006&quot;,&quot;001001004&quot;);" haschild="false">劳务</a></li>
+    		</ul>
+		</ul>
+	</div>
+	<!-- 左侧分类树end -->
+	<!-- 搜索菜单栏start -->
+	<div class="cus_tit" style="height: 25px;position: absolute;top: 30px;right: 10px;">
+		<ul>
+			<li style="width: 190px;">
+        		<a class="comm_search" style="display: block;width: 42px;height: 20px;margin-top: 6px;" onclick="javascript:loadProducts(null,&#39;001001004&#39;);" href="javascript:void(0);">
+        			<img src="/assets/search.png" style="display:block;position: absolute;top: 5px;right: 508px;">
+        		</a>
+        		<input class="comm_info_search" style="display: block;position: absolute;top: 2px;right: 380px;
+        			width: 120px;height: 21px;outline:none;">
+        		
+        	</li>
+		</ul>
+	</div>
+	<!-- 搜索菜单栏end -->
+	<!-- 商品编码表格 start -->
+	<div class="forxx">
+		<!-- for_scroll start -->
+		<div class="forxx_scroll" style="width: 548px;height: 350px;overflow:scroll;border: 1px solid #dfdfdf;">
+			<div id="productTable" class="forxx_con" style="width: 1300px;height: 300px;"><table border="1">
+	<thead>
+		<tr>
+			<th class="t_left"></th>
+			<th>编码</th>
+			<th>名称</th>
+			<th>简码</th>
+			<th>商品税号</th>
+			<th>税率</th>
+			<th>规格型号</th>
+			<th>计量单位</th>
+			<th>备单价注</th>
+			<th>含税价标志</th>
+			<th>隐藏标志</th>
+			<th>税收分类编码</th>
+			<th>税收分类名称</th>
+			<th>享受优惠政策</th>
+			<th>优惠政策类型</th>
+		</tr>
+	</thead>
+	<tbody>
+				<tr>
+			<td class="t_left"><input type="hidden" id="id" name="id" value="1"></td>
+			<td style="display:none;" id="forxx_scroll_id">1</td>
+			<td style="display:none;" id="fatherCode">001</td>
+			<td style="display:none;" id="productTaxId"></td>
+			<td style="display:none;" id="taxclassAbbreviation"></td>
+			<td id="code">001</td>
+			<td id="name">一般货物</td>
+			<td id="shortCode"></td>
+			<td id="productTaxName"></td>
+			<td id="taxRate"></td>
+			<td id="spec"></td>
+			<td id="unit"></td>
+			<td id="price"></td>
+			<td id="haveTax">否</td>
+			<td id="isHide">否</td>
+			<td id="taxClassCode"></td>
+			<td id="taxClassName"></td>
+			<td id="havePrivilege">否</td>
+			<td id="typePrivilege"></td>
+		</tr>
+				<tr>
+			<td class="t_left"><input type="hidden" id="id" name="id" value="2"></td>
+			<td style="display:none;" id="forxx_scroll_id">2</td>
+			<td style="display:none;" id="fatherCode">002</td>
+			<td style="display:none;" id="productTaxId"></td>
+			<td style="display:none;" id="taxclassAbbreviation"></td>
+			<td id="code">002</td>
+			<td id="name">简易征收</td>
+			<td id="shortCode"></td>
+			<td id="productTaxName"></td>
+			<td id="taxRate"></td>
+			<td id="spec"></td>
+			<td id="unit"></td>
+			<td id="price"></td>
+			<td id="haveTax">否</td>
+			<td id="isHide">否</td>
+			<td id="taxClassCode"></td>
+			<td id="taxClassName"></td>
+			<td id="havePrivilege">否</td>
+			<td id="typePrivilege"></td>
+		</tr>
+				<tr>
+			<td class="t_left"><input type="hidden" id="id" name="id" value="3"></td>
+			<td style="display:none;" id="forxx_scroll_id">3</td>
+			<td style="display:none;" id="fatherCode">003</td>
+			<td style="display:none;" id="productTaxId"></td>
+			<td style="display:none;" id="taxclassAbbreviation"></td>
+			<td id="code">003</td>
+			<td id="name">应税服务</td>
+			<td id="shortCode"></td>
+			<td id="productTaxName"></td>
+			<td id="taxRate"></td>
+			<td id="spec"></td>
+			<td id="unit"></td>
+			<td id="price"></td>
+			<td id="haveTax">否</td>
+			<td id="isHide">否</td>
+			<td id="taxClassCode"></td>
+			<td id="taxClassName"></td>
+			<td id="havePrivilege">否</td>
+			<td id="typePrivilege"></td>
+		</tr>
+				<tr>
+			<td class="t_left"><input type="hidden" id="id" name="id" value="6"></td>
+			<td style="display:none;" id="forxx_scroll_id">6</td>
+			<td style="display:none;" id="fatherCode">006</td>
+			<td style="display:none;" id="productTaxId"></td>
+			<td style="display:none;" id="taxclassAbbreviation"></td>
+			<td id="code">006</td>
+			<td id="name">劳务</td>
+			<td id="shortCode"></td>
+			<td id="productTaxName"></td>
+			<td id="taxRate"></td>
+			<td id="spec"></td>
+			<td id="unit"></td>
+			<td id="price"></td>
+			<td id="haveTax">否</td>
+			<td id="isHide">否</td>
+			<td id="taxClassCode"></td>
+			<td id="taxClassName"></td>
+			<td id="havePrivilege">否</td>
+			<td id="typePrivilege"></td>
+		</tr>
+			</tbody>
+</table></div>
+        </div>
+      <!-- end for_scroll -->
+	</div>
+	<!-- end 商品编码表格 -->
+</div>
+<!-- 开具增值税专用发票——(打印) start -->
+<div id="typed" class="typed">
+	 <img src="/assets/kjdy.png">
+	 <p>x</p>
+	 <span>确定</span>
+</div>
+<!-- end 开具增值税专用发票——(打印) -->
+<!-- 开具增值税专用发票——(打印) start -->
+<div id="typed_error" class="typed">
+	 <img src="/assets/kjdy_error.png">
+	 <p>x</p>
+	 <span>确定</span>
+</div>
+<!-- end 开具增值税专用发票——(打印) -->
+<!-- 清单 start -->
+<form id="productOrderForm">
+<div class="orders">
+	 <img src="/assets/qdtd.png">
+
+	 <div class="orders_close">
+		<img src="/assets/panel_tools.png">
+	 </div>
+
+	 <div class="orders_tit">
+	 	 <a class="orders_tit_a1" alt="转发票"></a>
+	 	 <a class="orders_tit_a2" alt="折扣"></a>
+	 	 <a class="orders_tit_a3" alt="价格"></a>
+		 <a class="orders_tit_a4" alt="增行"></a>
+	 	 <a class="orders_tit_a5" alt="减行"></a>
+	 	 <a class="orders_tit_a6" alt="完成"></a>
+	 </div>
+
+	 <div class="orders_ref">
+	 	   <p>发票代码：<span class="bianhao_p1">1102073150</span></p>
+	 	   <p>发票号码：<span class="bianhao_p2">34100005</span></p>
+	 </div>
+
+     <div class="biaoge">
+		  <div class="biaoge_scroll" style="width: 806px;height: 386px;overflow-y:scroll;border: 1px solid #dfdfdf;">
+				<table border="1">
+					<thead>
+						<tr>
+						    <th class="biaoge_tab_tit">货物或应税劳务、服务名称</th>
+						    <th>规格型号</th>
+						    <th>单位</th>
+						    <th>数量</th>
+						    <th id="price">单价(不含税)</th>
+						    <th id="money">金额(不含税)</th>
+						    <th>税率</th>
+						    <th>税额</th>
+						</tr>
+					</thead>
+					<tbody>
+						   
+						   <tr>
+        						<td class="list_tab_tit">
+        							<input id="listing_id" type="hidden" value="">
+        							<input id="name" maxlength="60" value="" class="list_tab_tit" autocomplete="off">
+        						</td>
+        						<td>
+        							<input id="spec" maxlength="50" value="">
+        						</td>
+        						<td>
+        							<input id="unit" maxlength="50" value="">
+        						</td>
+        						<td>
+        							<input id="number" maxlength="50" value="">
+        						</td>
+        						<td>
+        							<input id="price" maxlength="50" value="" class="listing_price">
+        						</td>
+        						<td>
+        							<input id="money" maxlength="50" value="" class="listing_money" readonly="">
+        						</td>
+        						<td>
+        							<input id="taxRate" maxlength="50" value="">
+        						</td>
+        						<td>
+        							<input id="taxMoney" maxlength="50" value="" readonly="">
+        						</td>
+        					</tr>
+					</tbody>
+				</table>
+		  </div>
+	 </div>
+</div>
+</form><!-- end 清单 -->
+<!-- 添加折扣行start -->
+<!-- 添加折扣行 start -->
+<div class="zhekou">
+	  <div class="zhekou_tit">
+	  	    <img src="/assets/logo1.png" class="zhekou_logo">
+	  	    <h4>添加折扣行</h4>
+	  	    <span class="zhekou_close">
+	  	    	 <img src="/assets/panel_tools.png">
+	  	    </span>
+	  </div>
+
+	  <div class="zhekou_co">
+	  	   <dl>
+	  	   	    <dt>折扣行数：</dt>
+	  	   	    <dd><input type="text" value="1" class="zhekou_rownum"></dd>
+	  	   </dl>
+
+	  	   <dl>
+	  	   	    <dt>商品金额：</dt>
+	  	   	    <dd><input type="text" value="700.00" style="border: 0;text-align: left;" class="zhekou_totalmoney"></dd>
+	  	   </dl>
+
+	  	   <dl>
+	  	   	    <dt>折扣率：</dt>
+	  	   	    <dd><input type="text" value="5" class="zhekou_rate" style="float: left;width: 90%;">
+					<span style="float: left;">%</span></dd>
+	  	   </dl>
+
+	  	   <dl>
+	  	   	    <dt>折扣金额：</dt>
+	  	   	    <dd><input type="text" value="100.00" class="zhekou_discountmoney"></dd>
+	  	   </dl>
+	  </div>
+
+	  <div class="zhekou_btn">
+	  	    <button type="button" class="zhekou_close">取消</button>
+	  	    <button type="button" class="zhekou_confirm">确认</button>
+	  </div>
+
+
+</div>
+<!-- end 添加折扣行 --><!-- 添加折扣行end -->
+<!-- 红字 -->
+<div class="redcolor">
+     <p class="redcolor_p1">直接开具</p>
+     <p class="redcolor_p2">导入红字发票信息单</p>
+     <p class="redcolor_p2">导入网络下载红字发票</p>
+</div>
+
+<div class="equivalent" id="dyxx">
+	 <img src="/assets/dyxx.png">
+
+     <div class="equi_close">
+	  	   <img src="/assets/panel_tools.png">
+	 </div>
+
+     <div class="equi_btn">
+		<span class="equi_yes" id="dyxx_yes">下一步</span>
+		<span class="equi_no">取消</span>
+	 </div>
+
+	 <table>
+ 	    <tbody><tr>
+ 	    	  <td>信息表编号</td>
+ 	    	  <td>
+ 	    	  	    <input id="dyxx_text1" class="equivalent_text1" type="password" name="" value="">
+ 	    	  </td>
+ 	    </tr>
+ 	    <tr>
+ 	    	  <td>再次输入</td>
+ 	    	  <td>
+ 	    	  	    <input id="dyxx_text2" class="equivalent_text2" type="password" name="" value="">
+ 	    	  </td>
+ 	    </tr>
+	 </tbody></table>
+</div>
+
+<div class="equivalent" id="dyxx2">
+	 <img src="/assets/dyxx2.png">
+
+     <div class="equi_close">
+	  	   <img src="/assets/panel_tools.png">
+	 </div>
+
+     <div class="equi_btn">
+		<span class="equi_yes" id="dyxx2_yes">下一步</span>
+		<span class="equi_no">取消</span>
+	 </div>
+
+	 <table>
+ 	    <tbody><tr>
+ 	    	  <td>发票代码</td>
+ 	    	  <td>
+ 	    	  	    <input id="dyxx2_text1" class="equivalent_text1" type="text" name="" value="">
+ 	    	  </td>
+ 	    </tr>
+ 	    <tr>
+ 	    	  <td>发票号码</td>
+ 	    	  <td>
+ 	    	  	    <input id="dyxx2_text2" class="equivalent_text2" type="text" name="" value="">
+ 	    	  </td>
+ 	    </tr>
+	 </tbody></table>
+</div>
+	
+<div class="equivalent" id="dyxx3">
+	 <img src="/assets/dyxx3.png">
+
+     <div class="equi_close">
+	  	   <img src="/assets/panel_tools.png">
+	 </div>
+
+     <div class="equi_btn">
+		<span class="equi_yes" id="dyxx3_yes">下一步</span>
+		<span class="equi_no">取消</span>
+	 </div>
+
+	 <div style="position: absolute; top: 115px; left: 15px; width: 410px; height: 150px; overflow-y: scroll;">
+		<p style="line-height: 10px; margin: 15px;" id="dyxx3_p1">
+			类别代码：3302151130</p>
+		<p style="line-height: 10px; margin: 15px;" id="dyxx3_p2">
+			发票号码：01404611</p>
+		<p style="line-height: 10px; margin: 15px;">
+			购方名称：湖北方圆商贸有限公司</p>
+		<p style="line-height: 10px; margin: 15px;">
+			购方税号：420901714666552</p>
+		<p style="line-height: 10px; margin: 15px;">
+			购方地址电话：孝感市城站路95号 0172-2856697</p>
+		<p style="line-height: 10px; margin: 15px;">
+			购方银行账号：市中行营业部02890208091001</p>
+		<p style="line-height: 10px; margin: 15px;" id="dyxx3_p7">
+			合计金额(不含税)：1669.00</p>
+		<p style="line-height: 10px; margin: 15px;" id="dyxx3_p8">
+			合计税额：267.04</p>
+		<p style="line-height: 10px; margin: 15px;">
+			开票日期：2018年11月23日</p>
+	</div>
+	 
+</div><!-- end 红字 -->
+<!-- 差额模块 start -->
+<!-- 添加折扣行 start -->
+<div class="balance">
+	  <div class="balance_tit">
+	  	    <img src="/assets/logo1.png" class="balance_logo">
+	  	    <h4>输入扣除额</h4>
+	  	    <span class="balance_close">
+	  	    	 <img src="/assets/panel_tools.png">
+	  	    </span>
+	  </div>
+
+	  <div style="border: 1px solid #c5c1c1;margin: auto 20px;margin-top: 30px;">
+    	  <span style="position: absolute;background-color: #ffffff;margin-top: -11px;margin-left: 23px;">
+			友情提示：以下信息输入后无法修改！
+		  </span>
+		  <div class="balance_co">
+    	  	   <dl>
+    	  	   	    <dt>扣除额：</dt>
+    	  	   	    <dd><input type="text" value="0" class="balance_deduction"></dd>
+    	  	   </dl>
+    	  </div>
+    
+    	  <div class="balance_btn">
+    	  	    <button type="button" class="balance_close">取消</button>
+    	  	    <button type="button" class="balance_confirm">确认</button>
+    	  </div>
+      </div>
+
+
+</div>
+<!-- end 添加折扣行 --><!-- end 差额模块 -->
+<div class="errorx">
+	 <img src="/assets/hzxx.png">
+	 <p>x</p>
+	 <span>确定</span>
+</div>    	<!-- end 开具增值税专用发票 -->
+    </div>
+	<!-- 发票库存查询start -->
+	<!-- 金税设备库存发票查询 start -->
+<div class="querie">
+	<div class="quer_tit">
+		<div class="tit_left">
+          <dl>
+          	   <dt>领购年份：</dt>
+          	   <dd>
+ 	   	          <select disabled="disabled">
+ 	   	          	     <option>全部</option>
+ 	   	          	     <option>2016年</option>
+ 	   	          	     <option>2015年</option>
+ 	   	          	     <option>2014年</option>
+ 	   	          </select>
+          	   </dd>
+          </dl>
+
+          <dl>
+          	   <dt>领购月份：</dt>
+          	   <dd>
+ 	   	          <select disabled="disabled">
+ 	   	          	     <option>全部</option>
+ 	   	          	     <option>01</option>
+ 	   	          	     <option>02</option>
+ 	   	          	     <option>03</option>
+ 	   	          	     <option>04</option>
+ 	   	          	     <option>05</option>
+ 	   	          	     <option>06</option>
+ 	   	          	     <option>07</option>
+ 	   	          	     <option>08</option>
+ 	   	          	     <option>09</option>
+ 	   	          	     <option>10</option>
+ 	   	          	     <option>11</option>
+ 	   	          	     <option>12</option>
+ 	   	          </select>
+          	   </dd>
+          </dl>
+
+          <dl>
+          	   <dt>发票种类：</dt>
+          	   <dd>
+ 	   	          <select disabled="disabled">
+ 	   	          	     <option>全部</option>
+ 	   	          </select>
+          	   </dd>
+          </dl>
+		</div>
+
+		<div class="tit_right">
+         	<ul>
+        	 <li>
+        	 	  <a href="javascript:void(0)" class="querie_close">
+        	 	  	   <img src="/assets/t-1.png">
+        	 	  </a>
+        	 </li>
+    
+        	 <li>
+        	 	  <a href="javascript:void(0)" class="">
+        	 	  	   <img src="/assets/t-3.png">
+        	 	  </a>
+        	 </li>
+    
+        	 <li>
+        	 	  <a href="javascript:void(0)" class="">
+        	 	  	   <img src="/assets/t-2.png">
+        	 	  </a>
+        	 </li>
+    
+        	 <li>
+        	 	  <a href="javascript:void(0)" class="">
+        	 	  	   <img src="/assets/t-4.png">
+        	 	  </a>
+        	 </li>
+    
+        	 <li>
+        	 	  <a href="javascript:void(0)" class="">
+        	 	  	   <img src="/assets/t-5.png">
+        	 	  </a>
+        	 </li>
+         </ul>
+     </div>
+	</div>
+
+	<div class="quer_table">
+ 	   <table>
+ 	   	      <thead>
+ 	   	      	     <tr><th>发票种类</th>
+ 	   	      	     <th>开票限额</th>
+ 	   	      	     <th>类别代码</th>
+ 	   	      	     <th>类别名称</th>
+ 	   	      	     <th>起始号码</th>
+ 	   	      	     <th>发票张数</th>
+ 	   	      	     <th>卷终止号</th>
+ 	   	      	     <th>领购日期</th>
+ 	   	      </tr></thead>
+
+ 	   	      <tbody>
+ 	   	      	     
+					
+					
+ 	   	      </tbody>
+ 	   </table>
+    </div>
+</div>
+<!-- end 金税设备库存发票查询 -->	<!-- 发票库存查询end -->
+	<!-- 已开发票查询start -->
+	<!-- 选择发票号码查询 start -->
+<div class="xuanzes">
+	<div class="xuanz_tit">
+		<div class="xuanz_left">
+			<select>
+				<option selected="selected">2016年</option>
+				<option>2015年</option>
+				<option>2014年</option>
+			</select> <select>
+				<option>01月份</option>
+				<option>02月份</option>
+				<option selected="selected">03月份</option>
+				<option>04月份</option>
+				<option>05月份</option>
+				<option>06月份</option>
+				<option>07月份</option>
+				<option>08月份</option>
+				<option>09月份</option>
+				<option>10月份</option>
+				<option>11月份</option>
+				<option>12月份</option>
+			</select> <select>
+				<option>全部</option>
+			</select> <input type="text" placeholder="请输入检索关键字..."> <select>
+				<option>报送状态</option>
+			</select>
+		</div>
+
+		<div class="xuanz_right">
+			<ul>
+				<li><a href="javascript:void(0)" class="xuz_close"> <img src="/assets/t-1.png">
+				</a></li>
+
+				<li><a href="javascript:void(0)" class="xuz_print"> <img src="/assets/t-2.png">
+				</a></li>
+
+				<li><a href="javascript:void(0)" class=""> <img src="/assets/t-3.png">
+				</a></li>
+
+				<li><a href="javascript:void(0)" class=""> <img src="/assets/t-4.png">
+				</a></li>
+
+				<li><a href="javascript:void(0)" class=""> <img src="/assets/t-5.png">
+				</a></li>
+				<li><a href="javascript:void(0)" class=""> <img src="/assets/t-6.png">
+				</a></li>
+
+				<li><a href="javascript:void(0)" class=""> <img src="/assets/t-7.png">
+				</a></li>
+
+				<li><a href="javascript:void(0)" class=""> <img src="/assets/t-8.png">
+				</a></li>
+
+				<li><a href="javascript:void(0)" class=""> <img src="/assets/t-9.png">
+				</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="xuanz_table">
+		<table>
+			<thead>
+				<tr><th>发票种类</th>
+				<th>发票代码</th>
+				<th>发票号码</th>
+				<th>开票机号</th>
+				<th>购方名称</th>
+				<th>购方税号</th>
+				<th>购方地址电话</th>
+				<th>购方银行账号</th>
+				<th>开票日期</th>
+				<th>报送状态</th>
+				<th>报送日志</th>
+				<th>所属月份</th>
+				<th>合计金额</th>
+				<th>税率</th>
+				<th>合计税额</th>
+				<th>备注</th>
+				<th>开票人</th>
+				<th>收款人</th>
+				<th>复核人</th>
+				<th>打印标志</th>
+				<th>作废标志</th>
+				<th>清单标志</th>
+				<th>修复标志</th>
+				<th>作废日期</th>
+			</tr></thead>
+
+			<tbody>
+							</tbody>
+		</table>
+	</div>
+
+	<!-- 打印 start -->
+	<div class="Prints">
+		<ul>
+			<li><a href="javascript:void(0);" class="Prints_invoice">发&nbsp;&nbsp;票</a></li>
+
+			<li><a href="javascript:void(0);" class="Prints_orders">销货清单</a></li>
+
+			<li><a href="javascript:void(0);">发票列表</a></li>
+
+		</ul>
+	</div>
+	<!-- end 打印 -->
+</div>
+<!-- end 选择发票号码查询 -->
+<!-- 打印 start -->
+<div class="printxlist">
+	 <img src="/assets/dayin.png">
+     <div class="prin_close">
+	  	  <img src="/assets/panel_tools.png">
+	 </div>
+     <div class="printxlist_btn">
+         <span class="printxlist_yl">预览</span>
+         <span class="printxlist_yes">打印</span>
+         <span class="printxlist_no">不打印</span>
+     </div>
+</div>
+<!-- end 打印 -->	<!-- 已开发票查询end -->
+    <div class="frocount_table" style="display: none;">
+    	<table border="1">
+    		<thead>
+    			<tr>
+    			    <th class="ta_left"></th>
+    			    <th>发票种类</th>
+    			    <th>开票限额</th>
+    			    <th>卷号</th>
+    			    <th>类别代码</th>
+    			    <th>类别名称</th>
+    			    <th>起始号码</th>
+    			    <th>发票张数</th>
+    			    <th>领购日期</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			   
+    				
+    		</tbody>
+    	</table>
+    </div>
+</div>
+
+
+<!-- end main_content -->
+
+		<a class="main_close"></a>
+		<a class="operate_close"></a>
+		<input id="paytaxId" value="110105539548703 " type="hidden">
+    	<!-- 信息提示——弹窗 start -->
+    	<div class="alert_info">
+    		<img src="/assets/fp_msg.png">
+    		<p onclick="javascript:$(&#39;.alert_info&#39;).hide();">x</p>
+    		<span class="content"></span>
+    		<a onclick="javascript:$(&#39;.alert_info&#39;).hide();">确定</a>
+    	</div>
+    	<!-- end 信息提示——弹窗 -->
+	</div>
+	<!-- 右侧 start -->
+	<!-- 
+    <div class="business">
+         <a><span>&gt;</span><p>实操助手</p></a>
+    </div>
+	-->
+    <!-- end 右侧 -->
+    <!-- side start -->
+            <!-- end side -->
+	<!-- 右侧 start -->
+<script type="text/javascript" src="/assets/page.js"></script>
+<div class="business" style="position: absolute; margin: 0px;">
+      <p>实操助手</p><span class="lower"></span>
+</div>
+<!-- end 右侧 -->
+<!-- zhuai start -->
+	 <!-- side start -->
+	 <div class="dong side" style="position: absolute; margin: 0px; z-index: 99999;">
+	       <!-- side_tit start -->
+	 	   <div class="side_tit">
+		 	   <h3>实操助手</h3>
+	     	   <span class="upper"></span>
+	 	   </div>
+	 	   <!-- end side_tit -->
+
+	 	   <!-- herex start -->
+	 	   <div class="herex">
+	 	   	     <div class="herex_box side_box">
+
+	 	   	     	   <!-- current start -->
+	 	   	     	   <div class="current">
+	 	   	     	   	      <div class="curr_co">
+    <div class="curr_info">
+    	  <h3>1、经济业务摘要</h3>
+    </div>
+
+    <div class="curre_tit">
+    	  <i></i>
+    	  <span>业务说明：</span>
+    	  <input type="hidden" id="questionId" value="211">
+    </div>
+		
+		
+	    <!-- ziliao start -->
+    <div class="ziliao">
+    	  <p>2018年12月3日去国税局购买增值税专用发票20份，发票代码：4200041142，发票起止号码：0029885~0029904，购发增值税普通发票20份，发票代码：4200041140，发票起止号码：0029891~0029910<input class="gmfp_buttom" type="button" value="去税务局" onclick="opengmfp();"></p>
+    </div>
+    <!-- end ziliao -->
+	
+	        <!-- <div class="curre_tit">
+        	<i></i>
+        	<span>背景单据：</span>
+    	</div> -->
+                <p onclick="getBgBill(201,&#39;商品编码补充资料&#39;,&#39;agile/001001/001001004/001001004002/spbm.html&#39;)" class="curre_detail">商品编码补充资料</p>
+                    	    </div>	 	   	     	   </div>
+	 	   	     	   <!-- end current -->
+
+	 	   	     	   <!-- whole start -->
+	 	   	     	   <div class="whole">
+	 	   	     	   	      <div class="whole_co">
+	 	   	     	   	           <div class="whole_title">
+	 	   	     	   	           	    <h3>2、任务列表</h3>
+	 	   	     	   	           </div>
+
+	 	   	     	   	           <!-- whole_ul start -->
+	 	   	     	   	           <div class="whole_ul">
+	 	   	     	   	           	     <ul>
+																							                                					                                																<li id="001001004001">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开票系统登录">
+    																1、开票系统登录
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	                                            						<a class="whole_state whole_r_color">已结束</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004003">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="购买发票" class="whole_red">
+    																2、购买发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	                                            						<a class="whole_state whole_r_color whole_going whole_r_go">进行中</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004004">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具带销货清单的增值税专用发票并打印发票及销货清单">
+    																3、开具带销货清单的增值税专用发票并打印发票及销货清单
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004005">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具带销货清单的增值税专用发票并打印发票及销货清单">
+    																4、开具带销货清单的增值税专用发票并打印发票及销货清单
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004006">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税专用发票">
+    																5、开具增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004007">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税专用发票">
+    																6、开具增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004015">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税专用发票">
+    																7、开具增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004008">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税普通发票">
+    																8、开具增值税普通发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004009">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具红字增值税专用发票">
+    																9、开具红字增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004010">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税专用发票">
+    																10、开具增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004011">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="拟开具一张带折扣的发票，然后作废（拟通过该业务让学员了解带折扣发票的开具）">
+    																11、拟开具一张带折扣的发票，然后作废（拟通过该业务让学员了解带折扣发票的开具）
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004012">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="发票查询">
+    																12、发票查询
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004013">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+															                                        						
+                                        						                                            						<a href="http://lab1.ruby.com:8081/course/operate-fwsk_login-001001004.html?csqk=0" style="color:black " title="抄税清卡">
+																<span title="抄税清卡">
+    																13、抄税清卡
+																</span>
+																</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004014">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="查询并打印增值税专用发票汇总表">
+    																14、查询并打印增值税专用发票汇总表
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+												 	   	     	   	           	     </ul>
+	 	   	     	   	           </div>
+	 	   	     	   	           <!-- end whole_ul -->
+
+	 	   	     	   	      </div>
+	 	   	     	   </div>
+	 	   	     	   <!-- end whole -->
+
+	 	   	     </div>
+	 	   </div>
+	 	   <!-- end herex -->
+
+	 
+
+
+
+<script type="text/javascript">
+$(function(){
+	  //外部(实操助手)--拖拽
+	jQuery(".business").Tdrag();
+
+	  //外部--实操助手
+	jQuery(".lower").click(function(){
+	  	  $(".side").show(300);
+	  	  $(".business").hide(300);
+	  });
+
+	  //内部--关闭
+	jQuery(".upper").click(function(){
+		jQuery(".side").hide();
+		jQuery(".business").show();
+	  });
+
+	//内部(实操助手)--拖拽
+	jQuery(".side").Tdrag({
+//	    scope:".zhuai",
+	    handle:".side_tit",
+	    axis:"x"
+	});
+
+
+
+
+});
+
+</script></div>
+	 <!-- end side -->
+<!-- end zhuai -->
+
+<div style="position: absolute; top: -1970px; left: -1970px;"><iframe style="width: 186px; height: 198px;" src="/assets/My97DatePicker.html" frameborder="0" border="0" scrolling="no" __idm_frm__="381"></iframe></div></body></html>

@@ -1,0 +1,993 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+img{
+	border: 0;
+	display: block;
+}
+body{
+    font-family: "å¾®è½¯é›…é»‘";
+}
+.xt_a1{
+	display: block;
+	width: 62px;
+	height: 72px;
+	position: absolute;
+	top: 241px;
+	left: 315px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.parameterx{
+	width: 610px;
+	height: 340px;
+	background-color: #fff;
+	border: 2px solid #a6bddc;
+	position: absolute;
+	top: 92px;
+	left: 190px;
+	z-index: 10;
+	overflow: hidden;
+	display: none;
+}
+.parameterx .par_tit{
+	height: 30px;
+	background-color: #a6bddc;
+}
+.parameterx .par_tit img{
+	width: 30px;
+	height:30px;
+	float: left;
+}
+.parameterx .par_tit span{
+	display: block;
+	float: left;
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+/*showx start*/
+.showx .sh_menu{
+     width:100px;
+     height: 310px;
+     border-right: 1px solid #dfdfdf;
+     float: left;
+     }
+.showx .sh_menu ul li{
+     line-height:35px;
+     border-bottom: 1px solid #dfdfdf;
+     color: #000;
+     cursor: pointer;
+     font-weight: 700;
+     text-align: center;
+     font-size: 14px;
+ }
+
+.showx .sh_menu ul .selx{
+	color: #3469FC;
+}
+.showx .sh_cont{
+	width:490px;
+	height:240px;
+	float: right;
+	margin-top: 15px;
+}
+.showx .sh_cont .sh_pag{
+	width:506px;
+	height:240px;
+	display:none;
+}
+.showx .sh_cont .sh_one{
+	display: block;
+}
+.showx .sh_cont .sh_pag h3{
+	font-size: 14px;
+	color: #4FB1FD;
+}
+.showx .sh_cont .sh_one .sh_one_1{
+	width: 450px;
+	height: 200px;
+	margin: 10px 0 10px 25px;
+}
+.showx .sh_cont .sh_one .sh_one_1 table tr td{
+	padding: 0 20px 10px 0;
+    font-size: 14px;
+}
+
+
+.showx .sh_cont .sh_two{
+}
+
+.showx .sh_cont .sh_two .sh_two_2{
+	width: 450px;
+	height: 200px;
+	margin: 10px 0 10px 25px;
+}
+
+.sh_two_2 .sh_two_form{
+  width: 240px;
+  height: 100px;
+  border: 1px solid #666;
+  margin-top: 15px;
+  position: relative;
+}
+
+.sh_two_2 .sh_two_form p{
+	position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: #fff;
+}
+
+.sh_two_2 .sh_two_form .sh_two_input{
+	margin: 20px 0 0px 20px;
+}
+
+.sh_two_2 span{
+	display: block;
+	font-size: 12px;
+	color: #4FB1FD;
+	margin-top: 15px;
+}
+
+.showx .sh_cont .sh_three{
+}
+
+.showx .sh_cont .sh_three .sh_three_3{
+	width: 450px;
+    height: 200px;
+    margin: 10px 0 10px 25px;
+}
+.showx .sh_cont .sh_three .sh_three_3 p{
+	line-height: 24px;
+}
+.showx .sh_cont .sh_three .sh_three_3 p input{
+	display: inline-block;
+}
+.showx .sh_cont .sh_three .sh_three_3 p button{
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #07a8f8;
+    border: 0;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.showx .sh_cont .sh_three .sh_three_3 .sh_thr_co{
+	width: 300px;
+	height: 130px;
+	margin-left: 20px;
+}
+.showx .sh_cont .sh_three .sh_three_3 .sh_thr_co .thr_co_p{
+	color: #999;
+}
+.showx .sh_cont .sh_three .sh_three_3 .sh_thr_co .thr_co_p input{
+	width: 30px;
+}
+
+
+/*end showx*/
+.parameterx{
+	display: none;
+	overflow: hidden;
+}
+
+.parameterx .par_close{
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.parameterx .par_close img{
+	margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.parameterx .par_btn{
+	width: 240px;
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 50%;
+    margin-right: -168px;
+    overflow: hidden;
+}
+.parameterx .par_btn span{
+	width: 100px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.parameterx .par_btn .par_yes{
+	float: left;
+}
+.parameterx .par_btn .par_no{
+	float: right;
+}
+
+.register{
+	width: 585px;
+	height: 450px;
+	background-color: #fff;
+    position: absolute;
+    top: 58px;
+    left: 183px;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.register .reg_bg{
+	display: block;
+}
+
+
+/*Tab start*/
+.Tab{
+    width: 370px;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+}
+
+.Tab .Ta_nav{
+     width:370px;
+     height:30px;
+     cursor:pointer;
+ }
+.Tab .Ta_nav ul li{
+	float:left;
+	line-height:30px;
+    padding:0px 10px;
+    background-color:#F1F1F1;
+    font-size: 14px;
+    border: 1px solid #868686;
+    border-bottom: none;
+    cursor: pointer;
+    }
+.Tab .Ta_nav ul .Ta_sel{
+	background-color:#fff;
+	border-bottom: none;
+}
+.Tab .Ta_box{
+	width:370px;
+	height:380px;
+}
+.Tab .Ta_box .Ta_page{
+	width:370px;
+	height:360px;
+	display:none;
+}
+.Tab .Ta_box .Ta_one{display:block;}
+.Tab .Ta_box .Ta_two{}
+.Tab .Ta_box .Ta_three{}
+/*end Tab*/
+
+.register .regi_close{
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.register .regi_close img{
+	margin: 0 0 0 -16px;
+}
+
+.mailx{
+	width: 480px;
+	height: 435px;
+	background-color: #fff;
+	position: absolute;
+    top: 50px;
+    left: 280px;
+	z-index: 10;
+	overflow: hidden;
+	display:none;
+}
+
+.mailx .mai_close{
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.mailx .mai_close img{
+	 margin: 0 0 0 -16px;
+}
+
+.mailx .mai_btn{
+	width: 240px;
+    height: 35px;
+    position: absolute;
+    bottom: 13px;
+    right: 50%;
+    margin-right: -125px;
+    overflow: hidden;
+}
+
+.mailx .mai_btn span{
+    width: 100px;
+    height: 35px;
+    background-color: #07a8f8;
+    display: block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.mailx .mai_btn .mai_confirmx{
+	float: left;
+}
+.mailx .mai_btn .mai_aways{
+	float: right;
+}
+
+.wrong{
+    width: 376px;
+    height: 169px;
+    position: absolute;
+    top: 166px;
+    left: 305px;
+    background-color: #fff;
+    z-index: 30;
+    display: none;
+}
+.wrong p{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.wrong p:hover{
+    color: #fff;
+}
+.wrong span{
+    display: block;
+    width: 56px;
+    height: 26px;
+    background-color: #299dda;
+    position: absolute;
+    bottom: 13px;
+    right: 15px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.customer{
+    width: 790px;
+    height: 430px;
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    left: 96px;
+    z-index: 10;
+    display: none;
+}
+.customer .cus_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.customer .cus_close img{
+    margin: 0 0 0 -16px;
+}
+
+.customer .cus_tit{
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+}
+.customer .cus_tit ul li{
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.customer .cus_tit ul li a{
+    display: block;
+    width: 42px;
+    height: 20px;
+    margin-top: 6px;
+}
+.customer .cus_tit ul li a:hover{
+    border-left: 1px solid #A1A1A1;
+    border-top: 1px solid #A1A1A1;
+}
+
+.customer .reports{
+    width: 550px;
+    height: 355px;
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+}
+.customer .reports .scr_cont table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.customer .reports .scr_cont table thead{
+    background-color: #1487c6;
+    color: #fff;
+}
+.customer .reports .scr_cont table thead th{
+    width: 12.3%;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+.customer .reports .scr_cont table .ta_left{
+    width: 1%;
+    background-color: #1487c6;
+}
+.customer .reports .scr_cont table tbody tr td{
+    width: 12.3%;
+    height: 25px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.customer .reports .scr_cont table tbody tr.selected{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+.customer .reports .scr_cont table tbody tr.selected input{
+    background-color: #7d95b9;
+    cursor: pointer;
+	color:#fff;
+}
+/*
+.customer .reports .scr_cont table tbody tr:hover{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+*/
+
+.customer .reports .scr_cont table tbody tr td input{
+    display:block;
+	background-color:#fff;
+	border:none;
+	outline:none;
+}
+.xt_a2{
+    display: block;
+    width: 62px;
+    height: 72px;
+    position: absolute;
+    top: 241px;
+    right: 397px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.add_box{
+    width: 650px;
+    height: 330px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    display: none;
+}
+.add_box .add_box_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.add_box .add_box_tit img{
+    width: 30px;
+    height: 30px;
+    float: left
+}
+.add_box .add_box_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.add_box .add_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.add_box .add_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+
+.add_box .add_top{
+    height: 25px;
+    background-color: #fbfafa;
+
+}
+.add_box .add_top img{
+    float: left;
+    margin: 3px 4px 0 4px;
+    cursor: pointer;
+}
+.add_box table tbody tr td{
+    padding: 5px 0 5px 4px;
+}
+.add_box table tbody tr td .table_td_red{
+    display: inline-block;
+    color: red;
+}
+
+.modify{
+    width: 650px;
+    height: 330px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    display: none;
+}
+.modify .modify_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.modify .modify_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.modify .modify_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.modify .modify_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.modify .modify_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.modify .modify_top{
+    height: 25px;
+    background-color: #fbfafa;
+}
+.modify .modify_top img{
+    float: left;
+    margin: 3px 4px 0 4px;
+    cursor: pointer;
+}
+.modify table tbody tr td{
+    padding: 5px 0 5px 4px;
+}
+
+.removerx{
+    width: 235px;
+    height: 166px;
+    position: absolute;
+    top: 130px;
+    right: 180px;
+    background-color: #fff;
+    z-index: 30;
+    overflow: hidden;
+    display: none;
+}
+.removerx p{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.removerx p:hover{
+    color: #fff;
+}
+.removerx .remo_btn{
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    bottom: 2px;
+    right: 50px;
+}
+.removerx .remo_btn input{
+    display: block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #4BA9E8;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+.removerx .remo_btn .re_btn_ok{
+    float: left;
+}
+.removerx .remo_btn .re_btn_no{
+    float: right;
+}
+
+.commodity{
+    width: 790px;
+    height: 430px;
+    background-color: #fff;
+    position: absolute;
+    top: 66px;
+    left: 90px;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.commodity .comm_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.commodity .comm_close img{
+    margin: 0 0 0 -16px;
+}
+.commodity .comm_tit{
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+}
+.commodity .comm_tit ul li{
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.commodity .comm_tit ul li a{
+    display: block;
+    width: 42px;
+    height: 20px;
+    margin-top: 6px;
+}
+.commodity .comm_tit ul li a:hover{
+    border-left: 1px solid #A1A1A1;
+    border-top: 1px solid #A1A1A1;
+}
+
+.formx{
+    width: 550px;
+    height: 355px;
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+}
+
+.formx .for_scroll .for_con table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.formx .for_scroll .for_con table thead{
+    background-color: #1487c6;
+    color: #fff;
+}
+.formx .for_scroll .for_con table .ta_left {
+    width: 1%;
+    background-color: #1487c6;
+}
+.formx .for_scroll .for_con table thead th{
+    width: 7%;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+.formx .for_scroll .for_con table tbody tr td{
+    width: 7%;
+    height: 25px;
+    text-align: left;
+    padding-left: 5px;
+}
+.formx .for_scroll .for_con table tbody tr:hover{
+	background-color: #7d95b9;
+	cursor: pointer;
+}
+
+.commodity .formx .for_con table tbody tr.selected{
+    background-color: #7d95b9;
+    cursor: pointer;
+}
+
+.adding{
+    width: 650px;
+    height: 330px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    display: none;  
+}
+.adding .adding_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.adding .adding_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.adding .adding_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.adding .adding_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.adding .adding_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.adding .adding_top{
+    height: 25px;
+    background-color: #fbfafa;
+}
+.adding .adding_top img{
+    float: left;
+    margin: 3px 4px 0 4px;
+    cursor: pointer;
+}
+.adding table tbody tr td{
+    padding: 5px 0 5px 4px;
+}
+.adding table tbody tr td .table_td_red{
+    color: red;
+    display: inline-block;
+}
+
+.xt_a3{
+    display: block;
+    width: 62px;
+    height: 72px;
+    position: absolute;
+    top: 241px;
+    right: 210px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.deletex{
+    width: 235px;
+    height: 166px;
+    position: absolute;
+    top: 130px;
+    right: 180px;
+    background-color: #fff;
+    z-index: 30;
+    overflow: hidden;
+    display: none;
+}
+.deletex p{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.deletex p:hover{
+    color: #fff;
+}
+
+.deletex .del_btn{
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    bottom: 2px;
+    right: 50px;
+}
+.deletex .del_btn input{
+    display: block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #4BA9E8;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+.deletex .del_btn .del_btn_ok{
+    float: left;
+}
+.deletex .del_btn .del_btn_no{
+    float: right;
+}
+
+.choice{
+    width: 670px;
+    height: 385px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 30px;
+    right:25px;
+    z-index: 10;
+    display: none;
+}
+
+.choice .choi_tit{
+    height: 30px;
+    background-color: #a6bddc;
+}
+.choice .choi_tit img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.choice .choi_tit span{
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.choice .choi_close{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.choice .choi_close img{
+    margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.choice .choi_scroll .choi_cont table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+.choice .choi_scroll .choi_cont table thead{
+    background-color: #1487c6;
+    color: #fff;
+}
+.choice .choi_scroll .choi_cont table thead th{
+    width: 12.3%;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+}
+.choice .choi_scroll .choi_cont table .ta_left{
+    width: 1%;
+    background-color: #1487c6;
+} 
+.choice .choi_scroll .choi_cont table tbody tr td{
+    width: 12.3%;
+    height: 20px;
+    text-align: left;
+    padding-left: 5px;
+}
+.choice .choi_scroll .choi_cont table tbody tr:hover{
+	background-color: #7d95b9;
+	cursor: pointer;
+}
+.revised{
+	width: 650px;
+    height: 330px;
+    background-color: #fff;
+    border: 2px solid #a6bddc;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    display: none;
+}
+.revised .revised_tit{
+	height: 30px;
+    background-color: #a6bddc;
+}
+.revised .revised_tit img{
+	width: 30px;
+    height: 30px;
+    float: left;
+}
+.revised .revised_tit span{
+	display: block;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.revised .revised_close{
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    overflow: hidden;
+}
+.revised .revised_close img{
+	margin: 0 0 0 -16px;
+    cursor: pointer;
+}
+.revised .revised_top{
+	height: 25px;
+    background-color: #fbfafa;
+}
+.revised .revised_top img{
+	float: left;
+    margin: 3px 4px 0 4px;
+    cursor: pointer;
+}
+.revised table tbody tr td{
+	padding: 5px 0 5px 4px;
+}

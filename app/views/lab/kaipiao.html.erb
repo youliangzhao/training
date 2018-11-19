@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+
+<html slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<%= stylesheet_link_tag "default.css" %>
+<title>税务开票模拟系统</title>
+<%= stylesheet_link_tag "main_page.css" %>
+<%= stylesheet_link_tag "desk.css" %>
+
+<%= javascript_include_tag "jquery-1.12.3.min.js" %>
+
+<%= stylesheet_link_tag "iblue.css" %>
+<%= stylesheet_link_tag "Draging.css" %>
+
+<%= javascript_include_tag "lhgdialog.min.js" %>
+<%= javascript_include_tag "lhgdialog-notice.js" %>
+<%= javascript_include_tag "Tdrag.js" %>
+
+
+<!--浏览器兼容提示框start-->
+<style>
+.opacity{
+	display:none;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: none;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    position: absolute;
+    z-index: 99999999998;
+    opacity: 0.1;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto;
+    background-color: rgb(0, 0, 0);
+}
+#norightbro {
+	display:none;
+	width: 830px;
+	margin-left: -415px;
+    position: absolute;
+    z-index: 99999999999;
+    background-color: #fff;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    border: 2px solid #2E5473;
+}
+#norightbro .mod_tit span {
+    display: block;
+    margin: 3px 0 0 7px;
+}
+
+#norightbro .mod_tit {
+    width: 831px;
+    height: 24px;
+    background-color: #2E5473;
+    color: #fff;
+    overflow: hidden;
+    margin-left: -1px;
+}
+#norightbro .mod_con {
+    width: 80%;
+    margin: 17px auto;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#norightbro .mod_fo {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+#norightbro .mod_con p {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#norightbro .mod_fo .mod_fo_con .mod_confirm {
+    float: right;
+	margin-right:20px;
+}
+#norightbro .mod_fo .mod_fo_con button {
+    display: block;
+    width: 60px;
+    height: 25px;
+    color: #fff;
+    background-color: #2E5473;
+    outline: none;
+    border: 0;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <div class="" style="left: 0px; top: 0px; visibility: hidden; position: absolute;">
+    <table class="ui_border">
+      <tbody>
+        <tr>
+          <td class="ui_lt"></td>
+          <td class="ui_t"></td>
+          <td class="ui_rt"></td>
+        </tr>
+        <tr>
+          <td class="ui_l"></td>
+          <td class="ui_c">
+            <div class="ui_inner">
+              <table class="ui_dialog">
+                <tbody>
+                  <tr>
+                    <td colspan="2">
+                      <div class="ui_title_bar">
+                        <div class="ui_title" unselectable="on" style="cursor: move;"></div>
+                        <div class="ui_title_buttons">
+                          <a class="ui_min" href="javascript:void(0);" title="最小化" style="display: inline-block;">
+                            <b class="ui_min_b"></b></a>
+                          <a class="ui_max" href="javascript:void(0);" title="最大化" style="display: inline-block;">
+                            <b class="ui_max_b"></b></a>
+                          <a class="ui_res" href="javascript:void(0);" title="还原">
+                            <b class="ui_res_b"></b><b class="ui_res_t"></b></a>
+                          <a class="ui_close" href="javascript:void(0);" title="关闭(esc键)" style="display: inline-block;">×</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="ui_icon" style="display: none;"></td>
+                    <td class="ui_main" style="width: auto; height: auto;">
+                      <div class="ui_content" style="padding: 10px;"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div class="ui_buttons" style="display: none;"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+          <td class="ui_r">
+          </td>
+        </tr>
+        <tr>
+          <td class="ui_lb"></td>
+          <td class="ui_b"></td>
+          <td class="ui_rb" style="cursor: se-resize;"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="opacity">
+</div>
+<!-- 用户使用浏览器不正确 start -->
+<div id="norightbro">
+	 <div class="mod_tit">
+	     <span>温馨提示</span>
+	 </div>
+
+	 <div class="mod_con" style="color:red">
+		<p>请使用火狐浏览器！</p>
+	 </div>
+	 <div class="mod_fo">
+	      <div class="mod_fo_con">
+	          <button type="button" class="mod_confirm" id="norightbrosure">确定</button>
+	      </div>
+	 </div>
+</div>
+<script type="text/javascript">
+;$(function(){
+	$("#norightbrosure").bind("click",function(){//浏览器兼容温馨提示确定按钮
+		hideBro();
+	});
+	bro();
+});
+function bro(){ 
+    var broName = ''; 
+	var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");//application/vnd.chromium.remoting-viewer可能为360特有
+    if (isChrome() && is360) { 
+	   broName="360浏览器";
+    }else{
+		 if(window.navigator.userAgent.indexOf('MSIE')!=-1&&window.navigator.appName.indexOf("Microsoft") != -1){ 
+			broName = 'IE';  
+		}  
+		if(window.navigator.userAgent.indexOf('Firefox')!=-1){  
+			broName = 'Firefox';  
+		}  
+		if(window.navigator.userAgent.indexOf('Chrome')!=-1){ 
+			broName = 'Chrome';  
+		}
+	}
+	if(broName!="Chrome" && broName!="Firefox"){
+		$(".opacity").show();
+		$("#norightbro").show();
+	}  
+}   
+function hideBro(){
+	$("#norightbro").hide();
+	$(".opacity").hide();
+}
+ //检测是否是谷歌内核(可排除360及谷歌以外的浏览器)
+ function isChrome(){
+	 var ua = navigator.userAgent.toLowerCase();
+	 return ua.indexOf("chrome") > 1;
+ }
+ //测试mime
+ function _mime(option, value) {
+	 var mimeTypes = navigator.mimeTypes;
+	 for (var mt in mimeTypes) {
+		 if (mimeTypes[mt][option] == value) {
+			 return true;
+		 }
+	 }
+	 return false;
+ }
+ </script><!--浏览器兼容提示框end-->
+<!--挤掉账号的websocket start-->
+<script type="text/javascript">
+var userName = "2850653086";
+var websocket=null;
+$(function () {
+    if (userName != null && userName != '') {
+        webSocketMsg();
+    }
+});
+//获取WebSocket推送的数据
+function webSocketMsg() {
+	// 判断当前浏览器是否支持WebSocket
+	if ('WebSocket' in window) {
+		websocket = new WebSocket("ws://" + window.location.host + "/hostWebSocket?"+userName );
+	} else {
+		alert('当前浏览器 Not support websocket');
+	}
+	// 连接发生错误的回调方法
+	websocket.onerror = function() {
+		console.log("WebSocket连接发生错误");
+	};
+	// 连接成功建立的回调方法
+	websocket.onopen = function() {
+		console.log("WebSocket连接成功");
+	}
+	// 接收到消息的回调方法
+	websocket.onmessage = function(event) {
+		 var objTemp = JSON.parse(event.data);
+	     var result = objTemp.success;
+	     var msg = objTemp.code;
+	     var content = objTemp.msg;
+	     if (result && "KickOut" == msg) {
+	    	 alert(content);
+	    	 top.location = "http://" + window.location.host + "/logout.html";
+	     }
+//	     if (result && "online" == msg) {
+//	    	 if($("#online")){
+//	    		 $("#online").text("已学习课程人数："+content+"人");
+//	    	 }
+//	     }
+	}
+	// 连接关闭的回调方法
+	websocket.onclose = function() {
+		console.log("WebSocket连接关闭");
+	}
+	// 监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。
+	window.onbeforeunload = function() {
+		closeWebSocket();
+	}
+}
+// 关闭WebSocket连接
+function closeWebSocket() {
+	websocket.close();
+}
+// 发送消息
+function send() {
+	var message = document.getElementById('text').value;
+	websocket.send(message);
+}</script>
+<!--挤掉账号的websocket end-->
+
+<%= javascript_include_tag "bgbill.js" %>
+
+<script type="text/javascript">
+$(function(){
+	jQuery.ajax({
+		url:'http://lab1.ruby.com:8081/course/list-001001004.html',
+		success:function(data){
+			$(".side").append(data);
+			//判断如果“未开始”项存不存在，存在则点击第一个“未开始”项，不存在则点击“进行中”项
+			if($(".side .side_box .whole li .whole_r_no:first").length == 1) {
+				$(".side .side_box .whole li .whole_r_no:first").click();
+			} else {
+				$(".side .side_box .whole li .whole_r_go").click();
+			}
+		}
+	});
+	$(".side").on("click",".side_box .whole li",function(){
+		if($(this).attr("id")){
+			if($(this).prev().find(".whole_right a").text() == "已结束" ||
+					$(this).prev().find(".whole_right a").text() == "")
+				loadRight($(this).attr("id"));
+			else {
+				alert("请按照业务顺序进行操作。");
+				return false;
+			}
+		}
+	});
+});
+
+function loadRight(code){
+	if(typeof(code) == "undefined") {
+		code = $(".side .side_box .whole li .whole_r_color:last").parent().parent().attr("id");
+	}
+	jQuery.ajax({
+		url:'http://lab1.ruby.com:8081/course/questionlist-'+code+'.html',
+		success:function(data){
+			$(".side").html(data);
+		}
+	});
+}
+
+function subNormalQuestion(questionId){
+	//说明不是全国防伪税控购买发票这一题，可以点击确认按钮
+	if($('.gmfp_buttom').length == 0) {
+		jQuery.ajax({
+			url:'http://lab1.ruby.com:8081/course/subnormalquestion-'+questionId+'.json',
+			success:function(data){
+				alert(data.msg);
+				loadRight($(".whole_r_go").parent().parent().next().attr("id"));
+			}
+		});
+	} else {
+		alert("请购买发票。");
+	}
+}
+
+/**
+ * 提交题目
+ * @param questionId
+ */
+function submitQuestion(questionId){
+	jQuery.ajax({
+		url:'http://lab1.ruby.com:8081/course/subnormalquestion-'+questionId+'.json',
+		success:function(data){
+			loadRight($(".whole_r_go").parent().parent().next().attr("id"));
+		}
+	});
+}
+
+/**
+ * 提交题目
+ * @param questionId
+ */
+function submitQuestionAndUrl(questionId, url){
+	jQuery.ajax({
+		url:'http://lab1.ruby.com:8081/course/subnormalquestion-'+questionId+'.json',
+		success:function(data){
+			loadRight($(".whole_r_go").parent().parent().next().attr("id"));
+			if(url != null) {
+				location = url;
+			}
+		}
+	});
+}
+/**
+ * 查看当前进行中的业务是否为指定的业务名，如果是则将该题提交答案
+ * @param trainingName 业务名称
+ * @param url 转向地址
+ */
+function checkCurrentIsNeedSubmitAndTurnURL(trainingName, url){
+	//获取正在进行中的li，如果为trainingName则将这道题变为已答状态
+	var li_go = $('.whole .whole_right .whole_r_go').parent().parent();
+	var span = li_go.find('span').attr("title");
+	if(typeof(span) == "undefined") {
+		span = $('.whole .whole_left').find('a').attr("title")
+	}
+	if(span == trainingName) {
+		jQuery.ajax({
+			url:'http://lab1.ruby.com:8081/course/subnormalquestion-'+$('#questionId').val()+'.json',
+			success:function(data){
+				loadRight($(".whole_r_go").parent().parent().next().attr("id"));
+				if(url != null) {
+					location = url;
+				}
+			}
+		});
+	} else {
+		if(url != null) {
+			location = url;
+		}
+	}
+}
+/**
+ * 验证所填表单是否跟当前业务匹配，如果不匹配给予提示，其中弹出的公共窗口在最外层公用share的vm页面中
+ * @param trainingCode 点击表单所属的业务，精确到12位，例：001003001002
+ * @returns {Boolean}
+ */
+function compareCurrentTrainingCode(trainingCode) {
+	var flag=true;
+	$('.whole .whole_right .whole_r_no', top.window.document).each(function(){
+		var rightTrainingCode = $(this).parent().parent().attr("id");
+		//alert(rightTrainingCode);
+		if(typeof(rightTrainingCode) != "undefined" && rightTrainingCode == trainingCode){
+//			$(".content").text("所选择填写的报表，与当前实操助手不匹配！");
+//			$(".keep").show();
+			flag=false;
+			return false;
+		}
+	})
+	if(!flag){
+		return false;
+	}
+	return true;
+}
+
+function showVideo(){
+	var dialog = jQuery.dialog({
+		title: '操作视频',
+		content: '<video width="320" height="240" controls="controls"><source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg"><source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4">你的浏览器不支持video标签</video>'
+    });
+}
+// 安装步骤：
+$(function() {
+	//判断是否为梦园商贸有限公司（小规模纳税人2月份筹建期）模块，只有这个模块开始是没有开票软件图标的
+	if("001001004" == "001001001") {
+		//说明系统安装启动题已经完成，可以显示开票软件
+		if(parseInt($("#isAnswerNum").val()) > 0) {
+			$(".icon_copytax").show();
+		}
+	} else {
+		$(".icon_copytax").show();
+	}
+	
+	//我的电脑
+	$(".Pda").dblclick(function() {
+		$(".install_0").show();
+	});
+	
+	// 关闭磁盘
+	$(".close_0").click(function() {
+		$(".install_0").hide();
+	});
+	// 1、安装：
+	$(".click1").dblclick(function() {
+		$(".install_1").fadeIn(500);
+		$(".install_0").fadeOut(500);
+	});
+
+	// 关闭
+	$(".close_1").click(function() {
+		$(".install_1").hide();
+		$(".install_0").show();
+	});
+
+	// 取消
+	$(".cancel_1").click(function() {
+		$(".install_1").hide();
+		$(".install_0").show();
+	});
+
+	// 下一步1
+	$(".next_1").click(function() {
+		$(".install_2").show();
+		$(".install_1").hide();
+	});
+
+	// 下一步2
+	$(".next_2").click(function() {
+		$(".install_3").show();
+		$(".install_2").hide();
+	});
+
+	// 下一步3
+	$(".next_3").click(function() {
+		$(".install_4").show();
+		$(".install_3").hide();
+	});
+
+	// 下一步4
+	$(".next_4").click(function() {
+		$(".install_5").show();
+		$(".install_4").hide();
+	});
+
+	// 完成安装
+	$(".next_5").click(function() {
+		$(".install_6").show();
+		$(".install_5").hide();
+	});
+
+	// 弹出桌面图标
+	$(".next_ok").click(function() {
+		$(".icon_copytax").show();
+		$(".install_6").hide();
+	});
+
+	// 2、登录---更改证书口令
+	$("#resetPass").click(function() {
+		$(".modify").show();
+	});
+
+	// 证书口令修改--关闭
+	$(".mod_close").click(function() {
+		$(".modify").hide();
+	});
+
+	// 证书口令修改--关闭
+	$(".mod_cancel").click(function() {
+		$(".modify").hide();
+	});
+
+	// 证书口令修改成功--弹窗
+	$(".mod_confirm").click(function() {
+		//当未进行答题操作时才进行口令修改
+		if($("#isAnswerNum").val() == "0") {
+			if($(".modify_oldpass").val() == "") {
+				alertCommand("证书口令修改", "原口令不能为空。");
+				return false;
+			}
+			if($(".modify_newpass").val() == "") {
+				alertCommand("证书口令修改", "新口令不能为空。");
+				return false;
+			}
+			var taxId = "420104783587294888";
+			if($(".modify_newpass").val() != taxId.substr(taxId.length-6,6)) {
+				alertCommand("证书口令修改", "请按照实操助手要求进行口令设置。");
+				return false;
+			}
+			if($(".modify_newpassconfirm").val() == "") {
+				alertCommand("证书口令修改", "确认口令不能为空。");
+				return false;
+			}
+			if($(".modify_newpass").val() != $(".modify_newpassconfirm").val()) {
+				alertCommand("证书口令修改", "新口令与确认口令不一致，请重新输入。");
+				return false;
+			}
+			if(typeof($("#questionId").val()) == "undefined") {
+				alertCommand("提示", "请打开业务说明再继续操作！");
+				return false;
+			}
+			alertCommand("证书口令修改", "证书口令修改成功，请输入证书新口令登录系统！");
+			submitQuestion($("#questionId").val());
+			$("#isAnswerNum").val("1");
+		} else
+			alertCommand("证书口令修改", "已修改证书口令，请不要进行重复操作。");
+		$('input[type=password]').val("");
+		$(".modify").hide();
+	});
+
+	// 证书口令修改成功--确认、关闭
+	$("#comma_confir").click(function() {
+		$(".command").hide();
+	});
+
+	$(".comma_close").click(function() {
+		$(".command").hide();
+	});
+
+});
+
+// 系统初始化（金税盘）
+$(function() {
+	// 关闭
+	$(".WHR_close").click(function() {
+		$(".init_One").hide();
+		$(".init_Two").hide();
+		$(".init_Three").hide();
+		$(".init_Four").hide();
+		$(".init_Five").hide();
+	});
+
+	// 下一步1：
+	$(".one_next").click(function() {
+		$(".init_Two").show();
+		$(".init_One").hide();
+	});
+	
+	// 上一步1：
+	$(".two_prev").click(function() {
+		$(".init_Two").hide();
+		$(".init_One").show();
+	});
+
+	// 下一步2：
+	$(".two_next").click(function() {
+		if($(".two_user").val() != "魏玉敏" ||
+				$(".two_pass1").val() != "123456" ||
+				$(".two_pass2").val() != "123456") {
+			alertCommand("提示", "请按照实操助手要求进行填写。");
+			$(".two_user").val("");
+			$(".two_pass1").val("");
+			$(".two_pass2").val("");
+			return false;
+		}
+		$(".init_Three").show();
+		$(".init_Two").hide();
+	});
+	
+	// 上一步2：
+	$(".three_prev").click(function() {
+		$(".init_Three").hide();
+		$(".init_Two").show();
+	});
+
+	// 下一步3：
+	$(".three_next").click(function() {
+		if($(".three_address").val() == "" ||
+				$(".three_phone").val() == "" ||
+				$(".three_accounts").val() == "") {
+			alertCommand("提示", "请按照实操助手要求进行填写。");
+			$(".three_address").val("");
+			$(".three_phone").val("");
+			$(".three_accounts").val("");
+			return false;
+		}
+		$(".init_Four").show();
+		$(".init_Three").hide();
+	});
+	
+	// 上一步3：
+	$(".four_prev").click(function() {
+		$(".init_Four").hide();
+		$(".init_Three").show();
+	});
+
+	// 下一步4：
+	$(".four_next").click(function() {
+//		alertCommand("登录提示信息", "证书口令输入有误。");
+		$(".init_Five").show();
+		$(".init_Four").hide();
+	});
+	
+	// 上一步4：
+	$(".five_prev").click(function() {
+		$(".init_Five").hide();
+		$(".init_Four").show();
+	});
+
+	// 下一步4----测试
+	// (1)、弹出提示窗口
+	$(".tests").click(function() {
+
+		$(".init_Four .four_alert").show();
+	});
+
+	// (2)、关闭
+	$(".four_alert_close").click(function() {
+		$(".init_Four .four_alert").hide();
+	});
+
+	// (3)、确认
+	$(".four_alert_confir").click(function() {
+		$(".init_Four .four_alert").hide();
+	});
+
+	// 确认：
+	$(".five_next").click(function() {
+//		alert("最后一步?");
+		//只有做完登录的题目才能进行初始化题目
+		if($("#isAnswerNum").val() == "1") {
+			if(typeof($("#questionId").val()) == "undefined") {
+				alertCommand("提示", "请打开业务说明再继续操作！");
+				return false;
+			}
+			submitQuestion($("#questionId").val());
+			$("#isAnswerNum").val("2");
+			$(".init_Five").hide();
+			$("#opUser").append("<option value='魏玉敏' selected='selected'>魏玉敏</option>")
+			$("#webox_").show();
+//			location = 'http://lab1.ruby.com:8081/course/operate-set-001001004.html';
+		} else
+			alertCommand("提示", "请检查答题顺序，是否已经进行初始化操作或还未进行登录操作。");
+	});
+	
+	//抄税清卡后跳转到set页面
+	$("#return_url").click(function() {
+		var info = $("#return_url").attr("click_type");
+		returnUrl(info);
+//		checkCurrentIsNeedSubmitAndTurnURL("抄税清卡", 'http://lab1.ruby.com:8081/course/operate-set-001001004.html');
+//		location = 'http://lab1.ruby.com:8081/course/operate-set-001001004.html';
+	});
+	
+	//抄税清卡上报汇总成功
+	$("#reported_finish").click(function() {
+		$("#reported_finish").hide();
+		if("001001004" == "001001001") {
+			$(".command .comma_tit").find('span').text("提示");
+			$(".command .comma_cont").find('span').text("正在运行自动执行程序...");
+			$(".command").show().delay (3000).fadeOut();
+			setTimeout(function(){  
+//			$("#comma_confir").css("display","none");
+				$("#return_url").css("display","block");
+				$("#return_url").attr("click_type", "clean");
+				alertCommand("提示", "金税设备已经完成清卡操作！");
+				$("#comma_confir").hide();
+				//$("#return_url").show();
+			},3500);
+			return false;
+		} else {
+			$.ajax({
+				url:"http://lab1.ruby.com:8081/course/checkNationaltaxDeclareTypeByTrainingCode.json?trainingCode=001001004",
+				contentType:"application/json",
+				dataType:"json",
+				type:"post",
+				success:function(data){
+					if(data.success){
+						$(".command .comma_tit").find('span').text("提示");
+						$(".command .comma_cont").find('span').text("正在运行自动执行程序...");
+						$(".command").show().delay (3000).fadeOut();
+						setTimeout(function(){  
+//						$("#comma_confir").css("display","none");
+							$("#return_url").css("display","block");
+							$("#return_url").attr("click_type", "clean");
+							alertCommand("提示", "金税设备已经完成清卡操作！");
+							$("#comma_confir").hide();
+							//$("#return_url").show();
+						},3500);
+						return false;
+					} else {
+						$("#redbill_fill").hide();
+						$(".redbill_printx").hide();
+						$("#addRedBillInvoiceForm")[0].reset();
+						$(".Issue").hide();
+						$(".side .side_box .whole li .whole_r_no:first").click();
+					}
+				}
+			});
+			
+			
+			$("#return_url").css("display","block");
+			$("#return_url").attr("click_type", "nation");
+			$("#comma_confir").hide();
+			alertCommand("提示", "需要到国税报税案例中，完成该公司增值税申报操作后，才能自动清卡！");
+		}
+		
+	});
+
+});
+
+// 打开登录层
+function opendiv() {
+	$("#webox_").show();
+}
+
+// 关闭登录层
+function closediv() {
+	$("#webox_").hide();
+}
+
+function handleLogin() {
+	if ($("#pass").val() == "" || $("#pass").val() == null) {
+		alertCommand("登录提示信息", "密码不能为空。");
+		return false;
+	}
+	if ($("#pass2").val() == "" || $("#pass2").val() == null) {
+		alertCommand("登录提示信息", "证书口令不能为空。");
+		return false;
+	}
+	if ($("#pass").val() != "123456") {
+		alertCommand("登录提示信息", "密码输入有误。");
+		return false;
+	}
+	var taxId = "420104783587294888";
+	if ($("#pass2").val() != "88888888" && $("#pass2").val() != taxId.substr(taxId.length-6,6)) {
+		alertCommand("登录提示信息", "证书口令输入有误。");
+		return false;
+	}
+	//判断是否为梦园商贸有限公司（小规模纳税人2月份筹建期）模块，只有这个模块才需要修改口令以及初始化
+	if("001001004" == "001001001") {
+		//说明系统安装启动题还未完成，需要更改证书口令
+		if($("#isAnswerNum").val() == "0") {
+			$(".modify").show();
+			return false;
+		}
+		//说明系统安装启动题目已经完成，开始初始化系统题目
+		if($("#isAnswerNum").val() == "1") {
+			$("#webox_").hide();
+			$(".init").show();
+			$(".init_One").show();
+			return false;
+		}
+	}
+	var csqk = location.search;
+	csqk = csqk.substr(csqk.length-1,1);
+	if(csqk == "0") {
+		$("#reported_finish").css("display","block");
+		alertCommand("提示", "上报汇总已成功！");
+		$("#comma_confir").hide();
+		
+		
+//		$(".command .comma_tit").find('span').text("提示");
+//		$(".command .comma_cont").find('span').text("正在运行自动执行程序...");
+//		$(".command").show().delay (3000).fadeOut();
+//		setTimeout(function(){  
+////			$("#comma_confir").css("display","none");
+//			$("#return_url").css("display","block");
+//			alertCommand("提示", "金税设备已经完成清卡操作！");
+//			$("#comma_confir").hide();
+//			//$("#return_url").show();
+//        },3500);
+//		return false;
+	} else {
+		checkCurrentIsNeedSubmitAndTurnURL("开票系统登录", '/lab/buy');
+
+	}
+}
+
+function changetype(obj) {
+	$(obj).attr("type", "password");
+	$(obj).attr("value", "");
+}
+
+function alertCommand(title, content) {
+	$(".command .comma_tit").find('span').text(title);
+	$(".command .comma_cont").find('span').text(content);
+	$(".command").show();
+}
+
+/**
+ * 根据业务说明类型跳转到对应的跳转地址
+ * @param info 业务类型：登录、开票之类
+ * @param url 跳转地址
+ */
+function returnUrl (info, url) {
+	if(info == "clean") {
+		checkCurrentIsNeedSubmitAndTurnURL("抄税清卡", 'http://lab1.ruby.com:8081/course/operate-set-001001004.html');
+	} else {
+		checkCurrentIsNeedSubmitAndTurnURL("开票系统登录", 'http://lab1.ruby.com:8081/course/operate-set-001001004.html');
+	}
+}
+</script>
+
+		
+
+<!-- 答题状态 -->
+<input type="hidden" id="isAnswerNum" value="">
+<div class="main watermark">
+    
+    <!--桌面图标 start-->
+    	<ul class="pico">
+    	     <li>
+    	     	  	   <img src="/assets/desk_01.png">
+    	     </li>
+
+    	     <li>
+    	     	  <a class="Pda" href="javascript:void(0);">
+    	     	  	   <img src="/assets/desk_02.png">
+    	     	  </a>
+    	     </li>
+
+    	     <li>
+    	     	  	   <img src="/assets/desk_03.png">
+    	     </li>
+
+    	     <li>
+    	     	  	   <img src="/assets/desk_04.jpg">
+    	     </li>
+
+    	     <li>
+    	     	  <a class="icon_copytax" onclick="opendiv();" href="javascript:void(0);" style="display: inline;">
+    	     	  	   <img src="/assets/desk_11.png">
+    	     	  </a>
+    	     </li>	
+    	</ul>
+	<!--end 桌面图标-->
+		
+	<!--安装步骤 start-->
+		<div class="install_0" style="display: none;">
+		    <div class="click1"></div>
+		    <div class="close_0"></div>
+		</div>
+		
+	    <div class="install_1">
+	        <div class="close_1"></div>
+	        <div class="next_1"></div>
+	        <div class="cancel_1"></div>
+	    </div>
+	    
+	    <div class="install_2">
+	    	<div class="close_1"></div>
+	        <div class="next_2"></div>
+	        <div class="cancel_1"></div>
+	    </div>
+	    
+	    <div class="install_3">
+	    	<div class="close_1"></div>
+	        <div class="next_3"></div>
+	        <div class="cancel_1"></div>
+	        
+	        <div class="TaxNum">
+	             <input type="text" value="420104783587294888">
+	             <input type="text" value="0">
+	        </div>     
+	    </div>
+	    
+	    <div class="install_4">
+	  	    <div class="close_1"></div>
+	        <div class="next_4"></div>
+	        <div class="cancel_1"></div>
+	        
+	        <div class="Ref">
+	            <input type="text" value="420100">
+	        </div>
+	    </div>
+	    
+	    <div class="install_5">
+		  	<div class="close_1"></div>
+	        <div class="next_5"></div>
+	        <div class="cancel_1"></div>    
+	    </div>
+	    
+	    <div class="install_6">
+			<div class="close_1"></div>
+	        <div class="next_ok"></div>
+	        <div class="cancel_1"></div>      
+	    </div>
+	<!--end 安装步骤-->
+
+	<!-- 系统初始化 start -->
+	<div class="init">
+	     <div class="init_One WHR">
+	         <div class="WHR_close"></div>
+	         <div class="one_next WHR_next"></div>
+	     </div>
+	     
+	     <div class="init_Two WHR">
+	  	     <div class="WHR_close"></div>
+			 <div class="two_prev WHR_prev"></div>
+	         <div class="two_next WHR_next"></div>
+	         <div class="two_admin">
+	         	  <input type="text" value="" class="two_user">
+	         	  <input type="password" value="" class="two_pass1">
+	         	  <input type="password" value="" class="two_pass2">
+	         </div>   
+	     </div>
+	     
+	     <div class="init_Three WHR">
+	  	     <div class="WHR_close"></div>
+			 <div class="three_prev WHR_prev"></div>
+	         <div class="three_next WHR_next"></div>
+	         <div class="three_info">
+                  <p>420104783587294888</p>
+				  <p>湖北仁和服饰有限公司</p>
+				  <input type="text" value="武汉市桥口区太平洋102号" style="margin-top: 24px;" class="three_address">
+	              <input type="text" value="027-83886888" class="three_phone">
+	              <textarea class="three_accounts">中国工商银行武汉市太平洋支行421863308018000655446</textarea>
+				  <p style="margin-top: 11px;margin-left: 10px;">410282091</p>
+				  <p style="margin-left: 10px;">武汉市江岸区国家税务局</p>
+	         </div>	     	
+	     </div>
+
+	     <div class="init_Four WHR">
+	  	     <div class="WHR_close"></div>
+			 <div class="four_prev WHR_prev"></div>
+	         <div class="four_next WHR_next"></div>
+	         <input type="text" value="https://tysl.bjtax.gov.cn">
+	         <div class="tests"></div>
+	         
+	         <div class="four_alert">
+	              <div class="four_alert_tit">
+	                  <i></i>
+	                  <span>提示</span>
+	                  <div class="four_alert_close"></div>
+	              </div>
+	              
+	             <div class="four_alert_cont">
+			     	  <i></i>
+			     	  <span>连接成功!</span>
+			     </div> 
+	 
+		         <div class="four_alert_ok">
+			           <button type="button" value="" class="four_alert_confir">确认</button>
+			     </div> 
+	 
+	         </div>
+	     </div>
+
+	     <div class="init_Five WHR">
+	  	     <div class="WHR_close"></div>
+			 <div class="five_prev WHR_prev"></div>
+	         <div class="five_next WHR_next"></div>	     	
+	     </div>
+	</div>
+	<!-- end 系统初始化 -->
+
+    <!--登录模块-->
+    <div class="webox" id="webox_">
+        <div id="inside_" style="height:440px;">
+            <div class="open_back1" id="locked_" onselectstart="return false;">
+                <a class="span" href="javascript:void(0);"></a>
+                <span class="open_logo1"></span>
+                <span class="open_title1">税控发票开票软件（金税盘版） 110105539548703</span>
+                <span class="open_close1" onclick="closediv();"></span>
+            </div>
+            
+            <div id="box_" class="open_style1">
+				<div class="open_content1">	
+					<div class="open_main1" id="open_main_" style="height: 409px; width: 592px; overflow: hidden; position: relative; background: rgb(51, 87, 116);">
+						<div class="system_login">
+							<dl class="system_login_border_input">
+								<dt>
+									<select id="opUser" class="system_input_select">
+										<option value="管理员">
+											管理员
+										</option>
+																					<option value="魏玉敏" selected="selected">
+    											魏玉敏
+    										</option>
+																			</select>
+								</dt>
+								<dt>
+									<input type="text" class="system_input" placeholder="请输入用户密码.." value="" id="pass" onfocus="changetype(this)">
+            					</dt>
+                                <dt>
+                                    <input type="text" class="system_input" placeholder="请输入证书口令.." value="" id="pass2" onfocus="changetype(this)">
+                                </dt>
+        					</dl>
+							<div style="position: relative; border: 1px solid #FFFFFF; top: 276px; left: 286px; width: 118px; height: 35px; cursor: pointer" id="btnSubmit" onclick="handleLogin();">
+							</div>
+    
+							<div style="position: relative; border: 1px solid #FFFFFF; top: 190px; left: 410px; width: 83px; height: 27px; cursor: pointer" id="resetPass">
+							</div>
+    					</div>
+    				</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- 证书口令修改 start -->
+		<div class="modify">
+			 <div class="mod_tit">
+			     <i></i>
+			     <span>证书口令修改</span>
+			     <div class="mod_close"></div>
+			 </div>
+
+			 <div class="mod_con">
+			      <h4>证书口令不能为默认口令，请修改！</h4>
+
+			      <dl>
+			      	   <dt>原口令：</dt>
+			      	   <dd>
+			      	       <input class="modify_oldpass" type="password" value="88888888">
+			      	   </dd>
+			      </dl>
+
+			      <dl>
+			      	   <dt>新口令：</dt>
+			      	   <dd>
+			      	       <input class="modify_newpass" type="password" value="">
+			      	   </dd>
+			      </dl>
+			      
+			      <dl>
+			      	   <dt>确认口令：</dt>
+			      	   <dd>
+			      	       <input class="modify_newpassconfirm" type="password" value="">
+			      	   </dd>
+			      </dl>			      
+			 </div>
+
+			 <div class="mod_fo">
+			      <div class="mod_fo_con">
+			          <button type="button" value="" class="mod_confirm">确认</button>
+			          <button type="button" value="" class="mod_cancel">取消</button>
+			      </div>
+			 </div>
+		</div>
+		<!-- end  证书口令修改-->
+
+
+	</div>
+	<!--登录模块-->
+
+	<!-- 提示信息 start -->
+	<div class="command">
+	     <div class="comma_tit">
+	     	 <i></i>
+		     <span>证书口令修改</span>
+		     <div class="comma_close"></div>
+	     </div>
+
+	     <div class="comma_cont">
+	     	  <i></i>
+	     	  <span>证书口令修改成功，请输入证书新口令登录系统！</span>
+	     </div>
+
+	     <div class="comma_yes" style="position: relative;">
+	           <button id="comma_confir" type="button" value="" class="comma_confir">确认</button>
+			   <button id="return_url" type="button" value="" class="comma_confir" style="display: none;position: absolute;z-index: 999;right: 10px;">确认</button>
+				<button id="reported_finish" type="button" value="" class="comma_confir" style="display: none;position: absolute;z-index: 999;right: 10px;">确认</button>
+	     </div>
+	</div>
+	<!--end 提示信息 -->
+	
+
+</div>
+
+	
+<!-- 右侧 start -->
+
+<%= javascript_include_tag "page.js" %>
+<div class="business" style="position: absolute; margin: 0px; display: block;">
+      <p>实操助手</p><span class="lower"></span>
+</div>
+<!-- end 右侧 -->
+<!-- zhuai start -->
+	 <!-- side start -->
+	 <div class="dong side" style="position: absolute; margin: 0px; z-index: 1000; display: none;">
+	       <!-- side_tit start -->
+	 	   <div class="side_tit">
+		 	   <h3>实操助手</h3>
+	     	   <span class="upper"></span>
+	 	   </div>
+	 	   <!-- end side_tit -->
+
+	 	   <!-- herex start -->
+	 	   <div class="herex">
+	 	   	     <div class="herex_box side_box">
+
+	 	   	     	   <!-- current start -->
+	 	   	     	   <div class="current">
+	 	   	     	   	      <div class="curr_co">
+    <div class="curr_info">
+    	  <h3>1、经济业务摘要</h3>
+    </div>
+
+    <div class="curre_tit">
+    	  <i></i>
+    	  <span>业务说明：</span>
+    	  <input type="hidden" id="questionId" value="210">
+    </div>
+		
+		
+	    <!-- ziliao start -->
+    <div class="ziliao">
+    	  <p>请以魏玉敏的身份登录，证书口令为纳税人识别号后六位，密码为123456，其相关资料如下：<br>企业名称：湖北仁和服饰有限公司<br>纳税人识别号：420104783587294888<br>地址：武汉市桥口区太平洋102号<br>电话：027-83886888<br>注册资本：200万<br>公司类型：有限责任公司<br>开户银行及账号：中国工商银行武汉市太平洋支行421863308018000655446</p>
+    </div>
+    <!-- end ziliao -->
+	
+	        	    </div>	 	   	     	   </div>
+	 	   	     	   <!-- end current -->
+
+	 	   	     	   <!-- whole start -->
+	 	   	     	   <div class="whole">
+	 	   	     	   	      <div class="whole_co">
+	 	   	     	   	           <div class="whole_title">
+	 	   	     	   	           	    <h3>2、任务列表</h3>
+	 	   	     	   	           </div>
+
+	 	   	     	   	           <!-- whole_ul start -->
+	 	   	     	   	           <div class="whole_ul">
+	 	   	     	   	           	     <ul>
+																							                                					                                					                                																<li id="001001004001">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开票系统登录" class="whole_red">
+    																1、开票系统登录
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	                                            						<a class="whole_state whole_r_color whole_going whole_r_go">进行中</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004003">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="购买发票">
+    																2、购买发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004004">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具带销货清单的增值税专用发票并打印发票及销货清单">
+    																3、开具带销货清单的增值税专用发票并打印发票及销货清单
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004005">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具带销货清单的增值税专用发票并打印发票及销货清单">
+    																4、开具带销货清单的增值税专用发票并打印发票及销货清单
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004006">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税专用发票">
+    																5、开具增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004007">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税专用发票">
+    																6、开具增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004015">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税专用发票">
+    																7、开具增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004008">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税普通发票">
+    																8、开具增值税普通发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004009">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具红字增值税专用发票">
+    																9、开具红字增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004010">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="开具增值税专用发票">
+    																10、开具增值税专用发票
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004011">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="拟开具一张带折扣的发票，然后作废（拟通过该业务让学员了解带折扣发票的开具）">
+    																11、拟开具一张带折扣的发票，然后作废（拟通过该业务让学员了解带折扣发票的开具）
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004012">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="发票查询">
+    																12、发票查询
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004013">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+															                                        						
+                                        						                                            						<a href="http://lab1.ruby.com:8081/course/operate-fwsk_login-001001004.html?csqk=0" style="color:black " title="抄税清卡">
+																<span title="抄税清卡">
+    																13、抄税清卡
+																</span>
+																</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+																							                                					                                					                                																<li id="001001004014">  
+	 	   	     	   	           	     	          <!-- whole_left start -->
+	 	   	     	   	           	     	    	  <div class="whole_left">
+	 	   	     	   	           	     	    	  	   <i></i>
+	 	   	     	   	           	     	    	  	    
+																															<span title="查询并打印增值税专用发票汇总表">
+    																14、查询并打印增值税专用发票汇总表
+																</span>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_left -->
+
+	 	   	     	   	           	     	    	  <!-- whole_right start -->
+	 	   	     	   	           	     	    	  <div class="whole_right">
+	 	   	     	   	           	     	    	  	    																<a class="whole_state whole_r_color whole_no whole_r_no">未开始</a>
+                                        						 	   	     	   	           	     	    	  </div>
+	 	   	     	   	           	     	    	  <!-- end whole_right -->
+	 	   	     	   	           	     	    </li>
+												 	   	     	   	           	     </ul>
+	 	   	     	   	           </div>
+	 	   	     	   	           <!-- end whole_ul -->
+
+	 	   	     	   	      </div>
+	 	   	     	   </div>
+	 	   	     	   <!-- end whole -->
+
+	 	   	     </div>
+	 	   </div>
+	 	   <!-- end herex -->
+
+	 
+
+
+
+<script type="text/javascript">
+$(function(){
+	  //外部(实操助手)--拖拽
+	jQuery(".business").Tdrag();
+
+	  //外部--实操助手
+	jQuery(".lower").click(function(){
+	  	  $(".side").show(300);
+	  	  $(".business").hide(300);
+	  });
+
+	  //内部--关闭
+	jQuery(".upper").click(function(){
+		jQuery(".side").hide();
+		jQuery(".business").show();
+	  });
+
+	//内部(实操助手)--拖拽
+	jQuery(".side").Tdrag({
+//	    scope:".zhuai",
+	    handle:".side_tit",
+	    axis:"x"
+	});
+
+
+
+
+});
+
+</script></div>
+	 <!-- end side -->
+<!-- end zhuai -->
+
+
+
+
+
+</body></html>
